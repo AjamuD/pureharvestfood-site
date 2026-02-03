@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trinidad Stewed Chicken Recipe | Pure Harvest Group of Companies Ltd.</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#8B4513',secondary:'#556B2F'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+color: #333333;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+}
+.recipe-difficulty {
+position: relative;
+width: 80px;
+height: 12px;
+background-color: #E5E7EB;
+border-radius: 6px;
+overflow: hidden;
+}
+.recipe-difficulty-fill {
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+background-color: #8B4513;
+border-radius: 6px;
+}
+.review-star.filled {
+color: #FFD700;
+}
+.review-star.empty {
+color: #E5E7EB;
+}
+.step-number {
+min-width: 28px;
+height: 28px;
+border-radius: 50%;
+background-color: #8B4513;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+margin-right: 12px;
+}
+.ingredient-checkbox {
+appearance: none;
+-webkit-appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #ddd;
+border-radius: 4px;
+margin-right: 10px;
+position: relative;
+cursor: pointer;
+}
+.ingredient-checkbox:checked {
+background-color: #8B4513;
+border-color: #8B4513;
+}
+.ingredient-checkbox:checked::after {
+content: "";
+position: absolute;
+top: 2px;
+left: 6px;
+width: 6px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.tab-content {
+display: none;
+}
+.tab-content.active {
+display: block;
+}
+</style>
+</head>
+<body class="bg-[#FAFAFA]">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+<a href="#"><img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/117959135c1f1a6fecd6b5698ea16259.png" alt="Pure Harvest Logo" class="h-12"></a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center space-x-8">
+<a href="/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Home</a>
+<a href="/shop/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Shop</a>
+<a href="/recipes/brown-stew-chicken/" data-readdy="true" class="text-primary font-medium">Recipes</a>
+<a href="#" class="text-gray-700 hover:text-primary transition">About Us</a>
+<a href="#" class="text-gray-700 hover:text-primary transition">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<!-- Social Media Icons -->
+<div class="hidden md:flex items-center space-x-3">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+<!-- Cart Icon -->
+<a href="#" class="relative w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition">
+<i class="ri-shopping-cart-2-line text-xl"></i>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">3</span>
+</a>
+<!-- Mobile Menu Button -->
+<button id="mobile-menu-button" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-menu-line text-2xl"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Navigation -->
+<div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+<div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+<a href="#" class="py-2 text-gray-700">Home</a>
+<a href="/shop/" data-readdy="true" class="py-2 text-gray-700">Shop</a>
+<a href="/recipes/brown-stew-chicken/" data-readdy="true" class="py-2 text-primary font-medium">Recipes</a>
+<a href="#" class="py-2 text-gray-700">About Us</a>
+<a href="#" class="py-2 text-gray-700">Contact</a>
+<!-- Social Media Icons for Mobile -->
+<div class="flex items-center space-x-4 py-2">
+<a href="#" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Breadcrumb -->
+<div class="bg-white py-3 border-b">
+<div class="container mx-auto px-4">
+<div class="flex items-center text-sm text-gray-500">
+<a href="#" class="hover:text-primary">Home</a>
+<span class="mx-2">/</span>
+<a href="/recipes/brown-stew-chicken/" data-readdy="true" class="hover:text-primary">Recipes</a>
+<span class="mx-2">/</span>
+<span class="text-primary font-medium">Trinidad Stewed Chicken</span>
+</div>
+</div>
+</div>
+<!-- Back Button -->
+<div class="container mx-auto px-4 py-4">
+<a href="/recipes/brown-stew-chicken/" data-readdy="true" class="inline-flex items-center text-gray-600 hover:text-primary transition">
+<i class="ri-arrow-left-line mr-1"></i> Back to Recipe Collection
+</a>
+</div>
+<!-- Recipe Header -->
+<section class="py-6">
+<div class="container mx-auto px-4">
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Recipe Image -->
+<div class="w-full lg:w-1/2">
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/feb9ac42a2e1c8580c7146994d1d6951.png" alt="Trinidad Stewed Chicken" class="w-full h-[500px] object-cover object-top">
+</div>
+</div>
+<!-- Recipe Info -->
+<div class="w-full lg:w-1/2">
+<div class="flex flex-col h-full">
+<h1 class="text-3xl md:text-4xl font-bold mb-3">Trinbago Stewed Chicken</h1>
+<div class="flex items-center mb-4">
+<div class="flex text-yellow-400 mr-2">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+<span class="text-gray-600 text-sm">4.7 (58 reviews)</span>
+</div>
+<p class="text-gray-600 mb-6">A classic Trinidad dish featuring tender chicken pieces simmered in a rich, flavorful sauce made with caramel browning. This traditional recipe brings authentic Caribbean flavors to your table with minimal ingredients but maximum taste.</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+<div class="bg-white rounded-lg p-4 text-center shadow-sm">
+<div class="text-primary mb-1"><i class="ri-time-line text-xl"></i></div>
+<p class="text-xs text-gray-500 uppercase font-medium">Prep Time</p>
+<p class="font-bold">15 mins</p>
+</div>
+<div class="bg-white rounded-lg p-4 text-center shadow-sm">
+<div class="text-primary mb-1"><i class="ri-fire-line text-xl"></i></div>
+<p class="text-xs text-gray-500 uppercase font-medium">Cook Time</p>
+<p class="font-bold">45 mins</p>
+</div>
+<div class="bg-white rounded-lg p-4 text-center shadow-sm">
+<div class="text-primary mb-1"><i class="ri-user-line text-xl"></i></div>
+<p class="text-xs text-gray-500 uppercase font-medium">Servings</p>
+<p class="font-bold">4-6</p>
+</div>
+<div class="bg-white rounded-lg p-4 text-center shadow-sm">
+<div class="text-primary mb-1"><i class="ri-bar-chart-line text-xl"></i></div>
+<p class="text-xs text-gray-500 uppercase font-medium">Difficulty</p>
+<div class="flex justify-center mt-1">
+<div class="recipe-difficulty inline-block align-middle">
+<div class="recipe-difficulty-fill" style="width: 40%"></div>
+</div>
+<span class="ml-2 text-xs">Medium</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-3 mb-6">
+<span class="bg-primary/10 text-primary text-xs py-1 px-3 rounded-full">Caribbean</span>
+<span class="bg-primary/10 text-primary text-xs py-1 px-3 rounded-full">Trinidad</span>
+<span class="bg-primary/10 text-primary text-xs py-1 px-3 rounded-full">Main Dish</span>
+<span class="bg-primary/10 text-primary text-xs py-1 px-3 rounded-full">Caramel Browning</span>
+</div>
+<div class="flex flex-col sm:flex-row gap-3 mt-auto">
+<button class="flex-1 bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-medium flex items-center justify-center whitespace-nowrap">
+<i class="ri-printer-line mr-2"></i> Print Recipe
+</button>
+<button class="flex-1 border border-gray-300 hover:border-primary hover:text-primary py-3 px-6 rounded-button font-medium flex items-center justify-center whitespace-nowrap">
+<i class="ri-heart-line mr-2"></i> Save Recipe
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recipe Content -->
+<section class="py-8 bg-white">
+<div class="container mx-auto px-4">
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Left Column - Ingredients & Info -->
+<div class="w-full lg:w-1/3">
+<!-- Ingredients Card -->
+<div class="bg-white rounded-lg shadow-md p-6 mb-8">
+<h2 class="text-2xl font-bold mb-4">Ingredients</h2>
+<ul class="space-y-3 mb-6">
+<li class="flex items-center">
+<input type="checkbox" class="ingredient-checkbox">
+<span>1 chicken (3½-4 lb), cut up</span>
+</li>
+<li class="flex items-center">
+<input type="checkbox" class="ingredient-checkbox">
+<span>1/2 cup local green seasoning</span>
+</li>
+<li class="flex items-center">
+<input type="checkbox" class="ingredient-checkbox">
+<span>2 cloves garlic, minced</span>
+</li>
+<li class="flex items-center">
+<input type="checkbox" class="ingredient-checkbox">
+<span>2 tbsp. sugar</span>
+</li>
+<li class="flex items-center">
+<input type="checkbox" class="ingredient-checkbox">
+<span>1 tbsp. cooking oil</span>
+</li>
+<li class="flex items-center">
+<input type="checkbox" class="ingredient-checkbox">
+<span>6 tbsp. Pure Harvest Caramel Browning</span>
+</li>
+<li class="flex items-center">
+<input type="checkbox" class="ingredient-checkbox">
+<span>1 onion, chopped or sliced</span>
+</li>
+<li class="flex items-center">
+<input type="checkbox" class="ingredient-checkbox">
+<span>Salt and black pepper to taste</span>
+</li>
+<li class="flex items-center">
+<input type="checkbox" class="ingredient-checkbox">
+<span>1 cup water</span>
+</li>
+<li class="flex items-center">
+<input type="checkbox" class="ingredient-checkbox">
+<span>1 teaspoon Pure Harvest Bay Leaf Powder</span>
+</li>
+</ul>
+<div class="flex justify-between">
+<button class="text-primary font-medium flex items-center text-sm">
+<i class="ri-scales-3-line mr-1"></i> US Measurements
+</button>
+<button class="text-gray-500 hover:text-primary font-medium flex items-center text-sm">
+<i class="ri-shopping-basket-line mr-1"></i> Add to Shopping List
+</button>
+</div>
+</div>
+<!-- Nutritional Info Card -->
+<div class="bg-white rounded-lg shadow-md p-6 mb-8">
+<h2 class="text-2xl font-bold mb-4">Nutritional Information</h2>
+<p class="text-gray-600 text-sm mb-4">Per serving (based on 6 servings)</p>
+<div class="space-y-3">
+<div class="flex justify-between py-2 border-b border-gray-100">
+<span class="font-medium">Calories</span>
+<span>320 kcal</span>
+</div>
+<div class="flex justify-between py-2 border-b border-gray-100">
+<span class="font-medium">Protein</span>
+<span>28g</span>
+</div>
+<div class="flex justify-between py-2 border-b border-gray-100">
+<span class="font-medium">Fat</span>
+<span>18g</span>
+</div>
+<div class="flex justify-between py-2 border-b border-gray-100">
+<span class="font-medium">Carbohydrates</span>
+<span>12g</span>
+</div>
+<div class="flex justify-between py-2 border-b border-gray-100">
+<span class="font-medium">Sugar</span>
+<span>8g</span>
+</div>
+<div class="flex justify-between py-2">
+<span class="font-medium">Sodium</span>
+<span>420mg</span>
+</div>
+</div>
+<p class="text-xs text-gray-500 mt-4">*Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs.</p>
+</div>
+<!-- Equipment Card -->
+<div class="bg-white rounded-lg shadow-md p-6">
+<h2 class="text-2xl font-bold mb-4">Equipment Needed</h2>
+<ul class="space-y-2">
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Heavy pot with lid</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Cutting board and knife</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Measuring spoons and cups</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Wooden spoon or spatula</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Right Column - Instructions & More -->
+<div class="w-full lg:w-2/3">
+<!-- Tab Navigation -->
+<div class="flex overflow-x-auto border-b border-gray-200 mb-6">
+<button class="recipe-tab active whitespace-nowrap px-6 py-3 font-medium text-primary border-b-2 border-primary" data-tab="instructions">Instructions</button>
+<button class="recipe-tab whitespace-nowrap px-6 py-3 font-medium text-gray-500 hover:text-gray-700" data-tab="tips">Cooking Tips</button>
+<button class="recipe-tab whitespace-nowrap px-6 py-3 font-medium text-gray-500 hover:text-gray-700" data-tab="variations">Variations</button>
+<button class="recipe-tab whitespace-nowrap px-6 py-3 font-medium text-gray-500 hover:text-gray-700" data-tab="reviews">Reviews</button>
+</div>
+<!-- Tab Content -->
+<div class="tab-content active" id="instructions-content">
+<div class="bg-white rounded-lg shadow-md p-6 mb-8">
+<h2 class="text-2xl font-bold mb-4">Video Instructions</h2>
+<div class="relative w-full" style="padding-top: 56.25%;">
+<iframe class="absolute inset-0 w-full h-full rounded-lg" src="https://www.youtube.com/embed/dBFvc9fQUKw?si=tM0duvv3b_agC6-t" title="Trinidad Stewed Chicken Recipe Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</div>
+<div class="space-y-8">
+<!-- Step 1 -->
+<div class="flex">
+<div class="step-number">1</div>
+<div>
+<h3 class="font-bold text-lg mb-2">Prepare the Chicken</h3>
+<p class="text-gray-600 mb-4">Cut up chicken, rinse quickly, do not soak in water.</p>
+<div class="rounded-lg overflow-hidden mb-4">
+<img src="https://readdy.ai/api/search-image?query=raw%20chicken%20pieces%20being%20rinsed%20quickly%20under%20running%20water%2C%20professional%20food%20preparation%20photography%2C%20clean%20kitchen%20setting%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=700&height=400&seq=step1&orientation=landscape" alt="Preparing chicken" class="w-full h-auto object-cover object-top">
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex">
+<div class="step-number">2</div>
+<div>
+<h3 class="font-bold text-lg mb-2">Season and Marinate</h3>
+<p class="text-gray-600 mb-4">Add local green seasoning, garlic, onion, salt, black pepper and 6 tablespoons of Pure Harvest Caramel Browning and leave to marinate for ½ hour.</p>
+<div class="rounded-lg overflow-hidden mb-4">
+<img src="https://readdy.ai/api/search-image?query=chicken%20pieces%20in%20bowl%20with%20seasonings%2C%20garlic%2C%20onions%2C%20salt%20and%20pepper%20being%20mixed%20together%2C%20professional%20food%20preparation%20photography%2C%20clean%20kitchen%20setting%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=700&height=400&seq=step2&orientation=landscape" alt="Seasoning chicken" class="w-full h-auto object-cover object-top">
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex">
+<div class="step-number">3</div>
+<div>
+<h3 class="font-bold text-lg mb-2">Brown the Sugar</h3>
+<p class="text-gray-600 mb-4">Heat oil in a heavy pot, add sugar and allow to brown.</p>
+<div class="rounded-lg overflow-hidden mb-4">
+<img src="https://readdy.ai/api/search-image?query=sugar%20caramelizing%20in%20hot%20oil%20in%20heavy%20pot%2C%20turning%20dark%20brown%2C%20professional%20food%20preparation%20photography%2C%20close-up%20of%20caramelization%20process%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=700&height=400&seq=step3&orientation=landscape" alt="Browning sugar" class="w-full h-auto object-cover object-top">
+</div>
+<div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 text-sm">
+<div class="flex">
+<div class="flex-shrink-0">
+<span class="w-5 h-5 flex items-center justify-center text-yellow-600">
+<i class="ri-lightbulb-line"></i>
+</span>
+</div>
+<div class="ml-3">
+<h3 class="text-sm font-medium text-yellow-800">Pro Tip</h3>
+<p class="text-yellow-700 mt-1">Watch the sugar carefully as it browns - it can burn quickly. You want a deep amber color, not black.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex">
+<div class="step-number">4</div>
+<div>
+<h3 class="font-bold text-lg mb-2">Add Chicken and Brown</h3>
+<p class="text-gray-600 mb-4">Add chicken and allow to brown all over, cook until water dries out.</p>
+<div class="rounded-lg overflow-hidden mb-4">
+<img src="https://readdy.ai/api/search-image?query=chicken%20pieces%20browning%20in%20pot%20with%20caramelized%20sugar%2C%20professional%20food%20preparation%20photography%2C%20showing%20chicken%20turning%20golden%20brown%20in%20caramel%20sauce%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=700&height=400&seq=step4&orientation=landscape" alt="Browning chicken" class="w-full h-auto object-cover object-top">
+</div>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="flex">
+<div class="step-number">5</div>
+<div>
+<h3 class="font-bold text-lg mb-2">Simmer Until Tender</h3>
+<p class="text-gray-600 mb-4">Add 1 cup water and 1 teaspoon Pure Harvest Bay Leaf Powder, cover pot, cook until chicken is tender.</p>
+<div class="rounded-lg overflow-hidden mb-4">
+<img src="https://readdy.ai/api/search-image?query=chicken%20stew%20simmering%20in%20covered%20pot%20with%20steam%20escaping%2C%20professional%20food%20preparation%20photography%2C%20showing%20rich%20brown%20sauce%20bubbling%20gently%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=700&height=400&seq=step5&orientation=landscape" alt="Simmering chicken" class="w-full h-auto object-cover object-top">
+</div>
+</div>
+</div>
+<!-- Step 6 (Optional) -->
+<div class="flex">
+<div class="step-number">6</div>
+<div>
+<h3 class="font-bold text-lg mb-2">Add Vegetables (Optional)</h3>
+<p class="text-gray-600 mb-4">Potatoes may be cut up and added towards the end with carrots and sweet peppers.</p>
+<div class="rounded-lg overflow-hidden mb-4">
+<img src="https://readdy.ai/api/search-image?query=diced%20potatoes%2C%20carrots%20and%20sweet%20peppers%20being%20added%20to%20chicken%20stew%2C%20professional%20food%20preparation%20photography%2C%20showing%20colorful%20vegetables%20in%20rich%20brown%20sauce%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=700&height=400&seq=step6&orientation=landscape" alt="Adding vegetables" class="w-full h-auto object-cover object-top">
+</div>
+</div>
+</div>
+<!-- Step 7 -->
+<div class="flex">
+<div class="step-number">7</div>
+<div>
+<h3 class="font-bold text-lg mb-2">Serve</h3>
+<p class="text-gray-600 mb-4">Serve hot with rice or potatoes, salad and vegetables.</p>
+<div class="rounded-lg overflow-hidden mb-4">
+<img src="https://readdy.ai/api/search-image?query=finished%20Trinidad%20stewed%20chicken%20served%20on%20plate%20with%20rice%2C%20salad%20and%20vegetables%2C%20professional%20food%20photography%2C%20appetizing%20presentation%2C%20showing%20rich%20brown%20sauce%20over%20tender%20chicken%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=700&height=400&seq=step7&orientation=landscape" alt="Serving stewed chicken" class="w-full h-auto object-cover object-top">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-content" id="tips-content">
+<div class="space-y-6">
+<h2 class="text-2xl font-bold mb-4">Cooking Tips</h2>
+<div class="bg-white rounded-lg shadow-sm p-5 border border-gray-100">
+<h3 class="font-bold text-lg mb-3 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full mr-2 text-sm">1</span>
+Browning the Sugar
+</h3>
+<p class="text-gray-600 mb-3">The key to authentic Trinidad Stewed Chicken is properly browning the sugar. Heat the oil first, then add the sugar and watch it carefully as it melts. You want it to reach a deep amber color without burning. If it burns, it will become bitter.</p>
+<div class="bg-yellow-50 p-4 rounded-md text-sm">
+<p class="text-yellow-800 font-medium">Caution: Be very careful when browning sugar as it gets extremely hot and can cause serious burns. Keep children away from the stove during this process.</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-5 border border-gray-100">
+<h3 class="font-bold text-lg mb-3 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full mr-2 text-sm">2</span>
+Marinating Time
+</h3>
+<p class="text-gray-600">While the recipe calls for a 30-minute marination, if you have time, letting the chicken marinate for 2-4 hours or even overnight in the refrigerator will enhance the flavor significantly. Just make sure to bring the chicken back to room temperature before cooking.</p>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-5 border border-gray-100">
+<h3 class="font-bold text-lg mb-3 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full mr-2 text-sm">3</span>
+Using Caramel Browning
+</h3>
+<p class="text-gray-600 mb-3">If you have Pure Harvest Caramel Browning sauce on hand, you can use it instead of browning the sugar yourself. Add 1-2 tablespoons after heating the oil, then proceed with adding the chicken.</p>
+<div class="flex items-center bg-primary/5 p-4 rounded-md">
+<img src="https://readdy.ai/api/search-image?query=bottle%20of%20caramel%20browning%20sauce%2C%20product%20photography%20on%20clean%20background%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=80&height=80&seq=browning-bottle&orientation=squarish" alt="Caramel Browning" class="w-16 h-16 object-cover rounded-md mr-4">
+<div>
+<p class="font-medium">Pure Harvest Caramel Browning</p>
+<a href="/recipes/brown-stew-chicken/" data-readdy="true" class="text-primary text-sm flex items-center mt-1">
+View Product
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-5 border border-gray-100">
+<h3 class="font-bold text-lg mb-3 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full mr-2 text-sm">4</span>
+Seasoning Options
+</h3>
+<p class="text-gray-600">The "1 tbsp. seasoning" in the recipe typically refers to a Caribbean green seasoning, which is a blend of herbs like culantro (chadon beni), thyme, parsley, celery, and peppers. If you don't have this, you can substitute with a mixture of fresh herbs or a quality poultry seasoning blend.</p>
+</div>
+<div class="bg-white rounded-lg shadow-sm p-5 border border-gray-100">
+<h3 class="font-bold text-lg mb-3 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full mr-2 text-sm">5</span>
+Cooking Time
+</h3>
+<p class="text-gray-600">The cooking time will vary depending on the size of your chicken pieces. Smaller pieces will cook faster. The chicken is done when it reaches an internal temperature of 165°F (74°C) and is tender enough that it easily pulls away from the bone.</p>
+</div>
+</div>
+</div>
+<div class="tab-content" id="variations-content">
+<div class="space-y-6">
+<h2 class="text-2xl font-bold mb-4">Recipe Variations</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=spicy%20Caribbean%20stewed%20chicken%20with%20scotch%20bonnet%20peppers%2C%20professional%20food%20photography%2C%20showing%20rich%20brown%20sauce%20with%20visible%20pepper%20flakes%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=500&height=300&seq=variation1&orientation=landscape" alt="Spicy Stewed Chicken" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<h3 class="font-bold text-lg mb-2">Spicy Stewed Chicken</h3>
+<p class="text-gray-600 mb-3">Add 1-2 scotch bonnet or habanero peppers (whole) during cooking for a spicy kick. Remove before serving if you want the flavor without extreme heat.</p>
+<div class="flex items-center text-sm text-gray-500">
+<span class="flex items-center mr-4">
+<i class="ri-fire-line mr-1"></i> Heat Level: High
+</span>
+<span class="flex items-center">
+<i class="ri-time-line mr-1"></i> Same cooking time
+</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=coconut%20milk%20stewed%20chicken%20with%20creamy%20brown%20sauce%2C%20professional%20food%20photography%2C%20showing%20rich%20creamy%20texture%20with%20Caribbean%20spices%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=500&height=300&seq=variation2&orientation=landscape" alt="Coconut Stewed Chicken" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<h3 class="font-bold text-lg mb-2">Coconut Stewed Chicken</h3>
+<p class="text-gray-600 mb-3">Replace half the water with coconut milk for a richer, creamier sauce with tropical flavor. Add during the simmering stage.</p>
+<div class="flex items-center text-sm text-gray-500">
+<span class="flex items-center mr-4">
+<i class="ri-fire-line mr-1"></i> Heat Level: Mild
+</span>
+<span class="flex items-center">
+<i class="ri-time-line mr-1"></i> Same cooking time
+</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=herb%20infused%20stewed%20chicken%20with%20fresh%20thyme%20and%20bay%20leaves%2C%20professional%20food%20photography%2C%20showing%20rich%20brown%20sauce%20with%20visible%20herbs%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=500&height=300&seq=variation3&orientation=landscape" alt="Herb Infused Stewed Chicken" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<h3 class="font-bold text-lg mb-2">Herb Infused Stewed Chicken</h3>
+<p class="text-gray-600 mb-3">Add fresh thyme sprigs, 2 bay leaves, and a tablespoon of chopped fresh parsley for an aromatic herb-forward version.</p>
+<div class="flex items-center text-sm text-gray-500">
+<span class="flex items-center mr-4">
+<i class="ri-fire-line mr-1"></i> Heat Level: Mild
+</span>
+<span class="flex items-center">
+<i class="ri-time-line mr-1"></i> Same cooking time
+</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=citrus%20stewed%20chicken%20with%20orange%20and%20lime%2C%20professional%20food%20photography%2C%20showing%20rich%20brown%20sauce%20with%20citrus%20slices%20garnish%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=500&height=300&seq=variation4&orientation=landscape" alt="Citrus Stewed Chicken" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<h3 class="font-bold text-lg mb-2">Citrus Stewed Chicken</h3>
+<p class="text-gray-600 mb-3">Add the juice of 1 orange and 1 lime to the marinade, and include the zest in the cooking process for a bright, citrusy flavor profile.</p>
+<div class="flex items-center text-sm text-gray-500">
+<span class="flex items-center mr-4">
+<i class="ri-fire-line mr-1"></i> Heat Level: Mild
+</span>
+<span class="flex items-center">
+<i class="ri-time-line mr-1"></i> Same cooking time
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<h3 class="font-bold text-lg mb-4">Serving Variations</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+<div class="bg-white rounded-lg p-4 border border-gray-100">
+<div class="font-medium mb-2">With Dumplings</div>
+<p class="text-gray-600 text-sm">Add flour dumplings during the last 10 minutes of cooking for a heartier meal.</p>
+</div>
+<div class="bg-white rounded-lg p-4 border border-gray-100">
+<div class="font-medium mb-2">With Plantains</div>
+<p class="text-gray-600 text-sm">Serve with fried ripe plantains on the side for a sweet contrast.</p>
+</div>
+<div class="bg-white rounded-lg p-4 border border-gray-100">
+<div class="font-medium mb-2">With Roti</div>
+<p class="text-gray-600 text-sm">Serve with paratha roti for an authentic Trinidadian meal.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-content" id="reviews-content">
+<div>
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-2xl font-bold">Reviews</h2>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm font-medium whitespace-nowrap">Write a Review</button>
+</div>
+<div class="flex flex-col md:flex-row gap-8 mb-8">
+<!-- Overall Rating -->
+<div class="w-full md:w-1/3 bg-white rounded-lg shadow-sm p-6 text-center">
+<h3 class="text-lg font-bold mb-2">Overall Rating</h3>
+<div class="flex justify-center text-yellow-400 text-2xl mb-2">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+<p class="text-3xl font-bold mb-2">4.7</p>
+<p class="text-gray-500 text-sm">Based on 58 reviews</p>
+</div>
+<!-- Rating Distribution -->
+<div class="w-full md:w-2/3">
+<h3 class="text-lg font-bold mb-4">Rating Distribution</h3>
+<div class="space-y-2">
+<div class="flex items-center">
+<span class="text-sm text-gray-600 w-8">5★</span>
+<div class="flex-1 h-4 bg-gray-200 rounded-full mx-2 overflow-hidden">
+<div class="h-full bg-yellow-400 rounded-full" style="width: 70%"></div>
+</div>
+<span class="text-sm text-gray-600 w-8">70%</span>
+</div>
+<div class="flex items-center">
+<span class="text-sm text-gray-600 w-8">4★</span>
+<div class="flex-1 h-4 bg-gray-200 rounded-full mx-2 overflow-hidden">
+<div class="h-full bg-yellow-400 rounded-full" style="width: 25%"></div>
+</div>
+<span class="text-sm text-gray-600 w-8">25%</span>
+</div>
+<div class="flex items-center">
+<span class="text-sm text-gray-600 w-8">3★</span>
+<div class="flex-1 h-4 bg-gray-200 rounded-full mx-2 overflow-hidden">
+<div class="h-full bg-yellow-400 rounded-full" style="width: 3%"></div>
+</div>
+<span class="text-sm text-gray-600 w-8">3%</span>
+</div>
+<div class="flex items-center">
+<span class="text-sm text-gray-600 w-8">2★</span>
+<div class="flex-1 h-4 bg-gray-200 rounded-full mx-2 overflow-hidden">
+<div class="h-full bg-yellow-400 rounded-full" style="width: 1%"></div>
+</div>
+<span class="text-sm text-gray-600 w-8">1%</span>
+</div>
+<div class="flex items-center">
+<span class="text-sm text-gray-600 w-8">1★</span>
+<div class="flex-1 h-4 bg-gray-200 rounded-full mx-2 overflow-hidden">
+<div class="h-full bg-yellow-400 rounded-full" style="width: 1%"></div>
+</div>
+<span class="text-sm text-gray-600 w-8">1%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Review Filters -->
+<div class="flex flex-wrap gap-2 mb-6">
+<button class="bg-primary text-white py-1 px-3 rounded-full text-sm font-medium">All Reviews</button>
+<button class="bg-white border border-gray-300 py-1 px-3 rounded-full text-sm">5 Stars Only</button>
+<button class="bg-white border border-gray-300 py-1 px-3 rounded-full text-sm">With Photos</button>
+<button class="bg-white border border-gray-300 py-1 px-3 rounded-full text-sm">Most Recent</button>
+</div>
+<!-- Reviews List -->
+<div class="space-y-6">
+<!-- Review 1 -->
+<div class="bg-white rounded-lg shadow-sm p-6">
+<div class="flex items-center mb-2">
+<div class="flex text-yellow-400 mr-2">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<span class="text-sm text-gray-600">Verified Recipe Made</span>
+</div>
+<h4 class="font-bold mb-1">Authentic Trinidadian Flavor!</h4>
+<p class="text-sm text-gray-500 mb-2">Reviewed by Gabrielle Thompson on July 1, 2025</p>
+<p class="text-gray-600 mb-4">This recipe brought me right back to my grandmother's kitchen in Port of Spain! The browning technique is spot on and gives the chicken that distinctive color and flavor that's essential for authentic stewed chicken. I added a scotch bonnet pepper for some heat and served it with rice and peas. My family devoured it!</p>
+<div class="flex space-x-2 mb-4">
+<img src="https://readdy.ai/api/search-image?query=homemade%20Trinidad%20stewed%20chicken%20on%20plate%20with%20rice%2C%20casual%20home%20setting%2C%20natural%20lighting%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=100&height=100&seq=review-img1&orientation=squarish" alt="Customer Photo" class="w-20 h-20 object-cover rounded-md">
+</div>
+<div class="flex items-center text-sm text-gray-500">
+<button class="flex items-center mr-4">
+<i class="ri-thumb-up-line mr-1"></i> Helpful (18)
+</button>
+<button class="flex items-center">
+<i class="ri-chat-1-line mr-1"></i> Comment
+</button>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-white rounded-lg shadow-sm p-6">
+<div class="flex items-center mb-2">
+<div class="flex text-yellow-400 mr-2">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-line"></i>
+</div>
+<span class="text-sm text-gray-600">Verified Recipe Made</span>
+</div>
+<h4 class="font-bold mb-1">Delicious but Watch the Sugar</h4>
+<p class="text-sm text-gray-500 mb-2">Reviewed by Alexander Mitchell on June 25, 2025</p>
+<p class="text-gray-600 mb-4">The flavor of this stewed chicken was excellent, but I had a bit of trouble with the sugar browning. My first attempt burned, so I had to start over. Second time was perfect though! I'd recommend using slightly less sugar if you're new to this technique. The chicken came out tender and flavorful, and my kids loved it with some dumplings added at the end.</p>
+<div class="flex items-center text-sm text-gray-500">
+<button class="flex items-center mr-4">
+<i class="ri-thumb-up-line mr-1"></i> Helpful (9)
+</button>
+<button class="flex items-center">
+<i class="ri-chat-1-line mr-1"></i> Comment
+</button>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-white rounded-lg shadow-sm p-6">
+<div class="flex items-center mb-2">
+<div class="flex text-yellow-400 mr-2">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<span class="text-sm text-gray-600">Verified Recipe Made</span>
+</div>
+<h4 class="font-bold mb-1">Simple Yet So Flavorful</h4>
+<p class="text-sm text-gray-500 mb-2">Reviewed by Isabella Rodriguez on June 18, 2025</p>
+<p class="text-gray-600 mb-4">I love how this recipe uses so few ingredients but creates such complex flavor. The caramelized sugar is the key! I used Pure Harvest's Caramel Browning instead of making my own and it worked perfectly. I also added potatoes and carrots as suggested, which made it a complete one-pot meal. Will definitely make this again!</p>
+<div class="flex space-x-2 mb-4">
+<img src="https://readdy.ai/api/search-image?query=Trinidad%20stewed%20chicken%20with%20potatoes%20and%20carrots%20in%20bowl%2C%20casual%20home%20setting%2C%20natural%20lighting%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=100&height=100&seq=review-img2&orientation=squarish" alt="Customer Photo" class="w-20 h-20 object-cover rounded-md">
+</div>
+<div class="flex items-center text-sm text-gray-500">
+<button class="flex items-center mr-4">
+<i class="ri-thumb-up-line mr-1"></i> Helpful (12)
+</button>
+<button class="flex items-center">
+<i class="ri-chat-1-line mr-1"></i> Comment
+</button>
+</div>
+</div>
+</div>
+<div class="mt-8 text-center">
+<button class="border border-gray-300 hover:border-primary hover:text-primary py-2 px-6 rounded-button text-sm font-medium whitespace-nowrap">Load More Reviews</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Related Products -->
+<section class="py-12 bg-[#F7F5F2]">
+<div class="container mx-auto px-4">
+<h2 class="text-2xl md:text-3xl font-bold mb-6">Ingredients You May Need</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Product 1 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=elegant%20glass%20bottle%20of%20rich%20dark%20caramel%20browning%20sauce%20with%20deep%20amber%20color%2C%20placed%20on%20a%20rustic%20wooden%20surface%20with%20subtle%20Caribbean%20cooking%20ingredients%20in%20background%2C%20professional%20product%20photography%2C%20soft%20natural%20lighting%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=400&height=300&seq=product1&orientation=landscape" alt="Caramel Browning" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<h3 class="text-lg font-bold mb-1">Caramel Browning</h3>
+<p class="text-gray-500 text-sm mb-3">250ml bottle</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$45.00</span>
+<a href="/recipes/brown-stew-chicken/" data-readdy="true" class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">View Product</a>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=jar%20of%20Caribbean%20green%20seasoning%20with%20herbs%20and%20spices%2C%20professional%20product%20photography%20on%20clean%20background%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=400&height=300&seq=product2&orientation=landscape" alt="Caribbean Green Seasoning" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<h3 class="text-lg font-bold mb-1">Caribbean Green Seasoning</h3>
+<p class="text-gray-500 text-sm mb-3">200g jar</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$38.00</span>
+<a href="#" class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">View Product</a>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=bottle%20of%20premium%20coconut%20oil%20for%20cooking%2C%20professional%20product%20photography%20on%20clean%20background%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=400&height=300&seq=product3&orientation=landscape" alt="Coconut Oil" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<h3 class="text-lg font-bold mb-1">Coconut Oil</h3>
+<p class="text-gray-500 text-sm mb-3">500ml bottle</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$42.00</span>
+<a href="#" class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">View Product</a>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=jar%20of%20premium%20Caribbean%20hot%20pepper%20sauce%2C%20professional%20product%20photography%20on%20clean%20background%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=400&height=300&seq=product4&orientation=landscape" alt="Hot Pepper Sauce" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<h3 class="text-lg font-bold mb-1">Hot Pepper Sauce</h3>
+<p class="text-gray-500 text-sm mb-3">150ml bottle</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$32.00</span>
+<a href="#" class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">View Product</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- More Recipes -->
+<section class="py-12 bg-white">
+<div class="container mx-auto px-4">
+<h2 class="text-2xl md:text-3xl font-bold mb-6">More Caribbean Recipes</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Recipe 1 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=traditional%20Caribbean%20pelau%20with%20rice%2C%20pigeon%20peas%20and%20chicken%2C%20rich%20brown%20color%2C%20served%20in%20bowl%2C%20professional%20food%20photography%2C%20appetizing%20presentation%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=500&height=300&seq=more-recipe1&orientation=landscape" alt="Trinidad Pelau" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Trinidad Pelau</h3>
+<span class="bg-primary/10 text-primary text-xs py-1 px-2 rounded">Traditional</span>
+</div>
+<p class="text-gray-600 mb-4">A one-pot rice dish with caramelized chicken, pigeon peas, and coconut milk. Caramel browning gives it its distinctive color and depth of flavor.</p>
+<div class="flex flex-wrap gap-4 text-sm text-gray-500 mb-4">
+<div class="flex items-center">
+<i class="ri-time-line mr-1"></i> 60 mins
+</div>
+<div class="flex items-center">
+<i class="ri-user-line mr-1"></i> Serves 6
+</div>
+<div>
+<span class="font-medium text-xs">Difficulty:</span>
+<div class="recipe-difficulty inline-block ml-1 align-middle">
+<div class="recipe-difficulty-fill" style="width: 60%"></div>
+</div>
+</div>
+</div>
+<a href="#" class="text-primary font-medium flex items-center">
+View Recipe
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+<!-- Recipe 2 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=traditional%20Caribbean%20oxtail%20stew%20with%20rich%20dark%20brown%20gravy%2C%20tender%20meat%2C%20served%20with%20rice%20and%20beans%2C%20professional%20food%20photography%2C%20appetizing%20presentation%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=500&height=300&seq=more-recipe2&orientation=landscape" alt="Oxtail Stew" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Oxtail Stew</h3>
+<span class="bg-primary/10 text-primary text-xs py-1 px-2 rounded">Traditional</span>
+</div>
+<p class="text-gray-600 mb-4">Slow-cooked oxtail in a rich, flavorful sauce enhanced with caramel browning. This hearty dish is perfect for Sunday dinners and special occasions.</p>
+<div class="flex flex-wrap gap-4 text-sm text-gray-500 mb-4">
+<div class="flex items-center">
+<i class="ri-time-line mr-1"></i> 3 hours
+</div>
+<div class="flex items-center">
+<i class="ri-user-line mr-1"></i> Serves 6
+</div>
+<div>
+<span class="font-medium text-xs">Difficulty:</span>
+<div class="recipe-difficulty inline-block ml-1 align-middle">
+<div class="recipe-difficulty-fill" style="width: 70%"></div>
+</div>
+</div>
+</div>
+<a href="#" class="text-primary font-medium flex items-center">
+View Recipe
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+<!-- Recipe 3 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=festive%20Caribbean%20black%20cake%20with%20rich%20dark%20color%2C%20topped%20with%20fruits%20and%20powdered%20sugar%2C%20Christmas%20or%20holiday%20setting%2C%20professional%20food%20photography%2C%20appetizing%20presentation%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=500&height=300&seq=more-recipe3&orientation=landscape" alt="Caribbean Black Cake" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Caribbean Black Cake</h3>
+<span class="bg-red-100 text-red-700 text-xs py-1 px-2 rounded">Festival</span>
+</div>
+<p class="text-gray-600 mb-4">A traditional holiday dessert featuring rum-soaked fruits and a deep, rich color from caramel browning. This cake is a staple at Christmas and special celebrations.</p>
+<div class="flex flex-wrap gap-4 text-sm text-gray-500 mb-4">
+<div class="flex items-center">
+<i class="ri-time-line mr-1"></i> 3+ hours
+</div>
+<div class="flex items-center">
+<i class="ri-user-line mr-1"></i> Serves 12
+</div>
+<div>
+<span class="font-medium text-xs">Difficulty:</span>
+<div class="recipe-difficulty inline-block ml-1 align-middle">
+<div class="recipe-difficulty-fill" style="width: 90%"></div>
+</div>
+</div>
+</div>
+<a href="#" class="text-primary font-medium flex items-center">
+View Recipe
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="text-center mt-8">
+<a href="/recipes/brown-stew-chicken/" data-readdy="true" class="inline-block bg-white border border-gray-300 hover:border-primary hover:text-primary py-3 px-8 rounded-button font-medium whitespace-nowrap">
+Browse All Recipes
+</a>
+</div>
+</div>
+</section>
+<!-- Print Recipe Modal (Hidden by default) -->
+<div id="print-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+<div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-xl font-bold">Print Recipe</h3>
+<button id="close-print-modal" class="text-gray-500 hover:text-gray-700">
+<i class="ri-close-line text-2xl"></i>
+</button>
+</div>
+<div class="print-content">
+<h1 class="text-2xl font-bold mb-2">Trinidad Stewed Chicken</h1>
+<div class="mb-4">
+<p class="text-gray-600">A classic Trinidad dish featuring tender chicken pieces simmered in a rich, flavorful sauce made with caramel browning.</p>
+</div>
+<div class="grid grid-cols-3 gap-4 mb-6 text-sm">
+<div>
+<p class="font-bold">Prep Time</p>
+<p>15 mins</p>
+</div>
+<div>
+<p class="font-bold">Cook Time</p>
+<p>45 mins</p>
+</div>
+<div>
+<p class="font-bold">Servings</p>
+<p>4-6</p>
+</div>
+</div>
+<div class="mb-6">
+<h2 class="text-xl font-bold mb-3">Ingredients</h2>
+<ul class="list-disc pl-5 space-y-1">
+<li>1 chicken (3½-4 lb), cut up</li>
+<li>1 tbsp. seasoning</li>
+<li>2 cloves garlic, minced</li>
+<li>2 tbsp. sugar</li>
+<li>1 tbsp. cooking oil</li>
+<li>1 onion, chopped or sliced</li>
+<li>Salt and black pepper to taste</li>
+<li>1 cup water</li>
+</ul>
+</div>
+<div>
+<h2 class="text-xl font-bold mb-3">Instructions</h2>
+<ol class="list-decimal pl-5 space-y-2">
+<li>Cut up chicken, rinse quickly, do not soak in water.</li>
+<li>Add seasonings, garlic, onion, salt and black pepper and leave to marinate for ½ hour.</li>
+<li>Heat oil in a heavy pot, add sugar and allow to brown.</li>
+<li>Add chicken and allow to brown all over, cook until water dries out.</li>
+<li>Add 1 cup water and cover pot, cook until chicken is tender.</li>
+<li>Potatoes may be cut up and added towards the end with carrots and sweet peppers.</li>
+<li>Serve hot with rice or potatoes, salad and vegetables. Dumplings can also be added during the last 10 minutes of cooking.</li>
+</ol>
+</div>
+</div>
+<div class="mt-6 text-center">
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-6 rounded-button font-medium whitespace-nowrap">
+<i class="ri-printer-line mr-2"></i> Print Now
+</button>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-[#2A2A2A] text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- Company Info -->
+<div>
+<a href="#" class="mb-6 inline-block"><img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/117959135c1f1a6fecd6b5698ea16259.png" alt="Pure Harvest Logo" class="h-12"></a>
+<p class="text-gray-400 mb-6">Pure Harvest Group of Companies Ltd. brings the authentic flavors of Trinidad and Tobago to kitchens around the world.</p>
+<div class="flex space-x-4">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h3 class="text-lg font-bold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+<li><a href="/shop/" data-readdy="true" class="text-gray-400 hover:text-white transition">Shop</a></li>
+<li><a href="/recipes/brown-stew-chicken/" data-readdy="true" class="text-gray-400 hover:text-white transition">Recipes</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Terms & Conditions</a></li>
+</ul>
+</div>
+<!-- Contact Info -->
+<div>
+<h3 class="text-lg font-bold mb-6">Contact Us</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-map-pin-line"></i>
+</span>
+<span class="text-gray-400">Congo Hill, Moriah, Tobago</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-phone-line"></i>
+</span>
+<span class="text-gray-400">+1 868 361-8990</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-mail-line"></i>
+</span>
+<span class="text-gray-400">pureharvest2022@gmail.com</span>
+</li>
+</ul>
+<div class="mt-6">
+<h4 class="text-sm font-bold mb-3">We Accept</h4>
+<div class="flex space-x-3">
+<span class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-visa-fill text-xl"></i>
+</span>
+<span class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-mastercard-fill text-xl"></i>
+</span>
+<span class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-paypal-fill text-xl"></i>
+</span>
+</div>
+</div>
+</div>
+<!-- Newsletter -->
+<div>
+<h3 class="text-lg font-bold mb-6">Newsletter</h3>
+<p class="text-gray-400 mb-4">Subscribe to receive updates, access to exclusive deals, and more.</p>
+<form class="space-y-3">
+<input type="email" placeholder="Your email address" class="w-full py-3 px-4 rounded-button bg-white/10 border-none text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/30">
+<button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white py-3 px-4 rounded-button font-medium whitespace-nowrap">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-700 pt-8">
+<p class="text-gray-500 text-center">&copy; 2025 Pure Harvest Group of Companies Ltd. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', function() {
+if (mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.remove('hidden');
+} else {
+mobileMenu.classList.add('hidden');
+}
+});
+});
+</script>
+<script id="recipe-tabs-script">
+document.addEventListener('DOMContentLoaded', function() {
+const tabs = document.querySelectorAll('.recipe-tab');
+const tabContents = document.querySelectorAll('.tab-content');
+tabs.forEach(tab => {
+tab.addEventListener('click', () => {
+const target = tab.getAttribute('data-tab');
+// Remove active class from all tabs and contents
+tabs.forEach(t => t.classList.remove('active', 'text-primary', 'border-primary'));
+tabs.forEach(t => t.classList.add('text-gray-500'));
+tabContents.forEach(c => c.classList.remove('active'));
+// Add active class to clicked tab and corresponding content
+tab.classList.add('active', 'text-primary', 'border-b-2', 'border-primary');
+tab.classList.remove('text-gray-500');
+document.getElementById(`${target}-content`).classList.add('active');
+});
+});
+});
+</script>
+<script id="ingredient-checkbox-script">
+document.addEventListener('DOMContentLoaded', function() {
+const checkboxes = document.querySelectorAll('.ingredient-checkbox');
+checkboxes.forEach(checkbox => {
+checkbox.addEventListener('change', function() {
+const textElement = this.nextElementSibling;
+if (this.checked) {
+textElement.style.textDecoration = 'line-through';
+textElement.style.color = '#9CA3AF';
+} else {
+textElement.style.textDecoration = 'none';
+textElement.style.color = '';
+}
+});
+});
+});
+</script>
+<script id="print-modal-script">
+document.addEventListener('DOMContentLoaded', function() {
+const printButton = document.querySelector('button.bg-primary i.ri-printer-line').parentElement;
+const printModal = document.getElementById('print-modal');
+const closeModalButton = document.getElementById('close-print-modal');
+printButton.addEventListener('click', function() {
+printModal.classList.remove('hidden');
+});
+closeModalButton.addEventListener('click', function() {
+printModal.classList.add('hidden');
+});
+// Close modal when clicking outside
+printModal.addEventListener('click', function(e) {
+if (e.target === printModal) {
+printModal.classList.add('hidden');
+}
+});
+});
+</script>
+<script id="save-recipe-script">
+document.addEventListener('DOMContentLoaded', function() {
+const saveButton = document.querySelector('button i.ri-heart-line').parentElement;
+saveButton.addEventListener('click', function() {
+const icon = saveButton.querySelector('i');
+if (icon.classList.contains('ri-heart-line')) {
+icon.classList.remove('ri-heart-line');
+icon.classList.add('ri-heart-fill');
+saveButton.classList.add('text-primary');
+// Show success message
+const successMessage = document.createElement('div');
+successMessage.className = 'fixed top-4 right-4 bg-primary/10 border-l-4 border-primary text-primary p-4 rounded shadow-md z-50';
+successMessage.innerHTML = `
+<div class="flex items-center">
+<span class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-heart-fill"></i>
+</span>
+<span>Recipe saved to your favorites!</span>
+</div>
+`;
+document.body.appendChild(successMessage);
+setTimeout(() => {
+successMessage.remove();
+}, 3000);
+} else {
+icon.classList.remove('ri-heart-fill');
+icon.classList.add('ri-heart-line');
+saveButton.classList.remove('text-primary');
+}
+});
+});
+</script>
+</body>
+</html>

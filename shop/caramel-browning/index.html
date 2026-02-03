@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caramel Browning | Pure Harvest Group of Companies Ltd.</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#8B4513',secondary:'#556B2F'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+color: #333333;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.custom-checkbox {
+position: relative;
+display: inline-block;
+width: 20px;
+height: 20px;
+background-color: white;
+border: 2px solid #ddd;
+border-radius: 4px;
+cursor: pointer;
+}
+.custom-checkbox.checked::after {
+content: "";
+position: absolute;
+top: 2px;
+left: 6px;
+width: 6px;
+height: 10px;
+border: solid #8B4513;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.custom-radio {
+position: relative;
+display: inline-block;
+width: 20px;
+height: 20px;
+background-color: white;
+border: 2px solid #ddd;
+border-radius: 50%;
+cursor: pointer;
+}
+.custom-radio.checked::after {
+content: "";
+position: absolute;
+top: 4px;
+left: 4px;
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background-color: #8B4513;
+}
+.tab-content {
+display: none;
+}
+.tab-content.active {
+display: block;
+}
+.variant-tab.active {
+background-color: #8B4513;
+color: white;
+}
+.review-star.filled {
+color: #FFD700;
+}
+.review-star.empty {
+color: #E5E7EB;
+}
+.size-option.active {
+border-color: #8B4513;
+background-color: #8B4513;
+color: white;
+}
+.recipe-difficulty {
+position: relative;
+width: 80px;
+height: 12px;
+background-color: #E5E7EB;
+border-radius: 6px;
+overflow: hidden;
+}
+.recipe-difficulty-fill {
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+background-color: #8B4513;
+border-radius: 6px;
+}
+</style>
+</head>
+<body class="bg-[#FAFAFA]">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+<a href="#"><img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/117959135c1f1a6fecd6b5698ea16259.png" alt="Pure Harvest Logo" class="h-12"></a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center space-x-8">
+<a href="/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Home</a>
+<a href="/shop/" data-readdy="true" class="text-primary font-medium">Shop</a>
+<a href="#" class="text-gray-700 hover:text-primary transition">About Us</a>
+<a href="#" class="text-gray-700 hover:text-primary transition">Become a Retailer</a>
+<a href="#" class="text-gray-700 hover:text-primary transition">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<!-- Social Media Icons -->
+<div class="hidden md:flex items-center space-x-3">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+<!-- Cart Icon -->
+<a href="#" class="relative w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition">
+<i class="ri-shopping-cart-2-line text-xl"></i>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">3</span>
+</a>
+<!-- Mobile Menu Button -->
+<button id="mobile-menu-button" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-menu-line text-2xl"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Navigation -->
+<div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+<div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+<a href="#" class="py-2 text-gray-700">Home</a>
+<a href="/shop/" data-readdy="true" class="py-2 text-primary font-medium">Shop</a>
+<a href="#" class="py-2 text-gray-700">About Us</a>
+<a href="#" class="py-2 text-gray-700">Become a Retailer</a>
+<a href="#" class="py-2 text-gray-700">Contact</a>
+<!-- Social Media Icons for Mobile -->
+<div class="flex items-center space-x-4 py-2">
+<a href="#" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="#" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Promotional Banner -->
+<div class="bg-primary text-white py-2 text-center">
+<p class="text-sm md:text-base">Free shipping on orders over $300 | Now available at Food Hall</p>
+</div>
+<!-- Breadcrumb -->
+<div class="bg-white py-3 border-b">
+<div class="container mx-auto px-4">
+<div class="flex items-center text-sm text-gray-500">
+<a href="#" class="hover:text-primary">Home</a>
+<span class="mx-2">/</span>
+<a href="/shop/" data-readdy="true" class="hover:text-primary">Shop</a>
+<span class="mx-2">/</span>
+<a href="#" class="hover:text-primary">Browning</a>
+<span class="mx-2">/</span>
+<span class="text-primary font-medium">Caramel Browning</span>
+</div>
+</div>
+</div>
+<!-- Back Button -->
+<div class="container mx-auto px-4 py-4">
+<a href="/" data-readdy="true" class="inline-flex items-center text-gray-600 hover:text-primary transition">
+<i class="ri-arrow-left-line mr-1"></i> Back to Categories
+</a>
+</div>
+<!-- Product Showcase Section -->
+<section class="py-8">
+<div class="container mx-auto px-4">
+<div class="flex flex-col lg:flex-row gap-10">
+<!-- Product Images -->
+<div class="w-full lg:w-1/2">
+<div class="bg-white rounded-lg shadow-md overflow-hidden mb-4">
+<img id="main-product-image" src="https://readdy.ai/api/search-image?query=elegant%2520glass%2520bottle%2520of%2520rich%2520dark%2520caramel%2520browning%2520sauce%2520with%2520deep%2520amber%2520color%252C%2520placed%2520on%2520a%2520rustic%2520wooden%2520surface%2520with%2520subtle%2520Caribbean%2520cooking%2520ingredients%2520in%2520background%252C%2520professional%2520product%2520photography%252C%2520soft%2520natural%2520lighting%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=800&height=800&seq=browning-main&orientation=squarish" alt="Caramel Browning" class="w-full h-[500px] object-cover object-top">
+</div>
+<div class="grid grid-cols-4 gap-2">
+<div class="thumbnail-item cursor-pointer bg-white rounded-md overflow-hidden border-2 border-primary">
+<img src="https://readdy.ai/api/search-image?query=elegant%2520glass%2520bottle%2520of%2520rich%2520dark%2520caramel%2520browning%2520sauce%2520with%2520deep%2520amber%2520color%252C%2520placed%2520on%2520a%2520rustic%2520wooden%2520surface%2520with%2520subtle%2520Caribbean%2520cooking%2520ingredients%2520in%2520background%252C%2520professional%2520product%2520photography%252C%2520soft%2520natural%2520lighting%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=200&height=200&seq=browning-thumb1&orientation=squarish" alt="Caramel Browning Thumbnail 1" class="w-full h-24 object-cover object-top">
+</div>
+<div class="thumbnail-item cursor-pointer bg-white rounded-md overflow-hidden border-2 border-gray-200">
+<img src="https://readdy.ai/api/search-image?query=caramel%2520browning%2520sauce%2520being%2520poured%2520into%2520a%2520traditional%2520Caribbean%2520stew%252C%2520close-up%2520of%2520pouring%2520action%252C%2520rich%2520dark%2520color%2520mixing%2520with%2520food%252C%2520professional%2520food%2520photography%252C%2520soft%2520natural%2520lighting%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=200&height=200&seq=browning-thumb2&orientation=squarish" alt="Caramel Browning Thumbnail 2" class="w-full h-24 object-cover object-top">
+</div>
+<div class="thumbnail-item cursor-pointer bg-white rounded-md overflow-hidden border-2 border-gray-200">
+<img src="https://readdy.ai/api/search-image?query=multiple%2520bottles%2520of%2520caramel%2520browning%2520sauce%2520in%2520different%2520sizes%252C%2520250ml%252C%2520500ml%2520and%25201L%2520glass%2520bottles%2520arranged%2520on%2520wooden%2520surface%252C%2520professional%2520product%2520photography%252C%2520soft%2520natural%2520lighting%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=200&height=200&seq=browning-thumb3&orientation=squarish" alt="Caramel Browning Thumbnail 3" class="w-full h-24 object-cover object-top">
+</div>
+<div class="thumbnail-item cursor-pointer bg-white rounded-md overflow-hidden border-2 border-gray-200">
+<img src="https://readdy.ai/api/search-image?query=caramel%2520browning%2520sauce%2520used%2520in%2520finished%2520Caribbean%2520dish%252C%2520showing%2520rich%2520brown%2520color%2520of%2520food%252C%2520professional%2520food%2520photography%252C%2520appetizing%2520presentation%252C%2520soft%2520natural%2520lighting%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=200&height=200&seq=browning-thumb4&orientation=squarish" alt="Caramel Browning Thumbnail 4" class="w-full h-24 object-cover object-top">
+</div>
+</div>
+</div>
+<!-- Product Details -->
+<div class="w-full lg:w-1/2">
+<h1 class="text-3xl md:text-4xl font-bold mb-2">Caramel Browning</h1>
+<div class="flex items-center mb-4">
+<div class="flex text-yellow-400 mr-2">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+<span class="text-gray-600 text-sm">4.7 (124 reviews)</span>
+</div>
+<p class="text-2xl font-bold text-primary mb-6">$45.00</p>
+<p class="text-gray-600 mb-6">Traditional Caribbean browning sauce made from caramelized sugar. Essential for adding rich color and subtle sweetness to stews, gravies, and meat dishes. Our authentic recipe brings the true taste of Trinidad and Tobago to your kitchen.</p>
+<!-- Variant Selection -->
+<div class="mb-6">
+<h3 class="font-medium mb-3">Browning Type</h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+<button class="variant-tab active flex flex-col items-center bg-white border border-gray-300 rounded-lg p-3 transition !rounded-button">
+<span class="font-medium">Caramel</span>
+<span class="text-xs">Classic</span>
+</button>
+<button class="variant-tab flex flex-col items-center bg-white border border-gray-300 rounded-lg p-3 transition !rounded-button">
+<span class="font-medium">Curry</span>
+<span class="text-xs">+$5.00</span>
+</button>
+<button class="variant-tab flex flex-col items-center bg-white border border-gray-300 rounded-lg p-3 transition !rounded-button">
+<span class="font-medium">Nutmeg</span>
+<span class="text-xs">+$8.00</span>
+</button>
+<button class="variant-tab flex flex-col items-center bg-white border border-gray-300 rounded-lg p-3 transition !rounded-button">
+<span class="font-medium">Bayleaf</span>
+<span class="text-xs">+$8.00</span>
+</button>
+</div>
+</div>
+<!-- Size Selection -->
+<div class="mb-6">
+<h3 class="font-medium mb-3">Size</h3>
+<div class="flex space-x-3">
+<button class="size-option active border-2 border-gray-300 rounded-full w-20 h-10 flex items-center justify-center text-sm font-medium transition !rounded-button">
+250ml
+</button>
+<button class="size-option border-2 border-gray-300 rounded-full w-20 h-10 flex items-center justify-center text-sm font-medium transition !rounded-button">
+500ml
+</button>
+<button class="size-option border-2 border-gray-300 rounded-full w-20 h-10 flex items-center justify-center text-sm font-medium transition !rounded-button">
+1L
+</button>
+</div>
+</div>
+<!-- Quantity Selector -->
+<div class="mb-8">
+<h3 class="font-medium mb-3">Quantity</h3>
+<div class="flex items-center">
+<button id="decrease-qty" class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-l-lg text-gray-600 hover:bg-gray-100 transition">
+<i class="ri-subtract-line"></i>
+</button>
+<input type="number" id="quantity" value="1" min="1" class="w-16 h-10 border-t border-b border-gray-300 text-center focus:outline-none text-gray-700 border-none">
+<button id="increase-qty" class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-r-lg text-gray-600 hover:bg-gray-100 transition">
+<i class="ri-add-line"></i>
+</button>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row gap-4 mb-8">
+<button id="add-to-cart" class="flex-1 bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-medium flex items-center justify-center whitespace-nowrap">
+<i class="ri-shopping-cart-2-line mr-2"></i> Add to Cart
+</button>
+<button id="save-for-later" class="flex-1 border border-gray-300 hover:border-primary hover:text-primary py-3 px-6 rounded-button font-medium flex items-center justify-center whitespace-nowrap">
+<i class="ri-heart-line mr-2"></i> Save for Later
+</button>
+</div>
+<!-- Product Features -->
+<div class="bg-gray-50 rounded-lg p-4 mb-6">
+<ul class="space-y-2">
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>100% Natural Ingredients</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>No Artificial Preservatives</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Traditional Caribbean Recipe</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Handcrafted in Small Batches</span>
+</li>
+</ul>
+</div>
+<!-- Shipping Info -->
+<div class="flex items-start text-gray-600 text-sm">
+<span class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2">
+<i class="ri-truck-line"></i>
+</span>
+<span>Free shipping on orders over $300. Estimated delivery: 2-4 business days</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Information Tabs -->
+<section class="py-10 bg-white">
+<div class="container mx-auto px-4">
+<!-- Tab Navigation -->
+<div class="flex overflow-x-auto border-b border-gray-200 mb-6">
+<button class="product-tab active whitespace-nowrap px-6 py-3 font-medium text-primary border-b-2 border-primary" data-tab="description">Description</button>
+<button class="product-tab whitespace-nowrap px-6 py-3 font-medium text-gray-500 hover:text-gray-700" data-tab="ingredients">Ingredients</button>
+<button class="product-tab whitespace-nowrap px-6 py-3 font-medium text-gray-500 hover:text-gray-700" data-tab="nutrition">Nutritional Info</button>
+<button class="product-tab whitespace-nowrap px-6 py-3 font-medium text-gray-500 hover:text-gray-700" data-tab="usage">Usage Guide</button>
+<button class="product-tab whitespace-nowrap px-6 py-3 font-medium text-gray-500 hover:text-gray-700" data-tab="storage">Storage</button>
+<button class="product-tab whitespace-nowrap px-6 py-3 font-medium text-gray-500 hover:text-gray-700" data-tab="reviews">Reviews</button>
+</div>
+<!-- Tab Content -->
+<div class="tab-content active" id="description-content">
+<div class="max-w-4xl">
+<h2 class="text-2xl font-bold mb-4">About Caramel Browning</h2>
+<p class="text-gray-600 mb-4">Caramel Browning is a staple in Caribbean cooking, particularly in Trinidad and Tobago cuisine. This rich, dark sauce is made by carefully caramelizing sugar until it reaches the perfect color and consistency. It's used to add depth, color, and a subtle sweetness to a variety of dishes.</p>
+<p class="text-gray-600 mb-4">Our Caramel Browning is crafted using traditional methods passed down through generations. We start with high-quality cane sugar that's slowly heated until it transforms into a deep amber liquid. The result is a versatile cooking ingredient that brings authentic Caribbean flavor to your kitchen.</p>
+<p class="text-gray-600 mb-4">Unlike store-bought alternatives that often contain additives and artificial ingredients, our Caramel Browning is 100% natural. The rich, complex flavor comes solely from the caramelization process, creating a pure product that enhances your cooking without overwhelming it.</p>
+<p class="text-gray-600">Whether you're making traditional Caribbean stews, gravies, or meat dishes, a few drops of our Caramel Browning will transform your cooking with its distinctive color and subtle flavor notes.</p>
+</div>
+</div>
+<div class="tab-content" id="ingredients-content">
+<div class="max-w-4xl">
+<h2 class="text-2xl font-bold mb-4">Ingredients</h2>
+<p class="text-gray-600 mb-6">We pride ourselves on using simple, natural ingredients in our Caramel Browning sauce.</p>
+<div class="bg-gray-50 rounded-lg p-6 mb-6">
+<ul class="space-y-2">
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-3">
+<i class="ri-checkbox-circle-line"></i>
+</span>
+<div>
+<span class="font-medium">Cane Sugar</span>
+<p class="text-sm text-gray-500">Locally sourced from Trinidad and Tobago sugar cane farms</p>
+</div>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-3">
+<i class="ri-checkbox-circle-line"></i>
+</span>
+<div>
+<span class="font-medium">Water</span>
+<p class="text-sm text-gray-500">Filtered for purity</p>
+</div>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-primary mt-0.5 mr-3">
+<i class="ri-checkbox-circle-line"></i>
+</span>
+<div>
+<span class="font-medium">Natural Flavors</span>
+<p class="text-sm text-gray-500">Derived from the caramelization process</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="flex items-start bg-green-50 p-4 rounded-lg">
+<span class="w-6 h-6 flex items-center justify-center text-green-600 mt-0.5 mr-3">
+<i class="ri-leaf-line"></i>
+</span>
+<div>
+<p class="font-medium text-green-800">Allergen Information</p>
+<p class="text-sm text-green-700">This product is free from common allergens including gluten, dairy, nuts, soy, and eggs.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-content" id="nutrition-content">
+<div class="max-w-4xl">
+<h2 class="text-2xl font-bold mb-4">Nutritional Information</h2>
+<p class="text-gray-600 mb-6">Caramel Browning is typically used in small amounts as a flavoring and coloring agent. The nutritional impact per serving in your finished dish is minimal.</p>
+<div class="bg-white border border-gray-200 rounded-lg overflow-hidden mb-6">
+<table class="w-full">
+<thead>
+<tr class="bg-gray-50">
+<th class="px-6 py-3 text-left text-sm font-medium text-gray-700">Nutrient</th>
+<th class="px-6 py-3 text-right text-sm font-medium text-gray-700">Amount per 5ml (1 tsp)</th>
+<th class="px-6 py-3 text-right text-sm font-medium text-gray-700">% Daily Value*</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200">
+<tr>
+<td class="px-6 py-4 text-sm text-gray-700">Calories</td>
+<td class="px-6 py-4 text-sm text-gray-700 text-right">20</td>
+<td class="px-6 py-4 text-sm text-gray-700 text-right">1%</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-sm text-gray-700">Total Fat</td>
+<td class="px-6 py-4 text-sm text-gray-700 text-right">0g</td>
+<td class="px-6 py-4 text-sm text-gray-700 text-right">0%</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-sm text-gray-700">Sodium</td>
+<td class="px-6 py-4 text-sm text-gray-700 text-right">0mg</td>
+<td class="px-6 py-4 text-sm text-gray-700 text-right">0%</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-sm text-gray-700">Total Carbohydrates</td>
+<td class="px-6 py-4 text-sm text-gray-700 text-right">5g</td>
+<td class="px-6 py-4 text-sm text-gray-700 text-right">2%</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-sm text-gray-700 pl-10">Sugars</td>
+<td class="px-6 py-4 text-sm text-gray-700 text-right">5g</td>
+<td class="px-6 py-4 text-sm text-gray-700 text-right">-</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-sm text-gray-700">Protein</td>
+<td class="px-6 py-4 text-sm text-gray-700 text-right">0g</td>
+<td class="px-6 py-4 text-sm text-gray-700 text-right">0%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="text-sm text-gray-500">*Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs.</p>
+</div>
+</div>
+<div class="tab-content" id="usage-content">
+<div class="max-w-4xl">
+<h2 class="text-2xl font-bold mb-4">Usage Guide</h2>
+<p class="text-gray-600 mb-6">Caramel Browning is a versatile ingredient that can enhance many dishes. Here's how to get the most out of it:</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<div class="bg-gray-50 rounded-lg p-6">
+<h3 class="text-lg font-bold mb-3 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full mr-2 text-sm">1</span>
+Stews and Curries
+</h3>
+<p class="text-gray-600">Add 1-2 teaspoons during cooking to give your stews and curries a rich, appetizing color and subtle depth of flavor.</p>
+</div>
+<div class="bg-gray-50 rounded-lg p-6">
+<h3 class="text-lg font-bold mb-3 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full mr-2 text-sm">2</span>
+Meat Dishes
+</h3>
+<p class="text-gray-600">Use as a marinade component for meats like chicken, beef, or pork. Mix with other seasonings for a flavorful coating that will caramelize beautifully when cooked.</p>
+</div>
+<div class="bg-gray-50 rounded-lg p-6">
+<h3 class="text-lg font-bold mb-3 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full mr-2 text-sm">3</span>
+Gravies and Sauces
+</h3>
+<p class="text-gray-600">Incorporate a few drops into gravies and sauces to enhance color and add a subtle sweetness that balances savory flavors.</p>
+</div>
+<div class="bg-gray-50 rounded-lg p-6">
+<h3 class="text-lg font-bold mb-3 flex items-center">
+<span class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full mr-2 text-sm">4</span>
+Rice Dishes
+</h3>
+<p class="text-gray-600">Add a small amount to rice dishes like pelau or rice and peas for authentic Caribbean color and flavor.</p>
+</div>
+</div>
+<div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+<div class="flex">
+<div class="flex-shrink-0">
+<span class="w-5 h-5 flex items-center justify-center text-yellow-600">
+<i class="ri-lightbulb-line"></i>
+</span>
+</div>
+<div class="ml-3">
+<h3 class="text-sm font-medium text-yellow-800">Pro Tip</h3>
+<p class="text-sm text-yellow-700 mt-1">Start with a small amount and adjust to taste. Caramel Browning is concentrated, and a little goes a long way.</p>
+</div>
+</div>
+</div>
+<p class="text-gray-600">For recipe ideas using Caramel Browning, check out our Recipe Collection section below.</p>
+</div>
+</div>
+<div class="tab-content" id="storage-content">
+<div class="max-w-4xl">
+<h2 class="text-2xl font-bold mb-4">Storage Instructions</h2>
+<p class="text-gray-600 mb-6">Proper storage ensures your Caramel Browning maintains its quality and flavor for as long as possible.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div class="bg-gray-50 rounded-lg p-6 text-center">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mx-auto mb-4">
+<i class="ri-sun-line text-xl"></i>
+</div>
+<h3 class="font-bold mb-2">Keep Away From Light</h3>
+<p class="text-gray-600 text-sm">Store in a cool, dark place away from direct sunlight.</p>
+</div>
+<div class="bg-gray-50 rounded-lg p-6 text-center">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mx-auto mb-4">
+<i class="ri-fridge-line text-xl"></i>
+</div>
+<h3 class="font-bold mb-2">Refrigeration</h3>
+<p class="text-gray-600 text-sm">Refrigerate after opening to extend shelf life.</p>
+</div>
+<div class="bg-gray-50 rounded-lg p-6 text-center">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mx-auto mb-4">
+<i class="ri-calendar-check-line text-xl"></i>
+</div>
+<h3 class="font-bold mb-2">Shelf Life</h3>
+<p class="text-gray-600 text-sm">Best used within 12 months of opening.</p>
+</div>
+</div>
+<div class="bg-blue-50 border-l-4 border-blue-400 p-4">
+<div class="flex">
+<div class="flex-shrink-0">
+<span class="w-5 h-5 flex items-center justify-center text-blue-600">
+<i class="ri-information-line"></i>
+</span>
+</div>
+<div class="ml-3">
+<h3 class="text-sm font-medium text-blue-800">Important Note</h3>
+<p class="text-sm text-blue-700 mt-1">It's normal for natural sediment to form over time. This doesn't affect the quality or safety of the product. Simply shake well before using.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-content" id="reviews-content">
+<div class="max-w-4xl">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-2xl font-bold">Customer Reviews</h2>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm font-medium whitespace-nowrap">Write a Review</button>
+</div>
+<div class="flex flex-col md:flex-row gap-8 mb-8">
+<!-- Overall Rating -->
+<div class="w-full md:w-1/3 bg-gray-50 rounded-lg p-6 text-center">
+<h3 class="text-lg font-bold mb-2">Overall Rating</h3>
+<div class="flex justify-center text-yellow-400 text-2xl mb-2">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+<p class="text-3xl font-bold mb-2">4.7</p>
+<p class="text-gray-500 text-sm">Based on 124 reviews</p>
+</div>
+<!-- Rating Distribution -->
+<div class="w-full md:w-2/3">
+<h3 class="text-lg font-bold mb-4">Rating Distribution</h3>
+<div class="space-y-2">
+<div class="flex items-center">
+<span class="text-sm text-gray-600 w-8">5★</span>
+<div class="flex-1 h-4 bg-gray-200 rounded-full mx-2 overflow-hidden">
+<div class="h-full bg-yellow-400 rounded-full" style="width: 75%"></div>
+</div>
+<span class="text-sm text-gray-600 w-8">75%</span>
+</div>
+<div class="flex items-center">
+<span class="text-sm text-gray-600 w-8">4★</span>
+<div class="flex-1 h-4 bg-gray-200 rounded-full mx-2 overflow-hidden">
+<div class="h-full bg-yellow-400 rounded-full" style="width: 20%"></div>
+</div>
+<span class="text-sm text-gray-600 w-8">20%</span>
+</div>
+<div class="flex items-center">
+<span class="text-sm text-gray-600 w-8">3★</span>
+<div class="flex-1 h-4 bg-gray-200 rounded-full mx-2 overflow-hidden">
+<div class="h-full bg-yellow-400 rounded-full" style="width: 3%"></div>
+</div>
+<span class="text-sm text-gray-600 w-8">3%</span>
+</div>
+<div class="flex items-center">
+<span class="text-sm text-gray-600 w-8">2★</span>
+<div class="flex-1 h-4 bg-gray-200 rounded-full mx-2 overflow-hidden">
+<div class="h-full bg-yellow-400 rounded-full" style="width: 1%"></div>
+</div>
+<span class="text-sm text-gray-600 w-8">1%</span>
+</div>
+<div class="flex items-center">
+<span class="text-sm text-gray-600 w-8">1★</span>
+<div class="flex-1 h-4 bg-gray-200 rounded-full mx-2 overflow-hidden">
+<div class="h-full bg-yellow-400 rounded-full" style="width: 1%"></div>
+</div>
+<span class="text-sm text-gray-600 w-8">1%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Review Filters -->
+<div class="flex flex-wrap gap-2 mb-6">
+<button class="bg-primary text-white py-1 px-3 rounded-full text-sm font-medium">All Reviews</button>
+<button class="bg-white border border-gray-300 py-1 px-3 rounded-full text-sm">5 Stars Only</button>
+<button class="bg-white border border-gray-300 py-1 px-3 rounded-full text-sm">With Photos</button>
+<button class="bg-white border border-gray-300 py-1 px-3 rounded-full text-sm">Verified Purchases</button>
+</div>
+<!-- Reviews List -->
+<div class="space-y-6">
+<!-- Review 1 -->
+<div class="border-b border-gray-200 pb-6">
+<div class="flex items-center mb-2">
+<div class="flex text-yellow-400 mr-2">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<span class="text-sm text-gray-600">Verified Purchase</span>
+</div>
+<h4 class="font-bold mb-1">Authentic Caribbean Flavor</h4>
+<p class="text-sm text-gray-500 mb-2">Reviewed by Olivia Johnson on June 15, 2025</p>
+<p class="text-gray-600 mb-4">As someone who grew up in Trinidad, I've been looking for an authentic browning sauce for years. This is the real deal! The flavor is exactly what I remember from my grandmother's kitchen. I use it in my pelau and stews, and it brings that perfect color and subtle sweetness that you can't get from anything else.</p>
+<div class="flex space-x-2 mb-4">
+<img src="https://readdy.ai/api/search-image?query=close%2520up%2520of%2520Caribbean%2520stew%2520with%2520rich%2520brown%2520color%2520from%2520browning%2520sauce%252C%2520showing%2520meat%2520and%2520vegetables%2520in%2520thick%2520gravy%252C%2520homemade%2520appearance%252C%2520on%2520white%2520plate%252C%2520no%2520text%252C%2520photorealistic&width=100&height=100&seq=review-img1&orientation=squarish" alt="Customer Photo" class="w-20 h-20 object-cover rounded-md">
+<img src="https://readdy.ai/api/search-image?query=bottle%2520of%2520caramel%2520browning%2520sauce%2520next%2520to%2520home%2520cooked%2520Caribbean%2520meal%252C%2520casual%2520home%2520kitchen%2520setting%252C%2520natural%2520lighting%252C%2520no%2520text%252C%2520photorealistic&width=100&height=100&seq=review-img2&orientation=squarish" alt="Customer Photo" class="w-20 h-20 object-cover rounded-md">
+</div>
+<div class="flex items-center text-sm text-gray-500">
+<button class="flex items-center mr-4">
+<i class="ri-thumb-up-line mr-1"></i> Helpful (24)
+</button>
+<button class="flex items-center">
+<i class="ri-chat-1-line mr-1"></i> Comment
+</button>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="border-b border-gray-200 pb-6">
+<div class="flex items-center mb-2">
+<div class="flex text-yellow-400 mr-2">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-line"></i>
+</div>
+<span class="text-sm text-gray-600">Verified Purchase</span>
+</div>
+<h4 class="font-bold mb-1">Great Product, Fragile Packaging</h4>
+<p class="text-sm text-gray-500 mb-2">Reviewed by Marcus Williams on June 2, 2025</p>
+<p class="text-gray-600 mb-4">The browning sauce itself is excellent - rich color and flavor that's perfect for my oxtail stew. I'm giving 4 stars because my bottle arrived with a small crack. Fortunately, it didn't leak, but more secure packaging would be appreciated for glass bottles. That said, I'll definitely reorder because the quality of the product is worth it.</p>
+<div class="flex items-center text-sm text-gray-500">
+<button class="flex items-center mr-4">
+<i class="ri-thumb-up-line mr-1"></i> Helpful (12)
+</button>
+<button class="flex items-center">
+<i class="ri-chat-1-line mr-1"></i> Comment
+</button>
+</div>
+</div>
+<!-- Review 3 -->
+<div>
+<div class="flex items-center mb-2">
+<div class="flex text-yellow-400 mr-2">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<span class="text-sm text-gray-600">Verified Purchase</span>
+</div>
+<h4 class="font-bold mb-1">A Must-Have for Caribbean Cooking</h4>
+<p class="text-sm text-gray-500 mb-2">Reviewed by Sophia Rodriguez on May 28, 2025</p>
+<p class="text-gray-600 mb-4">I'm a chef specializing in Caribbean cuisine, and I've tried many browning sauces over the years. This one stands out for its clean ingredients and authentic flavor. The caramelization is perfect - not bitter at all, which can happen with some commercial brands. I appreciate that it's made in small batches, as the quality is consistently excellent. My customers always comment on the rich color and flavor of my dishes.</p>
+<div class="flex items-center text-sm text-gray-500">
+<button class="flex items-center mr-4">
+<i class="ri-thumb-up-line mr-1"></i> Helpful (37)
+</button>
+<button class="flex items-center">
+<i class="ri-chat-1-line mr-1"></i> Comment
+</button>
+</div>
+</div>
+</div>
+<div class="mt-8 text-center">
+<button class="border border-gray-300 hover:border-primary hover:text-primary py-2 px-6 rounded-button text-sm font-medium whitespace-nowrap">Load More Reviews</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Heritage & History Section -->
+<section class="py-16 bg-[#F7F5F2]">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Heritage & History</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Discover the rich cultural significance of browning sauce in Caribbean cuisine</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-10 items-center mb-16">
+<div class="w-full lg:w-1/2">
+<img src="https://readdy.ai/api/search-image?query=historical%2520Caribbean%2520kitchen%2520scene%2520with%2520traditional%2520cooking%2520methods%252C%2520elderly%2520woman%2520preparing%2520food%2520with%2520authentic%2520ingredients%252C%2520warm%2520nostalgic%2520lighting%252C%2520vintage%2520feel%252C%2520detailed%2520cultural%2520elements%252C%2520professional%2520documentary%2520photography%2520style%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=800&height=600&seq=history1&orientation=landscape" alt="Traditional Caribbean Cooking" class="w-full h-auto rounded-lg shadow-md">
+</div>
+<div class="w-full lg:w-1/2">
+<h3 class="text-2xl font-bold mb-4">A Cornerstone of Caribbean Cooking</h3>
+<p class="text-gray-600 mb-4">Browning sauce has been a staple in Caribbean kitchens for generations. Its origins can be traced back to the early colonial period when sugar production was a major industry in the Caribbean islands. The process of caramelizing sugar to create a rich, dark sauce was developed as a way to enhance both the color and flavor of dishes.</p>
+<p class="text-gray-600 mb-4">In Trinidad and Tobago, browning sauce became particularly important in the development of the island's unique cuisine. It was used to give depth and character to stews, curries, and meat dishes that combined African, Indian, European, and indigenous influences.</p>
+<p class="text-gray-600">Today, caramel browning remains an essential ingredient in authentic Caribbean cooking, passed down through families as part of their culinary heritage. Our recipe honors this tradition, using methods that have stood the test of time.</p>
+</div>
+</div>
+<!-- Timeline -->
+<div class="relative">
+<div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary/20"></div>
+<div class="space-y-16 relative">
+<!-- Timeline Item 1 -->
+<div class="flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+<h3 class="text-xl font-bold mb-2">Early Origins</h3>
+<p class="text-gray-600">17th-18th Century: Sugar production becomes a major industry in the Caribbean. The technique of caramelizing sugar develops as a byproduct of sugar processing.</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white z-10 my-4 md:my-0">
+<i class="ri-history-line"></i>
+</div>
+<div class="md:w-1/2 md:pl-12">
+<img src="https://readdy.ai/api/search-image?query=historical%2520scene%2520of%2520Caribbean%2520sugar%2520plantation%2520with%2520sugar%2520cane%2520processing%252C%2520vintage%2520style%252C%2520historical%2520accuracy%252C%2520documentary%2520photography%2520style%252C%2520sepia%2520toned%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=400&height=300&seq=timeline1&orientation=landscape" alt="Early Sugar Production" class="w-full h-auto rounded-lg shadow-md">
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1">
+<img src="https://readdy.ai/api/search-image?query=historical%2520Caribbean%2520family%2520kitchen%2520scene%2520from%2520early%252020th%2520century%252C%2520mother%2520teaching%2520daughter%2520traditional%2520cooking%2520methods%252C%2520vintage%2520style%252C%2520warm%2520nostalgic%2520lighting%252C%2520documentary%2520photography%2520style%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=400&height=300&seq=timeline2&orientation=landscape" alt="Cultural Integration" class="w-full h-auto rounded-lg shadow-md">
+</div>
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white z-10 my-4 md:my-0 order-1 md:order-2">
+<i class="ri-community-line"></i>
+</div>
+<div class="md:w-1/2 md:pl-12 mb-6 md:mb-0 order-3">
+<h3 class="text-xl font-bold mb-2">Cultural Integration</h3>
+<p class="text-gray-600">19th-Early 20th Century: As diverse cultural influences blend in Caribbean cooking, browning sauce becomes integral to the region's cuisine, particularly in Trinidad and Tobago.</p>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+<h3 class="text-xl font-bold mb-2">Family Traditions</h3>
+<p class="text-gray-600">Mid 20th Century: Family recipes for browning sauce are passed down through generations, with each household developing their own special techniques and variations.</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white z-10 my-4 md:my-0">
+<i class="ri-home-heart-line"></i>
+</div>
+<div class="md:w-1/2 md:pl-12">
+<img src="https://readdy.ai/api/search-image?query=mid-century%2520Caribbean%2520family%2520gathering%2520around%2520dinner%2520table%2520with%2520traditional%2520food%252C%2520multiple%2520generations%252C%2520warm%2520nostalgic%2520lighting%252C%2520vintage%2520style%252C%2520documentary%2520photography%2520style%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=400&height=300&seq=timeline3&orientation=landscape" alt="Family Traditions" class="w-full h-auto rounded-lg shadow-md">
+</div>
+</div>
+<!-- Timeline Item 4 -->
+<div class="flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1">
+<img src="https://readdy.ai/api/search-image?query=modern%2520artisanal%2520food%2520production%2520facility%2520with%2520Caribbean%2520workers%2520carefully%2520preparing%2520traditional%2520browning%2520sauce%252C%2520small%2520batch%2520production%252C%2520clean%2520professional%2520environment%252C%2520documentary%2520photography%2520style%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=400&height=300&seq=timeline4&orientation=landscape" alt="Modern Artisanal Production" class="w-full h-auto rounded-lg shadow-md">
+</div>
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white z-10 my-4 md:my-0 order-1 md:order-2">
+<i class="ri-store-2-line"></i>
+</div>
+<div class="md:w-1/2 md:pl-12 mb-6 md:mb-0 order-3">
+<h3 class="text-xl font-bold mb-2">Pure Harvest Today</h3>
+<p class="text-gray-600">Present Day: Pure Harvest preserves these traditional methods while bringing authentic Caribbean browning sauce to a global market, maintaining the cultural integrity of this essential ingredient.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recipe Collection -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Recipe Collection</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Explore delicious ways to use Caramel Browning in your cooking</p>
+</div>
+<!-- Recipe Categories -->
+<div class="flex overflow-x-auto mb-8 pb-2">
+<button class="recipe-category active whitespace-nowrap px-4 py-2 bg-primary text-white rounded-full mr-3">All Recipes</button>
+<button class="recipe-category whitespace-nowrap px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full mr-3">Traditional Dishes</button>
+<button class="recipe-category whitespace-nowrap px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full mr-3">Modern Fusion</button>
+<button class="recipe-category whitespace-nowrap px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full mr-3">Quick Meals</button>
+<button class="recipe-category whitespace-nowrap px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 rounded-full">Festival Specials</button>
+</div>
+<!-- Recipes Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Recipe 1 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-60 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=traditional%2520Caribbean%2520brown%2520stew%2520chicken%2520with%2520rich%2520dark%2520sauce%252C%2520served%2520with%2520rice%2520and%2520vegetables%252C%2520professional%2520food%2520photography%252C%2520appetizing%2520presentation%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=600&height=400&seq=recipe1&orientation=landscape" alt="Brown Stew Chicken" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Brown Stew Chicken</h3>
+<span class="bg-primary/10 text-primary text-xs py-1 px-2 rounded">Traditional</span>
+</div>
+<p class="text-gray-600 mb-4">A classic Caribbean dish featuring chicken pieces simmered in a rich, flavorful sauce that gets its signature color from caramel browning.</p>
+<div class="flex flex-wrap gap-4 text-sm text-gray-500 mb-4">
+<div class="flex items-center">
+<i class="ri-time-line mr-1"></i> 45 mins
+</div>
+<div class="flex items-center">
+<i class="ri-user-line mr-1"></i> Serves 4
+</div>
+<div>
+<span class="font-medium text-xs">Difficulty:</span>
+<div class="recipe-difficulty inline-block ml-1 align-middle">
+<div class="recipe-difficulty-fill" style="width: 40%"></div>
+</div>
+</div>
+</div>
+<a href="/recipes/brown-stew-chicken/" data-readdy="true" class="text-primary font-medium flex items-center">
+View Recipe
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+<!-- Recipe 2 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-60 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=traditional%2520Caribbean%2520pelau%2520with%2520rice%252C%2520pigeon%2520peas%2520and%2520chicken%252C%2520rich%2520brown%2520color%252C%2520served%2520in%2520bowl%252C%2520professional%2520food%2520photography%252C%2520appetizing%2520presentation%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=600&height=400&seq=recipe2&orientation=landscape" alt="Trinidad Pelau" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Trinidad Pelau</h3>
+<span class="bg-primary/10 text-primary text-xs py-1 px-2 rounded">Traditional</span>
+</div>
+<p class="text-gray-600 mb-4">A one-pot rice dish with caramelized chicken, pigeon peas, and coconut milk. Caramel browning gives it its distinctive color and depth of flavor.</p>
+<div class="flex flex-wrap gap-4 text-sm text-gray-500 mb-4">
+<div class="flex items-center">
+<i class="ri-time-line mr-1"></i> 60 mins
+</div>
+<div class="flex items-center">
+<i class="ri-user-line mr-1"></i> Serves 6
+</div>
+<div>
+<span class="font-medium text-xs">Difficulty:</span>
+<div class="recipe-difficulty inline-block ml-1 align-middle">
+<div class="recipe-difficulty-fill" style="width: 60%"></div>
+</div>
+</div>
+</div>
+<a href="/recipes/brown-stew-chicken/" data-readdy="true" class="text-primary font-medium flex items-center">
+View Recipe
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+<!-- Recipe 3 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-60 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=modern%2520fusion%2520dish%2520with%2520Caribbean%2520flavors%252C%2520pan-seared%2520salmon%2520with%2520caramel%2520browning%2520glaze%252C%2520served%2520with%2520vegetables%252C%2520professional%2520food%2520photography%252C%2520elegant%2520plating%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=600&height=400&seq=recipe3&orientation=landscape" alt="Caramel Glazed Salmon" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Caramel Glazed Salmon</h3>
+<span class="bg-purple-100 text-purple-700 text-xs py-1 px-2 rounded">Fusion</span>
+</div>
+<p class="text-gray-600 mb-4">A modern take on Caribbean flavors featuring pan-seared salmon with a sweet and savory glaze made with caramel browning, ginger, and citrus.</p>
+<div class="flex flex-wrap gap-4 text-sm text-gray-500 mb-4">
+<div class="flex items-center">
+<i class="ri-time-line mr-1"></i> 25 mins
+</div>
+<div class="flex items-center">
+<i class="ri-user-line mr-1"></i> Serves 2
+</div>
+<div>
+<span class="font-medium text-xs">Difficulty:</span>
+<div class="recipe-difficulty inline-block ml-1 align-middle">
+<div class="recipe-difficulty-fill" style="width: 40%"></div>
+</div>
+</div>
+</div>
+<a href="/recipes/brown-stew-chicken/" data-readdy="true" class="text-primary font-medium flex items-center">
+View Recipe
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+<!-- Recipe 4 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-60 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=traditional%2520Caribbean%2520oxtail%2520stew%2520with%2520rich%2520dark%2520brown%2520gravy%252C%2520tender%2520meat%252C%2520served%2520with%2520rice%2520and%2520beans%252C%2520professional%2520food%2520photography%252C%2520appetizing%2520presentation%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=600&height=400&seq=recipe4&orientation=landscape" alt="Oxtail Stew" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Oxtail Stew</h3>
+<span class="bg-primary/10 text-primary text-xs py-1 px-2 rounded">Traditional</span>
+</div>
+<p class="text-gray-600 mb-4">Slow-cooked oxtail in a rich, flavorful sauce enhanced with caramel browning. This hearty dish is perfect for Sunday dinners and special occasions.</p>
+<div class="flex flex-wrap gap-4 text-sm text-gray-500 mb-4">
+<div class="flex items-center">
+<i class="ri-time-line mr-1"></i> 3 hours
+</div>
+<div class="flex items-center">
+<i class="ri-user-line mr-1"></i> Serves 6
+</div>
+<div>
+<span class="font-medium text-xs">Difficulty:</span>
+<div class="recipe-difficulty inline-block ml-1 align-middle">
+<div class="recipe-difficulty-fill" style="width: 70%"></div>
+</div>
+</div>
+</div>
+<a href="/recipes/brown-stew-chicken/" data-readdy="true" class="text-primary font-medium flex items-center">
+View Recipe
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+<!-- Recipe 5 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-60 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=quick%2520and%2520easy%2520Caribbean%2520style%2520rice%2520bowl%2520with%2520caramelized%2520vegetables%2520and%2520protein%252C%2520rich%2520brown%2520sauce%252C%2520professional%2520food%2520photography%252C%2520casual%2520presentation%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=600&height=400&seq=recipe5&orientation=landscape" alt="Quick Caribbean Rice Bowl" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Quick Caribbean Rice Bowl</h3>
+<span class="bg-green-100 text-green-700 text-xs py-1 px-2 rounded">Quick Meal</span>
+</div>
+<p class="text-gray-600 mb-4">A weeknight-friendly meal featuring rice, beans, and your choice of protein with a quick sauce made with caramel browning and Caribbean spices.</p>
+<div class="flex flex-wrap gap-4 text-sm text-gray-500 mb-4">
+<div class="flex items-center">
+<i class="ri-time-line mr-1"></i> 20 mins
+</div>
+<div class="flex items-center">
+<i class="ri-user-line mr-1"></i> Serves 2
+</div>
+<div>
+<span class="font-medium text-xs">Difficulty:</span>
+<div class="recipe-difficulty inline-block ml-1 align-middle">
+<div class="recipe-difficulty-fill" style="width: 20%"></div>
+</div>
+</div>
+</div>
+<a href="/recipes/brown-stew-chicken/" data-readdy="true" class="text-primary font-medium flex items-center">
+View Recipe
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+<!-- Recipe 6 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-60 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=festive%2520Caribbean%2520black%2520cake%2520with%2520rich%2520dark%2520color%252C%2520topped%2520with%2520fruits%2520and%2520powdered%2520sugar%252C%2520Christmas%2520or%2520holiday%2520setting%252C%2520professional%2520food%2520photography%252C%2520appetizing%2520presentation%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=600&height=400&seq=recipe6&orientation=landscape" alt="Caribbean Black Cake" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Caribbean Black Cake</h3>
+<span class="bg-red-100 text-red-700 text-xs py-1 px-2 rounded">Festival</span>
+</div>
+<p class="text-gray-600 mb-4">A traditional holiday dessert featuring rum-soaked fruits and a deep, rich color from caramel browning. This cake is a staple at Christmas and special celebrations.</p>
+<div class="flex flex-wrap gap-4 text-sm text-gray-500 mb-4">
+<div class="flex items-center">
+<i class="ri-time-line mr-1"></i> 3+ hours
+</div>
+<div class="flex items-center">
+<i class="ri-user-line mr-1"></i> Serves 12
+</div>
+<div>
+<span class="font-medium text-xs">Difficulty:</span>
+<div class="recipe-difficulty inline-block ml-1 align-middle">
+<div class="recipe-difficulty-fill" style="width: 90%"></div>
+</div>
+</div>
+</div>
+<a href="/recipes/brown-stew-chicken/" data-readdy="true" class="text-primary font-medium flex items-center">
+View Recipe
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="text-center mt-10">
+<button class="bg-white border border-gray-300 hover:border-primary hover:text-primary py-3 px-8 rounded-button font-medium whitespace-nowrap">View All Recipes</button>
+</div>
+</div>
+</section>
+<!-- Comparison Guide -->
+<section class="py-16 bg-[#F7F5F2]">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Browning Comparison Guide</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Understand the differences between our browning varieties to choose the perfect one for your dishes</p>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
+<div class="overflow-x-auto">
+<table class="w-full">
+<thead>
+<tr class="bg-primary text-white">
+<th class="px-6 py-4 text-left">Browning Type</th>
+<th class="px-6 py-4 text-left">Flavor Profile</th>
+<th class="px-6 py-4 text-left">Color Intensity</th>
+<th class="px-6 py-4 text-left">Best Uses</th>
+<th class="px-6 py-4 text-left">Price</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200">
+<tr class="bg-primary/5">
+<td class="px-6 py-4">
+<div class="font-bold">Caramel Browning</div>
+<div class="text-sm text-gray-500">Classic</div>
+</td>
+<td class="px-6 py-4">Subtle sweetness with rich caramel notes</td>
+<td class="px-6 py-4">
+<div class="flex items-center">
+<div class="w-24 h-3 bg-gray-200 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 80%"></div>
+</div>
+<span class="ml-2 text-sm">High</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-wrap gap-1">
+<span class="bg-gray-100 text-gray-700 text-xs py-1 px-2 rounded">Stews</span>
+<span class="bg-gray-100 text-gray-700 text-xs py-1 px-2 rounded">Pelau</span>
+<span class="bg-gray-100 text-gray-700 text-xs py-1 px-2 rounded">Gravies</span>
+</div>
+</td>
+<td class="px-6 py-4">$45.00</td>
+</tr>
+<tr>
+<td class="px-6 py-4">
+<div class="font-bold">Curry Browning</div>
+<div class="text-sm text-gray-500">Specialty</div>
+</td>
+<td class="px-6 py-4">Caramel with warm curry undertones</td>
+<td class="px-6 py-4">
+<div class="flex items-center">
+<div class="w-24 h-3 bg-gray-200 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 70%"></div>
+</div>
+<span class="ml-2 text-sm">Medium-High</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-wrap gap-1">
+<span class="bg-gray-100 text-gray-700 text-xs py-1 px-2 rounded">Curries</span>
+<span class="bg-gray-100 text-gray-700 text-xs py-1 px-2 rounded">Marinades</span>
+<span class="bg-gray-100 text-gray-700 text-xs py-1 px-2 rounded">Rice Dishes</span>
+</div>
+</td>
+<td class="px-6 py-4">$50.00</td>
+</tr>
+<tr>
+<td class="px-6 py-4">
+<div class="font-bold">Nutmeg Browning</div>
+<div class="text-sm text-gray-500">Specialty</div>
+</td>
+<td class="px-6 py-4">Caramel with warm, aromatic nutmeg notes</td>
+<td class="px-6 py-4">
+<div class="flex items-center">
+<div class="w-24 h-3 bg-gray-200 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 75%"></div>
+</div>
+<span class="ml-2 text-sm">Medium-High</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-wrap gap-1">
+<span class="bg-gray-100 text-gray-700 text-xs py-1 px-2 rounded">Desserts</span>
+<span class="bg-gray-100 text-gray-700 text-xs py-1 px-2 rounded">Baked Goods</span>
+<span class="bg-gray-100 text-gray-700 text-xs py-1 px-2 rounded">Holiday Dishes</span>
+</div>
+</td>
+<td class="px-6 py-4">$53.00</td>
+</tr>
+<tr>
+<td class="px-6 py-4">
+<div class="font-bold">Bayleaf Browning</div>
+<div class="text-sm text-gray-500">Specialty</div>
+</td>
+<td class="px-6 py-4">Caramel with subtle herbal bay leaf notes</td>
+<td class="px-6 py-4">
+<div class="flex items-center">
+<div class="w-24 h-3 bg-gray-200 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 65%"></div>
+</div>
+<span class="ml-2 text-sm">Medium</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-wrap gap-1">
+<span class="bg-gray-100 text-gray-700 text-xs py-1 px-2 rounded">Meat Dishes</span>
+<span class="bg-gray-100 text-gray-700 text-xs py-1 px-2 rounded">Soups</span>
+<span class="bg-gray-100 text-gray-700 text-xs py-1 px-2 rounded">Stews</span>
+</div>
+</td>
+<td class="px-6 py-4">$53.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Color Intensity Chart -->
+<div class="bg-white rounded-lg shadow-md p-6">
+<h3 class="text-xl font-bold mb-4">Color Intensity Comparison</h3>
+<div id="color-intensity-chart" class="w-full h-80"></div>
+</div>
+</div>
+</section>
+<!-- Related Products -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="flex justify-between items-end mb-8">
+<h2 class="text-3xl font-bold">Related Products</h2>
+<div class="flex space-x-2">
+<button id="prev-related" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:text-primary hover:border-primary transition">
+<i class="ri-arrow-left-s-line text-xl"></i>
+</button>
+<button id="next-related" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:text-primary hover:border-primary transition">
+<i class="ri-arrow-right-s-line text-xl"></i>
+</button>
+</div>
+</div>
+<div class="relative overflow-hidden">
+<div id="related-products-container" class="flex space-x-6 transition-transform duration-300">
+<!-- Product 1 -->
+<div class="min-w-[280px] max-w-[280px] bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=elegant%2520glass%2520jar%2520of%2520premium%2520curry%2520browning%2520sauce%2520with%2520warm%2520amber%2520color%2520and%2520subtle%2520spice%2520flecks%252C%2520professional%2520product%2520photography%2520on%2520clean%2520background%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=400&height=400&seq=related1&orientation=squarish" alt="Curry Browning" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<h3 class="text-lg font-bold mb-1">Curry Browning</h3>
+<p class="text-gray-500 text-sm mb-3">250ml bottle</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$50.00</span>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="min-w-[280px] max-w-[280px] bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=elegant%2520glass%2520jar%2520of%2520premium%2520nutmeg%2520browning%2520sauce%2520with%2520rich%2520amber%2520color%2520and%2520subtle%2520spice%2520flecks%252C%2520professional%2520product%2520photography%2520on%2520clean%2520background%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=400&height=400&seq=related2&orientation=squarish" alt="Nutmeg Browning" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<h3 class="text-lg font-bold mb-1">Nutmeg Browning</h3>
+<p class="text-gray-500 text-sm mb-3">250ml bottle</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$53.00</span>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="min-w-[280px] max-w-[280px] bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=elegant%2520glass%2520jar%2520of%2520premium%2520bayleaf%2520browning%2520sauce%2520with%2520deep%2520amber%2520color%2520and%2520subtle%2520herb%2520flecks%252C%2520professional%2520product%2520photography%2520on%2520clean%2520background%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=400&height=400&seq=related3&orientation=squarish" alt="Bayleaf Browning" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<h3 class="text-lg font-bold mb-1">Bayleaf Browning</h3>
+<p class="text-gray-500 text-sm mb-3">250ml bottle</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$53.00</span>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="min-w-[280px] max-w-[280px] bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=elegant%2520package%2520of%2520premium%2520Caribbean%2520accra%2520fish%2520cake%2520mix%252C%2520professional%2520product%2520photography%2520on%2520clean%2520background%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=400&height=400&seq=related4&orientation=squarish" alt="Accra Fish Cake Mix" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<h3 class="text-lg font-bold mb-1">Accra Fish Cake Mix</h3>
+<p class="text-gray-500 text-sm mb-3">200g package</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$40.00</span>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="min-w-[280px] max-w-[280px] bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=elegant%2520jar%2520of%2520premium%2520dehydrated%2520bay%2520leaves%252C%2520showing%2520dried%2520whole%2520leaves%2520through%2520clear%2520glass%252C%2520professional%2520product%2520photography%2520on%2520clean%2520background%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=400&height=400&seq=related5&orientation=squarish" alt="Dehydrated Bay Leaves" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<h3 class="text-lg font-bold mb-1">Dehydrated Bay Leaves</h3>
+<p class="text-gray-500 text-sm mb-3">50g jar</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$35.00</span>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Action Bar -->
+<div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-gray-200 py-3 px-4 z-40 hidden md:block">
+<div class="container mx-auto">
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=elegant%2520glass%2520bottle%2520of%2520rich%2520dark%2520caramel%2520browning%2520sauce%2520with%2520deep%2520amber%2520color%252C%2520simple%2520product%2520shot%2520on%2520white%2520background%252C%2520professional%2520product%2520photography%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=100&height=100&seq=sticky-img&orientation=squarish" alt="Caramel Browning" class="w-12 h-12 object-cover rounded-md mr-4">
+<div>
+<h3 class="font-bold">Caramel Browning</h3>
+<div class="flex items-center text-sm">
+<span class="text-gray-600 mr-3">250ml</span>
+<span class="text-primary font-bold">$45.00</span>
+</div>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<div class="flex items-center">
+<button id="sticky-decrease-qty" class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-l-lg text-gray-600 hover:bg-gray-100 transition">
+<i class="ri-subtract-line"></i>
+</button>
+<input type="number" id="sticky-quantity" value="1" min="1" class="w-12 h-8 border-t border-b border-gray-300 text-center focus:outline-none text-gray-700 border-none">
+<button id="sticky-increase-qty" class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded-r-lg text-gray-600 hover:bg-gray-100 transition">
+<i class="ri-add-line"></i>
+</button>
+</div>
+<button id="sticky-add-to-cart" class="bg-primary hover:bg-primary/90 text-white py-2 px-6 rounded-button font-medium whitespace-nowrap">
+Add to Cart
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-[#2A2A2A] text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- Company Info -->
+<div>
+<a href="#" class="mb-6 inline-block"><img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/117959135c1f1a6fecd6b5698ea16259.png" alt="Pure Harvest Logo" class="h-12"></a>
+<p class="text-gray-400 mb-6">Pure Harvest Group of Companies Ltd. brings the authentic flavors of Trinidad and Tobago to kitchens around the world.</p>
+<div class="flex space-x-4">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h3 class="text-lg font-bold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+<li><a href="/shop/" data-readdy="true" class="text-gray-400 hover:text-white transition">Shop</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Become a Retailer</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Terms & Conditions</a></li>
+</ul>
+</div>
+<!-- Contact Info -->
+<div>
+<h3 class="text-lg font-bold mb-6">Contact Us</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-map-pin-line"></i>
+</span>
+<span class="text-gray-400">Congo Hill, Moriah, Tobago</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-phone-line"></i>
+</span>
+<span class="text-gray-400">+1 868 361-8990</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-mail-line"></i>
+</span>
+<span class="text-gray-400">pureharvest2022@gmail.com</span>
+</li>
+</ul>
+<div class="mt-6">
+<h4 class="text-sm font-bold mb-3">We Accept</h4>
+<div class="flex space-x-3">
+<span class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-visa-fill text-xl"></i>
+</span>
+<span class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-mastercard-fill text-xl"></i>
+</span>
+<span class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-paypal-fill text-xl"></i>
+</span>
+</div>
+</div>
+</div>
+<!-- Newsletter -->
+<div>
+<h3 class="text-lg font-bold mb-6">Newsletter</h3>
+<p class="text-gray-400 mb-4">Subscribe to receive updates, access to exclusive deals, and more.</p>
+<form class="space-y-3">
+<input type="email" placeholder="Your email address" class="w-full py-3 px-4 rounded-button bg-white/10 border-none text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/30">
+<button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white py-3 px-4 rounded-button font-medium whitespace-nowrap">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-700 pt-8">
+<p class="text-gray-500 text-center">&copy; 2025 Pure Harvest Group of Companies Ltd. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script id="product-tabs-script">
+document.addEventListener('DOMContentLoaded', function() {
+const tabs = document.querySelectorAll('.product-tab');
+const tabContents = document.querySelectorAll('.tab-content');
+tabs.forEach(tab => {
+tab.addEventListener('click', () => {
+const target = tab.getAttribute('data-tab');
+// Remove active class from all tabs and contents
+tabs.forEach(t => t.classList.remove('active', 'text-primary', 'border-primary'));
+tabs.forEach(t => t.classList.add('text-gray-500'));
+tabContents.forEach(c => c.classList.remove('active'));
+// Add active class to clicked tab and corresponding content
+tab.classList.add('active', 'text-primary', 'border-b-2', 'border-primary');
+tab.classList.remove('text-gray-500');
+document.getElementById(`${target}-content`).classList.add('active');
+});
+});
+});
+</script>
+<script id="product-images-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mainImage = document.getElementById('main-product-image');
+const thumbnails = document.querySelectorAll('.thumbnail-item');
+thumbnails.forEach(thumbnail => {
+thumbnail.addEventListener('click', () => {
+// Update main image
+mainImage.src = thumbnail.querySelector('img').src;
+// Update active thumbnail
+thumbnails.forEach(t => t.classList.remove('border-primary'));
+thumbnails.forEach(t => t.classList.add('border-gray-200'));
+thumbnail.classList.remove('border-gray-200');
+thumbnail.classList.add('border-primary');
+});
+});
+});
+</script>
+<script id="quantity-selector-script">
+document.addEventListener('DOMContentLoaded', function() {
+const quantityInput = document.getElementById('quantity');
+const decreaseBtn = document.getElementById('decrease-qty');
+const increaseBtn = document.getElementById('increase-qty');
+const stickyQuantityInput = document.getElementById('sticky-quantity');
+const stickyDecreaseBtn = document.getElementById('sticky-decrease-qty');
+const stickyIncreaseBtn = document.getElementById('sticky-increase-qty');
+function updateQuantity(input, value) {
+input.value = Math.max(1, parseInt(input.value) + value);
+// Sync both quantity inputs
+if (input === quantityInput) {
+stickyQuantityInput.value = input.value;
+} else {
+quantityInput.value = input.value;
+}
+}
+decreaseBtn.addEventListener('click', () => updateQuantity(quantityInput, -1));
+increaseBtn.addEventListener('click', () => updateQuantity(quantityInput, 1));
+stickyDecreaseBtn.addEventListener('click', () => updateQuantity(stickyQuantityInput, -1));
+stickyIncreaseBtn.addEventListener('click', () => updateQuantity(stickyQuantityInput, 1));
+// Ensure direct input changes are also synced
+quantityInput.addEventListener('change', () => {
+quantityInput.value = Math.max(1, parseInt(quantityInput.value) || 1);
+stickyQuantityInput.value = quantityInput.value;
+});
+stickyQuantityInput.addEventListener('change', () => {
+stickyQuantityInput.value = Math.max(1, parseInt(stickyQuantityInput.value) || 1);
+quantityInput.value = stickyQuantityInput.value;
+});
+});
+</script>
+<script id="variant-tabs-script">
+document.addEventListener('DOMContentLoaded', function() {
+const variantTabs = document.querySelectorAll('.variant-tab');
+variantTabs.forEach(tab => {
+tab.addEventListener('click', () => {
+// Remove active class from all tabs
+variantTabs.forEach(t => t.classList.remove('active', 'bg-primary', 'text-white'));
+variantTabs.forEach(t => t.classList.add('bg-white'));
+// Add active class to clicked tab
+tab.classList.add('active');
+tab.classList.remove('bg-white');
+});
+});
+});
+</script>
+<script id="size-options-script">
+document.addEventListener('DOMContentLoaded', function() {
+const sizeOptions = document.querySelectorAll('.size-option');
+sizeOptions.forEach(option => {
+option.addEventListener('click', () => {
+// Remove active class from all options
+sizeOptions.forEach(o => o.classList.remove('active', 'border-primary', 'bg-primary', 'text-white'));
+// Add active class to clicked option
+option.classList.add('active');
+});
+});
+});
+</script>
+<script id="related-products-script">
+document.addEventListener('DOMContentLoaded', function() {
+const container = document.getElementById('related-products-container');
+const prevButton = document.getElementById('prev-related');
+const nextButton = document.getElementById('next-related');
+const productWidth = 280 + 24; // product width + gap
+let currentPosition = 0;
+// Calculate the maximum scroll position
+const maxScroll = () => {
+const containerWidth = container.parentElement.clientWidth;
+const totalWidth = container.scrollWidth;
+return totalWidth - containerWidth;
+};
+// Update buttons state
+const updateButtons = () => {
+prevButton.disabled = currentPosition <= 0;
+nextButton.disabled = currentPosition >= maxScroll();
+prevButton.style.opacity = prevButton.disabled ? '0.5' : '1';
+nextButton.style.opacity = nextButton.disabled ? '0.5' : '1';
+};
+// Scroll to position
+const scrollToPosition = (position) => {
+currentPosition = Math.max(0, Math.min(position, maxScroll()));
+container.style.transform = `translateX(-${currentPosition}px)`;
+updateButtons();
+};
+// Initialize
+updateButtons();
+// Event listeners
+prevButton.addEventListener('click', () => {
+scrollToPosition(currentPosition - productWidth * 2);
+});
+nextButton.addEventListener('click', () => {
+scrollToPosition(currentPosition + productWidth * 2);
+});
+// Update on resize
+window.addEventListener('resize', () => {
+scrollToPosition(currentPosition);
+});
+});
+</script>
+<script id="recipe-categories-script">
+document.addEventListener('DOMContentLoaded', function() {
+const categoryButtons = document.querySelectorAll('.recipe-category');
+categoryButtons.forEach(button => {
+button.addEventListener('click', () => {
+// Remove active class from all buttons
+categoryButtons.forEach(b => {
+b.classList.remove('active', 'bg-primary', 'text-white');
+b.classList.add('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
+});
+// Add active class to clicked button
+button.classList.add('active', 'bg-primary', 'text-white');
+button.classList.remove('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
+});
+});
+});
+</script>
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', function() {
+if (mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.remove('hidden');
+} else {
+mobileMenu.classList.add('hidden');
+}
+});
+});
+</script>
+<script id="sticky-bar-script">
+document.addEventListener('DOMContentLoaded', function() {
+const stickyBar = document.querySelector('.fixed.bottom-0');
+function toggleStickyBar() {
+if (window.scrollY > 600) {
+stickyBar.classList.remove('hidden');
+} else {
+stickyBar.classList.add('hidden');
+}
+}
+window.addEventListener('scroll', toggleStickyBar);
+toggleStickyBar(); // Initial check
+});
+</script>
+<script id="chart-script">
+document.addEventListener('DOMContentLoaded', function() {
+const chart = echarts.init(document.getElementById('color-intensity-chart'));
+const option = {
+animation: false,
+tooltip: {
+trigger: 'axis',
+backgroundColor: 'rgba(255, 255, 255, 0.9)',
+borderColor: '#e0e0e0',
+textStyle: {
+color: '#1f2937'
+}
+},
+legend: {
+data: ['Color Intensity', 'Flavor Strength'],
+bottom: 0
+},
+grid: {
+left: '3%',
+right: '4%',
+bottom: '15%',
+top: '3%',
+containLabel: true
+},
+xAxis: {
+type: 'category',
+data: ['Caramel', 'Curry', 'Nutmeg', 'Bayleaf'],
+axisLine: {
+lineStyle: {
+color: '#e0e0e0'
+}
+},
+axisTick: {
+alignWithLabel: true
+}
+},
+yAxis: {
+type: 'value',
+max: 100,
+axisLine: {
+show: false
+},
+axisTick: {
+show: false
+},
+splitLine: {
+lineStyle: {
+color: '#f0f0f0'
+}
+}
+},
+series: [
+{
+name: 'Color Intensity',
+type: 'bar',
+barWidth: '30%',
+data: [80, 70, 75, 65],
+itemStyle: {
+color: 'rgba(87, 181, 231, 1)'
+}
+},
+{
+name: 'Flavor Strength',
+type: 'bar',
+barWidth: '30%',
+data: [65, 85, 80, 70],
+itemStyle: {
+color: 'rgba(141, 211, 199, 1)'
+}
+}
+]
+};
+chart.setOption(option);
+window.addEventListener('resize', function() {
+chart.resize();
+});
+});
+</script>
+<script id="add-to-cart-script">
+document.addEventListener('DOMContentLoaded', function() {
+const addToCartBtn = document.getElementById('add-to-cart');
+const stickyAddToCartBtn = document.getElementById('sticky-add-to-cart');
+const saveForLaterBtn = document.getElementById('save-for-later');
+addToCartBtn.addEventListener('click', function() {
+// Animation feedback
+addToCartBtn.classList.add('opacity-75');
+setTimeout(() => {
+addToCartBtn.classList.remove('opacity-75');
+// Show success message
+const successMessage = document.createElement('div');
+successMessage.className = 'fixed top-4 right-4 bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded shadow-md z-50 animate-fade-in-out';
+successMessage.innerHTML = `
+<div class="flex items-center">
+<span class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Added to cart successfully!</span>
+</div>
+`;
+document.body.appendChild(successMessage);
+setTimeout(() => {
+successMessage.remove();
+}, 3000);
+}, 200);
+});
+stickyAddToCartBtn.addEventListener('click', function() {
+// Trigger the main add to cart button for consistency
+addToCartBtn.click();
+});
+saveForLaterBtn.addEventListener('click', function() {
+saveForLaterBtn.classList.add('opacity-75');
+setTimeout(() => {
+saveForLaterBtn.classList.remove('opacity-75');
+// Toggle saved state
+if (saveForLaterBtn.querySelector('i').classList.contains('ri-heart-line')) {
+saveForLaterBtn.querySelector('i').classList.remove('ri-heart-line');
+saveForLaterBtn.querySelector('i').classList.add('ri-heart-fill');
+saveForLaterBtn.classList.add('text-primary');
+// Show success message
+const successMessage = document.createElement('div');
+successMessage.className = 'fixed top-4 right-4 bg-primary/10 border-l-4 border-primary text-primary p-4 rounded shadow-md z-50 animate-fade-in-out';
+successMessage.innerHTML = `
+<div class="flex items-center">
+<span class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-heart-fill"></i>
+</span>
+<span>Saved for later!</span>
+</div>
+`;
+document.body.appendChild(successMessage);
+setTimeout(() => {
+successMessage.remove();
+}, 3000);
+} else {
+saveForLaterBtn.querySelector('i').classList.remove('ri-heart-fill');
+saveForLaterBtn.querySelector('i').classList.add('ri-heart-line');
+saveForLaterBtn.classList.remove('text-primary');
+}
+}, 200);
+});
+});
+</script>
+</body>
+</html>

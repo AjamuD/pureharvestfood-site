@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Pure Harvest Group of Companies Ltd.</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#8B4513',secondary:'#556B2F'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+color: #333333;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+}
+.hero-section {
+background-image: url('https://readdy.ai/api/search-image?query=beautiful%2520panoramic%2520view%2520of%2520Moriah%252C%2520Tobago%2520with%2520lush%2520green%2520hills%252C%2520Caribbean%2520sea%2520in%2520the%2520distance%252C%2520tropical%2520vegetation%252C%2520small%2520village%2520houses%252C%2520warm%2520sunset%2520lighting%252C%2520golden%2520hour%252C%2520professional%2520landscape%2520photography%252C%2520high%2520resolution%252C%2520no%2520people%252C%2520no%2520text%252C%2520photorealistic&width=1920&height=800&seq=tobago1&orientation=landscape');
+background-size: cover;
+background-position: center;
+position: relative;
+}
+.hero-section::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.3) 100%);
+}
+.team-member-card:hover .team-member-overlay {
+opacity: 1;
+}
+.process-step:not(:last-child)::after {
+content: "";
+position: absolute;
+top: 50%;
+right: -30px;
+width: 60px;
+height: 2px;
+background-color: #8B4513;
+transform: translateY(-50%);
+}
+@media (max-width: 768px) {
+.process-step:not(:last-child)::after {
+display: none;
+}
+}
+</style>
+</head>
+<body class="bg-[#FAFAFA]">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+<a href="#"><img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/117959135c1f1a6fecd6b5698ea16259.png" alt="Pure Harvest Logo" class="h-24"></a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center space-x-8">
+<a href="/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Home</a>
+<a href="/shop/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Shop</a>
+<a href="#" class="text-primary font-medium">About Us</a>
+<a href="/retailer/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Become a Retailer</a>
+<a href="/contact/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<!-- Social Media Icons -->
+<div class="hidden md:flex items-center space-x-3">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+<!-- Cart Icon -->
+<a href="#" class="relative w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition">
+<i class="ri-shopping-cart-2-line text-xl"></i>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">3</span>
+</a>
+<!-- Mobile Menu Button -->
+<button id="mobile-menu-button" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-menu-line text-2xl"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Navigation -->
+<div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+<div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+<a href="/" data-readdy="true" class="py-2 text-gray-700">Home</a>
+<a href="/shop/" data-readdy="true" class="py-2 text-gray-700">Shop</a>
+<a href="#" class="py-2 text-primary font-medium">About Us</a>
+<a href="#" class="py-2 text-gray-700">Become a Retailer</a>
+<a href="#" class="py-2 text-gray-700">Contact</a>
+<!-- Social Media Icons for Mobile -->
+<div class="flex items-center space-x-4 py-2">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-section relative h-[500px] flex items-center">
+<div class="container mx-auto px-4 relative z-10 w-full">
+<div class="max-w-3xl">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Our Story</h1>
+<p class="text-lg md:text-xl text-white/90 mb-8">Crafting Caribbean Flavors with Pride Since 2022</p>
+<div class="flex items-center space-x-3">
+<a href="/" data-readdy="true" class="inline-flex items-center text-white hover:text-white/80 transition">
+<span class="mr-2 w-5 h-5 flex items-center justify-center">
+<i class="ri-arrow-left-line"></i>
+</span>
+Back to Home
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Story Section -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-1/2">
+<div class="inline-block bg-primary/10 text-primary font-medium px-4 py-2 rounded-full mb-6">Est. 2022</div>
+<h2 class="text-3xl md:text-4xl font-bold mb-6">A Proudly Tobagonian Business</h2>
+<p class="text-gray-600 mb-4">Pure Harvest Group of Companies Ltd. is a proudly Tobagonian-owned business dedicated to bringing the authentic flavors and traditions of the Caribbean to the world. Founded with a passion for natural, high-quality products, we specialize in the production and distribution of all-natural foods including dehydrated spices, mixed fruits, nuts, and seeds, caramel browning infusions, Accra mixes, spicy honey, and more.</p>
+<p class="text-gray-600 mb-6">Every product we create is carefully developed using traditional Caribbean ingredients and methods, reflecting the rich culinary heritage of Trinidad and Tobago. From our signature Nutri-Fuse snack line to our uniquely seasoned Caribbean browning blends, our mission is to offer products that are flavorful, wholesome, and made with integrity.</p>
+<div class="flex items-center space-x-4">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+<i class="ri-leaf-line text-primary text-2xl"></i>
+</div>
+<div>
+<h3 class="font-bold text-lg">Natural Ingredients</h3>
+<p class="text-gray-600">100% natural, no preservatives</p>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 rounded-lg overflow-hidden shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=beautiful%2520arrangement%2520of%2520traditional%2520Caribbean%2520ingredients%2520including%2520fresh%2520spices%252C%2520tropical%2520fruits%252C%2520nuts%252C%2520and%2520seeds%2520on%2520a%2520rustic%2520wooden%2520table%252C%2520warm%2520natural%2520lighting%252C%2520professional%2520food%2520photography%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=800&height=600&seq=ingredients1&orientation=landscape" alt="Caribbean Ingredients" class="w-full h-full object-cover">
+</div>
+</div>
+</div>
+</section>
+<!-- Mission & Values -->
+<section class="py-16 bg-[#F7F5F2]">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Mission & Values</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">At Pure Harvest, we don't just make products — we craft experiences rooted in culture, wellness, and taste.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Value 1 -->
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+<i class="ri-heart-3-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">Authentic Caribbean Flavors</h3>
+<p class="text-gray-600">We preserve traditional recipes and flavors from Trinidad and Tobago, bringing authentic Caribbean taste to every product.</p>
+</div>
+<!-- Value 2 -->
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+<i class="ri-recycle-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">Sustainable Sourcing</h3>
+<p class="text-gray-600">We work directly with local farmers to source the freshest ingredients while supporting sustainable agricultural practices.</p>
+</div>
+<!-- Value 3 -->
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+<i class="ri-community-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">Community Growth</h3>
+<p class="text-gray-600">We're committed to creating opportunities and supporting economic development in our local Tobagonian community.</p>
+</div>
+<!-- Value 4 -->
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+<i class="ri-flask-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">Natural Preservation</h3>
+<p class="text-gray-600">We innovate in natural food preservation techniques, ensuring our products remain free from artificial additives.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Location -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-1/2 rounded-lg overflow-hidden shadow-lg">
+<div style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png')" class="w-full h-[400px] bg-center bg-no-repeat bg-cover"></div>
+</div>
+<div class="w-full md:w-1/2">
+<div class="inline-block bg-primary/10 text-primary font-medium px-4 py-2 rounded-full mb-6">Our Home</div>
+<h2 class="text-3xl md:text-4xl font-bold mb-6">Proudly Based in Moriah, Tobago</h2>
+<p class="text-gray-600 mb-4">Headquartered in Moriah, Tobago, Pure Harvest is deeply connected to the rich cultural heritage and natural bounty of our island home. Our location in the lush hills of Tobago provides us with access to some of the freshest tropical ingredients and traditional knowledge.</p>
+<p class="text-gray-600 mb-6">Our facility combines traditional methods with modern food safety standards, allowing us to create products that honor our heritage while meeting the highest quality expectations.</p>
+<div class="flex items-center space-x-4 mb-4">
+<div class="w-10 h-10 flex items-center justify-center text-primary">
+<i class="ri-map-pin-line text-xl"></i>
+</div>
+<div>
+<p class="text-gray-600">Congo Hill, Moriah, Tobago</p>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 flex items-center justify-center text-primary">
+<i class="ri-phone-line text-xl"></i>
+</div>
+<div>
+<p class="text-gray-600">+1 868 361-8990</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Team -->
+<section class="py-16 bg-[#F7F5F2]">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">The passionate people behind Pure Harvest's commitment to quality and tradition</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Team Member 1 -->
+<div class="team-member-card bg-white rounded-lg shadow-md overflow-hidden">
+<div class="relative h-80">
+<img src="https://public.readdy.ai/ai/img_res/fef51f87-c179-4a2e-a207-a230b0c3c45b.png" alt="Gabrielle Johnson" class="w-full h-full object-cover object-top">
+<div class="team-member-overlay absolute inset-0 bg-primary/80 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-white">
+<p class="text-center">Building a Sustainable Legacy, One Product at a Time</p>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-1"><a href="/founder/ajamu-daniel/" data-readdy="true" class="hover:text-primary transition">Ajamu J Daniel</a></h3>
+<p class="text-gray-500">Founder & Director</p>
+</div>
+</div>
+<!-- Team Member 2 -->
+<div class="team-member-card bg-white rounded-lg shadow-md overflow-hidden">
+<div class="relative h-80">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/d0d45f886093f9453db7c9ff2018effb.png" alt="Marcus Ramsey" class="w-full h-full object-cover object-top">
+<div class="team-member-overlay absolute inset-0 bg-primary/80 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-white">
+<p class="text-center">"I'm passionate about combining traditional Caribbean preservation methods with modern food science to create truly unique products."</p>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-1"><a href="/team/candice-joseph/" data-readdy="true" class="hover:text-primary transition">Candice G Joseph</a></h3>
+<p class="text-gray-500">Head of Product Development</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Process -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Production Process</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">How we transform the finest Caribbean ingredients into premium products</p>
+</div>
+<div class="relative">
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-200 -translate-y-1/2 z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+<!-- Step 1 -->
+<div class="process-step relative flex flex-col items-center text-center">
+<div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center mb-6 z-10">
+<i class="ri-hand-heart-line text-white text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">Careful Sourcing</h3>
+<p class="text-gray-600">We partner with local farmers to select the finest ingredients at peak freshness.</p>
+</div>
+<!-- Step 2 -->
+<div class="process-step relative flex flex-col items-center text-center">
+<div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center mb-6 z-10">
+<i class="ri-scales-3-line text-white text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">Traditional Methods</h3>
+<p class="text-gray-600">We use time-honored Caribbean techniques combined with modern food safety standards.</p>
+</div>
+<!-- Step 3 -->
+<div class="process-step relative flex flex-col items-center text-center">
+<div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center mb-6 z-10">
+<i class="ri-test-tube-line text-white text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">Quality Control</h3>
+<p class="text-gray-600">Every batch is tested to ensure it meets our high standards for flavor and quality.</p>
+</div>
+<!-- Step 4 -->
+<div class="process-step relative flex flex-col items-center text-center">
+<div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center mb-6 z-10">
+<i class="ri-box-3-line text-white text-2xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">Careful Packaging</h3>
+<p class="text-gray-600">Products are packaged to preserve freshness and flavor while minimizing environmental impact.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Facility Gallery -->
+<section class="py-16 bg-[#F7F5F2]">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Facility</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Take a peek inside our production facility in Moriah, Tobago</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Gallery Image 1 -->
+<div class="rounded-lg overflow-hidden shadow-md h-64">
+<img src="https://readdy.ai/api/search-image?query=modern%2520food%2520processing%2520facility%2520with%2520stainless%2520steel%2520equipment%252C%2520clean%2520bright%2520environment%252C%2520workers%2520in%2520food%2520safety%2520gear%2520processing%2520spices%252C%2520professional%2520industrial%2520photography%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=600&height=400&seq=facility1&orientation=landscape" alt="Spice Processing" class="w-full h-full object-cover">
+</div>
+<!-- Gallery Image 2 -->
+<div class="rounded-lg overflow-hidden shadow-md h-64">
+<img src="https://readdy.ai/api/search-image?query=food%2520quality%2520control%2520laboratory%2520with%2520technician%2520testing%2520samples%252C%2520modern%2520equipment%252C%2520clean%2520environment%252C%2520professional%2520industrial%2520photography%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=600&height=400&seq=facility2&orientation=landscape" alt="Quality Control" class="w-full h-full object-cover">
+</div>
+<!-- Gallery Image 3 -->
+<div class="rounded-lg overflow-hidden shadow-md h-64">
+<img src="https://readdy.ai/api/search-image?query=food%2520packaging%2520area%2520with%2520workers%2520carefully%2520filling%2520glass%2520jars%2520with%2520dried%2520fruits%2520and%2520nuts%252C%2520clean%2520environment%252C%2520food%2520safety%2520gear%252C%2520professional%2520industrial%2520photography%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=600&height=400&seq=facility3&orientation=landscape" alt="Packaging Area" class="w-full h-full object-cover">
+</div>
+<!-- Gallery Image 4 -->
+<div class="rounded-lg overflow-hidden shadow-md h-64">
+<img src="https://readdy.ai/api/search-image?query=warehouse%2520with%2520neatly%2520stacked%2520boxes%2520of%2520food%2520products%2520ready%2520for%2520shipping%252C%2520organized%2520storage%2520area%252C%2520professional%2520industrial%2520photography%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=600&height=400&seq=facility4&orientation=landscape" alt="Warehouse" class="w-full h-full object-cover">
+</div>
+<!-- Gallery Image 5 -->
+<div class="rounded-lg overflow-hidden shadow-md h-64">
+<img src="https://readdy.ai/api/search-image?query=dehydration%2520room%2520with%2520racks%2520of%2520tropical%2520fruits%2520being%2520processed%252C%2520modern%2520equipment%252C%2520clean%2520environment%252C%2520professional%2520industrial%2520photography%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=600&height=400&seq=facility5&orientation=landscape" alt="Dehydration Room" class="w-full h-full object-cover">
+</div>
+<!-- Gallery Image 6 -->
+<div class="rounded-lg overflow-hidden shadow-md h-64">
+<img src="https://readdy.ai/api/search-image?query=exterior%2520view%2520of%2520modern%2520food%2520processing%2520facility%2520in%2520tropical%2520setting%252C%2520surrounded%2520by%2520lush%2520vegetation%252C%2520professional%2520architectural%2520photography%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=600&height=400&seq=facility6&orientation=landscape" alt="Facility Exterior" class="w-full h-full object-cover">
+</div>
+</div>
+</div>
+</section>
+<!-- Market Reach -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-1/2">
+<div class="inline-block bg-primary/10 text-primary font-medium px-4 py-2 rounded-full mb-6">Global Reach</div>
+<h2 class="text-3xl md:text-4xl font-bold mb-6">From Tobago to the World</h2>
+<p class="text-gray-600 mb-4">What began as a small operation in Moriah has grown into an international business, bringing authentic Caribbean flavors to markets around the world. We proudly serve both local and international markets, building partnerships with supermarkets, retailers, and health-conscious consumers who value quality and authenticity.</p>
+<p class="text-gray-600 mb-6">Our products can now be found in select stores across the Caribbean, North America, and Europe, with plans to expand our reach even further in the coming years.</p>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-check-line text-xl"></i>
+</div>
+<span>Caribbean Region</span>
+</div>
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-check-line text-xl"></i>
+</div>
+<span>North America</span>
+</div>
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-check-line text-xl"></i>
+</div>
+<span>United Kingdom</span>
+</div>
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-check-line text-xl"></i>
+</div>
+<span>European Union</span>
+</div>
+</div>
+<a href="/retailer/" data-readdy="true" class="bg-primary hover:bg-primary/90 text-white py-3 px-8 rounded-button font-medium inline-block whitespace-nowrap">Become a Retailer</a>
+</div>
+<div class="w-full md:w-1/2">
+<div id="market-reach-chart" class="w-full h-[400px] rounded-lg shadow-lg"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-16 bg-[#F7F5F2]">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Partners Say</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Hear from the retailers and distributors who work with us</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="flex items-center mb-4">
+<div class="text-primary">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"Pure Harvest products have been a fantastic addition to our store. Customers love the authentic Caribbean flavors and the all-natural ingredients. Their commitment to quality is evident in every product."</p>
+<div class="flex items-center">
+<div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 mr-4">
+<i class="ri-user-3-line text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold">Richard Bennett</h4>
+<p class="text-gray-500 text-sm">Grocery Store Owner, Port of Spain</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="flex items-center mb-4">
+<div class="text-primary">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"Working with Pure Harvest has been seamless. Their dedication to maintaining consistent quality and reliable delivery schedules makes them an ideal supplier for our health food chain."</p>
+<div class="flex items-center">
+<div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 mr-4">
+<i class="ri-user-3-line text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold">Michelle Carrington</h4>
+<p class="text-gray-500 text-sm">Health Food Store Manager, Miami</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-white p-8 rounded-lg shadow-md">
+<div class="flex items-center mb-4">
+<div class="text-primary">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"The Nutri-Fuse line has been a hit with our customers who are looking for healthy, flavorful snack options. Pure Harvest's commitment to quality and sustainability aligns perfectly with our brand values."</p>
+<div class="flex items-center">
+<div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 mr-4">
+<i class="ri-user-3-line text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold">Jonathan Parker</h4>
+<p class="text-gray-500 text-sm">Specialty Foods Distributor, London</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="bg-[#F7F5F2] rounded-xl overflow-hidden">
+<div class="flex flex-col md:flex-row">
+<div class="w-full md:w-1/2 p-8 md:p-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-6">Get in Touch</h2>
+<p class="text-gray-600 mb-6">Interested in learning more about Pure Harvest or becoming a retailer? We'd love to hear from you.</p>
+<form class="space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label for="name" class="block text-gray-700 mb-2">Name</label>
+<input type="text" id="name" class="w-full px-4 py-3 rounded-button border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary">
+</div>
+<div>
+<label for="email" class="block text-gray-700 mb-2">Email</label>
+<input type="email" id="email" class="w-full px-4 py-3 rounded-button border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary">
+</div>
+</div>
+<div>
+<label for="subject" class="block text-gray-700 mb-2">Subject</label>
+<input type="text" id="subject" class="w-full px-4 py-3 rounded-button border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary">
+</div>
+<div>
+<label for="message" class="block text-gray-700 mb-2">Message</label>
+<textarea id="message" rows="4" class="w-full px-4 py-3 rounded-button border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"></textarea>
+</div>
+<button type="submit" class="bg-primary hover:bg-primary/90 text-white py-3 px-8 rounded-button font-medium whitespace-nowrap">Send Message</button>
+</form>
+</div>
+<div class="w-full md:w-1/2 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=beautiful%2520Caribbean%2520office%2520interior%2520with%2520natural%2520elements%252C%2520wooden%2520furniture%252C%2520tropical%2520plants%252C%2520warm%2520lighting%252C%2520professional%2520interior%2520photography%252C%2520high%2520resolution%252C%2520no%2520people%252C%2520no%2520text%252C%2520photorealistic&width=800&height=600&seq=contact1&orientation=portrait')"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#2A2A2A] text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- Company Info -->
+<div>
+<a href="#" class="mb-6 inline-block"><img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/117959135c1f1a6fecd6b5698ea16259.png" alt="Pure Harvest Logo" class="h-24"></a>
+<p class="text-gray-400 mb-6">Pure Harvest Group of Companies Ltd. brings the authentic flavors of Trinidad and Tobago to kitchens around the world.</p>
+<div class="flex space-x-4">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h3 class="text-lg font-bold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="/" data-readdy="true" class="text-gray-400 hover:text-white transition">Home</a></li>
+<li><a href="/shop/" data-readdy="true" class="text-gray-400 hover:text-white transition">Shop</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Become a Retailer</a></li>
+<li><a href="/contact/" data-readdy="true" class="text-gray-400 hover:text-white transition">Contact</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Terms & Conditions</a></li>
+</ul>
+</div>
+<!-- Contact Info -->
+<div>
+<h3 class="text-lg font-bold mb-6">Contact Us</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-map-pin-line"></i>
+</span>
+<span class="text-gray-400">Congo Hill, Moriah, Tobago</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-phone-line"></i>
+</span>
+<span class="text-gray-400">+1 868 361-8990</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-mail-line"></i>
+</span>
+<span class="text-gray-400">pureharvest2022@gmail.com</span>
+</li>
+</ul>
+<div class="mt-6">
+<h4 class="text-sm font-bold mb-3">We Accept</h4>
+<div class="flex space-x-3">
+<span class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-visa-fill text-xl"></i>
+</span>
+<span class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-mastercard-fill text-xl"></i>
+</span>
+<span class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-paypal-fill text-xl"></i>
+</span>
+</div>
+</div>
+</div>
+<!-- Newsletter -->
+<div>
+<h3 class="text-lg font-bold mb-6">Newsletter</h3>
+<p class="text-gray-400 mb-4">Subscribe to receive updates, access to exclusive deals, and more.</p>
+<form class="space-y-3">
+<input type="email" placeholder="Your email address" class="w-full py-3 px-4 rounded-button bg-white/10 border-none text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/30">
+<button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white py-3 px-4 rounded-button font-medium whitespace-nowrap">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-700 pt-8">
+<p class="text-gray-500 text-center">&copy; 2025 Pure Harvest Group of Companies Ltd. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', function() {
+if (mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.remove('hidden');
+} else {
+mobileMenu.classList.add('hidden');
+}
+});
+});
+</script>
+<script id="market-reach-chart-script">
+document.addEventListener('DOMContentLoaded', function() {
+const chartDom = document.getElementById('market-reach-chart');
+const myChart = echarts.init(chartDom);
+const option = {
+animation: false,
+tooltip: {
+trigger: 'item',
+backgroundColor: 'rgba(255, 255, 255, 0.8)',
+textStyle: {
+color: '#1f2937'
+}
+},
+legend: {
+top: '5%',
+left: 'center',
+textStyle: {
+color: '#1f2937'
+}
+},
+series: [
+{
+name: 'Market Distribution',
+type: 'pie',
+radius: ['40%', '70%'],
+avoidLabelOverlap: false,
+itemStyle: {
+borderRadius: 10,
+borderColor: '#fff',
+borderWidth: 2
+},
+label: {
+show: false,
+position: 'center'
+},
+emphasis: {
+label: {
+show: true,
+fontSize: 16,
+fontWeight: 'bold'
+}
+},
+labelLine: {
+show: false
+},
+data: [
+{ value: 45, name: 'Caribbean', itemStyle: { color: 'rgba(87, 181, 231, 1)' } },
+{ value: 25, name: 'North America', itemStyle: { color: 'rgba(141, 211, 199, 1)' } },
+{ value: 18, name: 'United Kingdom', itemStyle: { color: 'rgba(251, 191, 114, 1)' } },
+{ value: 12, name: 'European Union', itemStyle: { color: 'rgba(252, 141, 98, 1)' } }
+]
+}
+]
+};
+myChart.setOption(option);
+window.addEventListener('resize', function() {
+myChart.resize();
+});
+});
+</script>
+</body>
+</html>

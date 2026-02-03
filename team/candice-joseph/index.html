@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candice Joseph - Head of Product Development | Pure Harvest Group</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#8B4513',secondary:'#556B2F'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+color: #333333;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+}
+.hero-section {
+background-image: url('https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/283c9c2dcecc43a7b37c06f4276e19f9.png');
+background-size: cover;
+background-position: center;
+position: relative;
+}
+.hero-section::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.3) 100%);
+}
+.timeline-item {
+position: relative;
+padding-left: 2rem;
+}
+.timeline-item::before {
+content: "";
+position: absolute;
+left: 0;
+top: 0.5rem;
+width: 1rem;
+height: 1rem;
+background-color: #8B4513;
+border-radius: 50%;
+}
+.timeline-item:not(:last-child)::after {
+content: "";
+position: absolute;
+left: 0.375rem;
+top: 1.5rem;
+width: 2px;
+height: calc(100% - 1rem);
+background-color: #8B4513;
+opacity: 0.3;
+}
+.gallery-item {
+transition: transform 0.3s ease;
+}
+.gallery-item:hover {
+transform: scale(1.05);
+}
+.achievement-card {
+transition: all 0.3s ease;
+}
+.achievement-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+</style>
+</head>
+<body class="bg-[#FAFAFA]">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+<a href="/about/" data-readdy="true"><img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/117959135c1f1a6fecd6b5698ea16259.png" alt="Pure Harvest Logo" class="h-24"></a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center space-x-8">
+<a href="/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Home</a>
+<a href="/shop/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Shop</a>
+<a href="/about/" data-readdy="true" class="text-gray-700 hover:text-primary transition">About Us</a>
+<a href="/retailer/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Become a Retailer</a>
+<a href="/contact/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<!-- Social Media Icons -->
+<div class="hidden md:flex items-center space-x-3">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+<!-- Cart Icon -->
+<a href="#" class="relative w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition">
+<i class="ri-shopping-cart-2-line text-xl"></i>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">3</span>
+</a>
+<!-- Mobile Menu Button -->
+<button id="mobile-menu-button" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-menu-line text-2xl"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Navigation -->
+<div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+<div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+<a href="/" data-readdy="true" class="py-2 text-gray-700">Home</a>
+<a href="/shop/" data-readdy="true" class="py-2 text-gray-700">Shop</a>
+<a href="/about/" data-readdy="true" class="py-2 text-gray-700">About Us</a>
+<a href="/retailer/" data-readdy="true" class="py-2 text-gray-700">Become a Retailer</a>
+<a href="/contact/" data-readdy="true" class="py-2 text-gray-700">Contact</a>
+<!-- Social Media Icons for Mobile -->
+<div class="flex items-center space-x-4 py-2">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-section relative h-[600px] flex items-center">
+<div class="container mx-auto px-4 relative z-10 w-full">
+<div class="flex items-center space-x-3 mb-6">
+<a href="/about/" data-readdy="true" class="inline-flex items-center text-white hover:text-white/80 transition">
+<span class="mr-2 w-5 h-5 flex items-center justify-center">
+<i class="ri-arrow-left-line"></i>
+</span>
+Back to Team
+</a>
+</div>
+<div class="max-w-4xl">
+<div class="inline-block bg-primary/20 text-white font-medium px-4 py-2 rounded-full mb-6">Head of Product Development</div>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Candice Joseph</h1>
+<p class="text-lg md:text-xl text-white/90 mb-8">Pioneering Caribbean Food Science & Innovation</p>
+<div class="flex flex-wrap gap-4">
+<div class="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full">
+<span class="w-5 h-5 flex items-center justify-center text-white">
+<i class="ri-flask-line"></i>
+</span>
+<span class="text-white text-sm">Food Science Expert</span>
+</div>
+<div class="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full">
+<span class="w-5 h-5 flex items-center justify-center text-white">
+<i class="ri-lightbulb-line"></i>
+</span>
+<span class="text-white text-sm">Innovation Leader</span>
+</div>
+<div class="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full">
+<span class="w-5 h-5 flex items-center justify-center text-white">
+<i class="ri-leaf-line"></i>
+</span>
+<span class="text-white text-sm">Preservation Specialist</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Profile Overview -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="flex flex-col lg:flex-row items-start gap-12">
+<div class="w-full lg:w-1/3">
+<div class="bg-[#F7F5F2] rounded-lg p-8 sticky top-24">
+<div class="w-48 h-48 mx-auto rounded-lg overflow-hidden shadow-lg mb-6">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/a1548b92accd3993d008ebacdb072896.png" alt="Marcus Ramsey" class="w-full h-full object-cover object-top">
+</div>
+<div class="text-center mb-6">
+<h3 class="text-2xl font-bold mb-2">Candice Joseph</h3>
+<p class="text-primary font-medium mb-4">Head of Product Development</p>
+
+</div>
+
+</div>
+</div>
+<div class="w-full lg:w-2/3">
+<div class="mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-6">Professional Background</h2>
+<p class="text-gray-600 mb-4">Candice Joseph is the Director of Production at Pure Harvest Group of Companies Ltd., where she oversees product development, consistency, and quality. Her role is central to ensuring that every item carrying the Pure Harvest name reflects the company’s standard of authenticity and excellence.</p>
+<p class="text-gray-600 mb-4">Candice brings a sharp eye for detail that she honed during her years as a successful hairdresser, where precision, creativity, and customer satisfaction were at the heart of her craft. She has carried those skills into Pure Harvest, applying the same level of care and artistry to agro-processing.</p>
+<p class="text-gray-600 mb-6">Her leadership in production has been vital to the expansion of the company’s product range — from Nutri-Fuse mixed fruits and nuts to caramel browning, Accra mixes, and dehydrated fruit snacks. She is passionate about innovation and is dedicated to upholding Tobago’s culinary traditions while embracing new methods to scale production.
+Together with Director Ajamu Daniel, Candice is guiding Pure Harvest into regional and international markets, building not just a business but a legacy of authentic Tobago-made products.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Career Timeline -->
+<section class="py-16 bg-[#F7F5F2]">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Career Journey & Milestones</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">From joining Pure Harvest to leading innovation in Caribbean food preservation</p>
+</div>
+<div class="max-w-4xl mx-auto">
+<div class="space-y-8">
+<!-- 2020 -->
+<div class="timeline-item bg-white p-8 rounded-lg shadow-md">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+<h3 class="text-2xl font-bold text-primary">2022</h3>
+<span class="text-sm text-gray-500 bg-primary/10 px-3 py-1 rounded-full">Foundation Year</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Setting the Foundation</h4>
+<p class="text-gray-600 mb-4">Joined Pure Harvest as Director of Production, working alongside co-founder Ajamu Daniel.
+Oversaw the launch of the Nutri-Fuse mixed fruits and nuts line, ensuring consistent quality and packaging.</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Team Building</span>
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Process Development</span>
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Research & Analysis</span>
+</div>
+</div>
+<!-- 2021 -->
+<div class="timeline-item bg-white p-8 rounded-lg shadow-md">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+<h3 class="text-2xl font-bold text-primary">2023</h3>
+<span class="text-sm text-gray-500 bg-primary/10 px-3 py-1 rounded-full">Strengthening Systems</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Strengthening Systems</h4>
+<p class="text-gray-600 mb-4">Refined production processes for the Nutri-Fuse range.
+Focused on maintaining high standards as products gained traction in Tobago supermarkets.</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Product Formulation</span>
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Quality Standards</span>
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Market Testing</span>
+</div>
+</div>
+<!-- 2022 -->
+<div class="timeline-item bg-white p-8 rounded-lg shadow-md">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+<h3 class="text-2xl font-bold text-primary">2024</h3>
+<span class="text-sm text-gray-500 bg-primary/10 px-3 py-1 rounded-full">Innovation Expansion</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Expanding Product Lines</h4>
+<p class="text-gray-600 mb-4">Directed the development and production of Caramel Browning (nutmeg, curry, bay leaf infused) and Accra Mixes (Saltfish, Smoke Fish & Chicken).
+Implemented new workflows to handle multiple product lines at scale.</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Flavor Innovation</span>
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Traditional Methods</span>
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Product Diversification</span>
+</div>
+</div>
+<!-- 2023 -->
+<div class="timeline-item bg-white p-8 rounded-lg shadow-md">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+<h3 class="text-2xl font-bold text-primary">2025</h3>
+<span class="text-sm text-gray-500 bg-primary/10 px-3 py-1 rounded-full">Driving Innovation</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Driving Innovation</h4>
+<p class="text-gray-600 mb-4">Led production of Dehydrated Fruit Snacks (mango, papaya, sapodilla, banana).
+Worked closely on packaging improvements to ensure longer shelf life and international appeal.Also, expanding the product line into the Trinidad market</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Dehydration Technology</span>
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Nutritional Preservation</span>
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Shelf Life Extension</span>
+</div>
+</div>
+<!-- 2024 -->
+<div class="timeline-item bg-white p-8 rounded-lg shadow-md">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+<h3 class="text-2xl font-bold text-primary">2026</h3>
+<span class="text-sm text-gray-500 bg-primary/10 px-3 py-1 rounded-full">Regional Scaling</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Regional Scaling</h4>
+<p class="text-gray-600 mb-4">Adapted production systems to meet increased demand in Caribbean markets.
+Introduced better quality control systems for consistency across batches.</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">International Compliance</span>
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Packaging Innovation</span>
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Market Adaptation</span>
+</div>
+</div>
+<!-- 2025 -->
+<div class="timeline-item bg-white p-8 rounded-lg shadow-md">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+<h3 class="text-2xl font-bold text-primary">2027</h3>
+<span class="text-sm text-gray-500 bg-primary/10 px-3 py-1 rounded-full">Entering International Markets</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Entering International Markets</h4>
+<p class="text-gray-600 mb-4">Managed production scale-up to fulfill export orders to North America and Europe.
+Adjusted processes for compliance with international food safety and packaging standards.</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Sustainable Packaging</span>
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Eco-Friendly Production</span>
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Future Innovation</span>
+</div>
+</div>
+<!-- 2028 -->
+<div class="timeline-item bg-white p-8 rounded-lg shadow-md">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+<h3 class="text-2xl font-bold text-primary">2028</h3>
+<span class="text-sm text-gray-500 bg-primary/10 px-3 py-1 rounded-full">Innovation & Sustainability</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Innovation & Sustainability</h4>
+<p class="text-gray-600 mb-4">Experimented with premium lines and sustainable packaging options.
+Balanced tradition with modern methods to keep Pure Harvest innovative yet authentic.</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Premium Products</span>
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Sustainable Solutions</span>
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Traditional Innovation</span>
+</div>
+</div>
+<!-- 2029 -->
+<div class="timeline-item bg-white p-8 rounded-lg shadow-md">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+<h3 class="text-2xl font-bold text-primary">2029</h3>
+<span class="text-sm text-gray-500 bg-primary/10 px-3 py-1 rounded-full inline-flex items-center">Legacy Building</span>
+</div>
+<h4 class="text-xl font-bold mb-3">Building Production Legacy</h4>
+<p class="text-gray-600 mb-4">Established Pure Harvest as a model for quality-driven Caribbean agro-processing.
+Mentored younger team members in production, ensuring skills and standards are carried forward.</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Industry Leadership</span>
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Knowledge Transfer</span>
+<span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">Future Planning</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Projects -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Key Projects Led</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Innovative products that showcase Marcus's expertise in Caribbean food science</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="bg-[#F7F5F2] rounded-lg overflow-hidden shadow-md">
+<div class="h-48">
+<img src="https://readdy.ai/api/search-image?query=beautiful%20arrangement%20of%20mixed%20tropical%20nuts%20and%20dried%20fruits%20in%20glass%20jars%2C%20colorful%20variety%20including%20cashews%2C%20almonds%2C%20dried%20mango%2C%20papaya%2C%20professional%20food%20photography%2C%20clean%20white%20background%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=600&height=400&seq=project1&orientation=landscape" alt="Nutri-Fuse Line" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-3">Nutri-Fuse Mixed Fruits & Nuts</h3>
+<p class="text-gray-600 mb-4">Revolutionary blend combining traditional Caribbean fruits with premium nuts, using innovative preservation techniques to maintain nutritional value and authentic flavors.</p>
+<div class="flex items-center space-x-2 text-sm text-primary">
+<span class="w-4 h-4 flex items-center justify-center">
+<i class="ri-calendar-line"></i>
+</span>
+<span>2021 - Ongoing</span>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="bg-[#F7F5F2] rounded-lg overflow-hidden shadow-md">
+<div class="h-48">
+<img src="https://readdy.ai/api/search-image?query=elegant%20glass%20bottles%20containing%20rich%20caramel%20browning%20sauce%20with%20Caribbean%20spices%20like%20nutmeg%20and%20bay%20leaves%20visible%2C%20warm%20amber%20colors%2C%20professional%20product%20photography%2C%20clean%20background%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=600&height=400&seq=project2&orientation=landscape" alt="Caramel Browning" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-3">Caramel Browning Infusions</h3>
+<p class="text-gray-600 mb-4">Signature line featuring nutmeg, curry, and bay leaf varieties, developed using traditional Caribbean infusion methods enhanced with modern food science techniques.</p>
+<div class="flex items-center space-x-2 text-sm text-primary">
+<span class="w-4 h-4 flex items-center justify-center">
+<i class="ri-calendar-line"></i>
+</span>
+<span>2022 - Ongoing</span>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="bg-[#F7F5F2] rounded-lg overflow-hidden shadow-md">
+<div class="h-48">
+<img src="https://readdy.ai/api/search-image?query=colorful%20array%20of%20dehydrated%20tropical%20fruit%20slices%20including%20mango%2C%20papaya%2C%20banana%2C%20and%20sapodilla%2C%20arranged%20artistically%2C%20vibrant%20natural%20colors%2C%20professional%20food%20photography%2C%20clean%20white%20background%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=600&height=400&seq=project3&orientation=landscape" alt="Dehydrated Fruits" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-3">Dehydrated Fruit Snacks</h3>
+<p class="text-gray-600 mb-4">Premium line of naturally dehydrated tropical fruits using advanced preservation techniques that maintain nutritional integrity and intense natural flavors.</p>
+<div class="flex items-center space-x-2 text-sm text-primary">
+<span class="w-4 h-4 flex items-center justify-center">
+<i class="ri-calendar-line"></i>
+</span>
+<span>2023 - Ongoing</span>
+</div>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="bg-[#F7F5F2] rounded-lg overflow-hidden shadow-md">
+<div class="h-48">
+<img src="https://readdy.ai/api/search-image?query=traditional%20Caribbean%20Accra%20mix%20ingredients%20including%20split%20peas%2C%20spices%2C%20and%20seasonings%20in%20rustic%20bowls%2C%20authentic%20Caribbean%20cooking%20preparation%2C%20warm%20natural%20lighting%2C%20professional%20food%20photography%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=600&height=400&seq=project4&orientation=landscape" alt="Accra Mixes" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-3">Traditional Accra Mixes</h3>
+<p class="text-gray-600 mb-4">Authentic Caribbean Accra preparation mixes developed from traditional family recipes, optimized for consistent results and extended shelf life.</p>
+<div class="flex items-center space-x-2 text-sm text-primary">
+<span class="w-4 h-4 flex items-center justify-center">
+<i class="ri-calendar-line"></i>
+</span>
+<span>2022 - Ongoing</span>
+</div>
+</div>
+</div>
+<!-- Project 5 -->
+<div class="bg-[#F7F5F2] rounded-lg overflow-hidden shadow-md">
+<div class="h-48">
+<img src="https://readdy.ai/api/search-image?query=eco-friendly%20sustainable%20food%20packaging%20made%20from%20biodegradable%20materials%2C%20modern%20design%2C%20green%20technology%2C%20environmental%20innovation%2C%20professional%20product%20photography%2C%20clean%20background%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=600&height=400&seq=project5&orientation=landscape" alt="Sustainable Packaging" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-3">Sustainable Packaging Initiative</h3>
+<p class="text-gray-600 mb-4">Groundbreaking eco-friendly packaging solutions that reduce environmental impact while maintaining product freshness and extending shelf life.</p>
+<div class="flex items-center space-x-2 text-sm text-primary">
+<span class="w-4 h-4 flex items-center justify-center">
+<i class="ri-calendar-line"></i>
+</span>
+<span>2024 - Ongoing</span>
+</div>
+</div>
+</div>
+<!-- Project 6 -->
+<div class="bg-[#F7F5F2] rounded-lg overflow-hidden shadow-md">
+<div class="h-48">
+<img src="https://readdy.ai/api/search-image?query=modern%20food%20quality%20control%20laboratory%20with%20advanced%20testing%20equipment%2C%20samples%20being%20analyzed%2C%20scientific%20precision%2C%20clean%20sterile%20environment%2C%20professional%20laboratory%20photography%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=600&height=400&seq=project6&orientation=landscape" alt="Quality Systems" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-3">Advanced Quality Control Systems</h3>
+<p class="text-gray-600 mb-4">Implementation of cutting-edge quality assurance protocols ensuring 99.8% batch consistency across all Pure Harvest product lines.</p>
+<div class="flex items-center space-x-2 text-sm text-primary">
+<span class="w-4 h-4 flex items-center justify-center">
+<i class="ri-calendar-line"></i>
+</span>
+<span>2021 - Ongoing</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Innovation Contributions -->
+<section class="py-16 bg-[#F7F5F2]">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Innovation in Caribbean Food Preservation</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Candice's groundbreaking contributions to traditional Caribbean preservation techniques</p>
+</div>
+<div class="max-w-6xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<h3 class="text-2xl font-bold mb-6">Revolutionary Preservation Methods</h3>
+<div class="space-y-6">
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary text-white rounded-full flex-shrink-0">
+<i class="ri-leaf-line text-xl"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-2">Natural Dehydration Enhancement</h4>
+<p class="text-gray-600">Developed advanced natural dehydration techniques that preserve 95% of original nutritional content while extending shelf life by 300%.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary text-white rounded-full flex-shrink-0">
+<i class="ri-flask-line text-xl"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-2">Traditional Method Optimization</h4>
+<p class="text-gray-600">Enhanced traditional Caribbean preservation methods with modern food science, maintaining authenticity while improving safety and consistency.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary text-white rounded-full flex-shrink-0">
+<i class="ri-recycle-line text-xl"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-2">Sustainable Processing</h4>
+<p class="text-gray-600">Pioneered eco-friendly processing methods that reduce energy consumption by 40% while maintaining product quality standards.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary text-white rounded-full flex-shrink-0">
+<i class="ri-shield-check-line text-xl"></i>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-2">Safety Innovation</h4>
+<p class="text-gray-600">Developed natural antimicrobial preservation techniques using Caribbean herbs and spices, eliminating the need for artificial preservatives.</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div id="innovation-chart" class="w-full h-[400px] bg-white rounded-lg shadow-lg"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Photo Gallery -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Work in Action</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Behind the scenes with Candice in product development and innovation</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Gallery Image 1 -->
+<div class="gallery-item rounded-lg overflow-hidden shadow-md h-64">
+<img src="https://readdy.ai/api/search-image?query=Caribbean%20female%20food%20scientist%20in%20white%20lab%20coat%20examining%20tropical%20fruit%20samples%20under%20microscope%2C%20professional%20laboratory%20setting%2C%20focused%20concentration%2C%20scientific%20research%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=600&height=400&seq=gallery1&orientation=landscape" alt="Laboratory Research" class="w-full h-full object-cover">
+</div>
+<!-- Gallery Image 2 -->
+<div class="gallery-item rounded-lg overflow-hidden shadow-md h-64">
+<img src="https://readdy.ai/api/search-image?query=food%20scientist%20testing%20dehydrated%20fruit%20samples%2C%20quality%20control%20analysis%2C%20modern%20laboratory%20equipment%2C%20professional%20food%20testing%2C%20Caribbean%20female%20scientist%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=600&height=400&seq=gallery2&orientation=landscape" alt="Quality Testing" class="w-full h-full object-cover">
+</div>
+<!-- Gallery Image 3 -->
+<div class="gallery-item rounded-lg overflow-hidden shadow-md h-64">
+<img src="https://readdy.ai/api/search-image?query=product%20development%20meeting%20with%20Caribbean%20female%20scientist%20presenting%20new%20food%20formulations%20to%20team%2C%20conference%20room%20setting%2C%20professional%20business%20environment%2C%20collaboration%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=600&height=400&seq=gallery3&orientation=landscape" alt="Team Collaboration" class="w-full h-full object-cover">
+</div>
+<!-- Gallery Image 4 -->
+<div class="gallery-item rounded-lg overflow-hidden shadow-md h-64">
+<img src="https://readdy.ai/api/search-image?query=food%20scientist%20inspecting%20production%20line%20with%20dehydration%20equipment%2C%20industrial%20food%20processing%20facility%2C%20quality%20oversight%2C%20Caribbean%20female%20professional%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=600&height=400&seq=gallery4&orientation=landscape" alt="Production Oversight" class="w-full h-full object-cover">
+</div>
+<!-- Gallery Image 5 -->
+<div class="gallery-item rounded-lg overflow-hidden shadow-md h-64">
+<img src="https://readdy.ai/api/search-image?query=scientist%20documenting%20research%20findings%20with%20traditional%20Caribbean%20spices%20and%20preservation%20methods%2C%20notebook%20and%20samples%2C%20research%20documentation%2C%20professional%20setting%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=600&height=400&seq=gallery5&orientation=landscape" alt="Research Documentation" class="w-full h-full object-cover">
+</div>
+<!-- Gallery Image 6 -->
+<div class="gallery-item rounded-lg overflow-hidden shadow-md h-64">
+<img src="https://readdy.ai/api/search-image?query=Caribbean%20female%20food%20scientist%20presenting%20at%20international%20food%20science%20conference%2C%20professional%20presentation%2C%20academic%20setting%2C%20knowledge%20sharing%2C%20expert%20speaker%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=600&height=400&seq=gallery6&orientation=landscape" alt="Conference Presentation" class="w-full h-full object-cover">
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-16 bg-[#F7F5F2]">
+<div class="container mx-auto px-4">
+<div class="max-w-4xl mx-auto">
+<div class="bg-white rounded-xl overflow-hidden shadow-lg">
+<div class="flex flex-col md:flex-row">
+<div class="w-full md:w-1/2 p-8 md:p-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-6">Get in Touch with Candice</h2>
+<p class="text-gray-600 mb-6">Interested in collaborating on food science innovation or learning more about Caribbean preservation techniques? Candice is always open to discussing new opportunities and sharing knowledge.</p>
+<div class="space-y-4 mb-8">
+
+</div>
+<div class="flex space-x-4">
+<a href="/about/" data-readdy="true" class="border border-primary text-primary hover:bg-primary hover:text-white py-3 px-6 rounded-button font-medium whitespace-nowrap transition">View Team</a>
+</div>
+</div>
+<div class="w-full md:w-1/2 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=professional%20Caribbean%20female%20food%20scientist%20in%20modern%20office%20setting%2C%20confident%20pose%2C%20warm%20natural%20lighting%2C%20professional%20portrait%20photography%2C%20business%20environment%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=800&height=600&seq=contact1&orientation=portrait')"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#2A2A2A] text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- Company Info -->
+<div>
+<a href="#" class="mb-6 inline-block"><img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/117959135c1f1a6fecd6b5698ea16259.png" alt="Pure Harvest Logo" class="h-24"></a>
+<p class="text-gray-400 mb-6">Pure Harvest Group of Companies Ltd. brings the authentic flavors of Trinidad and Tobago to kitchens around the world.</p>
+<div class="flex space-x-4">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h3 class="text-lg font-bold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="/" data-readdy="true" class="text-gray-400 hover:text-white transition">Home</a></li>
+<li><a href="/shop/" data-readdy="true" class="text-gray-400 hover:text-white transition">Shop</a></li>
+<li><a href="/about/" data-readdy="true" class="text-gray-400 hover:text-white transition">About Us</a></li>
+<li><a href="/retailer/" data-readdy="true" class="text-gray-400 hover:text-white transition">Become a Retailer</a></li>
+<li><a href="/contact/" data-readdy="true" class="text-gray-400 hover:text-white transition">Contact</a></li>
+</ul>
+</div>
+<!-- Team -->
+<div>
+<h3 class="text-lg font-bold mb-6">Our Team</h3>
+<ul class="space-y-3">
+<li><a href="/founder/ajamu-daniel/" data-readdy="true" class="text-gray-400 hover:text-white transition">Ajamu J Daniel</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Candice Joseph</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Natasha Williams</a></li>
+<li><a href="/about/" data-readdy="true" class="text-gray-400 hover:text-white transition">View All Team</a></li>
+</ul>
+</div>
+<!-- Contact Info -->
+<div>
+<h3 class="text-lg font-bold mb-6">Contact Us</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-map-pin-line"></i>
+</span>
+<span class="text-gray-400">Congo Hill, Moriah, Tobago</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-phone-line"></i>
+</span>
+<span class="text-gray-400">+1 868 361-8990</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-mail-line"></i>
+</span>
+<span class="text-gray-400">pureharvest2022@gmail.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-700 pt-8">
+<p class="text-gray-500 text-center">&copy; 2025 Pure Harvest Group of Companies Ltd. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', function() {
+if (mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.remove('hidden');
+} else {
+mobileMenu.classList.add('hidden');
+}
+});
+});
+</script>
+<script id="innovation-chart-script">
+document.addEventListener('DOMContentLoaded', function() {
+const chartDom = document.getElementById('innovation-chart');
+const myChart = echarts.init(chartDom);
+const option = {
+animation: false,
+tooltip: {
+trigger: 'axis',
+backgroundColor: 'rgba(255, 255, 255, 0.8)',
+textStyle: {
+color: '#1f2937'
+}
+},
+legend: {
+data: ['Nutritional Retention', 'Shelf Life Extension', 'Energy Efficiency', 'Quality Consistency'],
+textStyle: {
+color: '#1f2937'
+}
+},
+grid: {
+left: '0px',
+right: '0px',
+bottom: '0px',
+top: '60px',
+containLabel: true
+},
+xAxis: {
+type: 'category',
+data: ['2020', '2021', '2022', '2023', '2024', '2025'],
+axisLabel: {
+color: '#1f2937'
+}
+},
+yAxis: {
+type: 'value',
+axisLabel: {
+color: '#1f2937',
+formatter: '{value}%'
+}
+},
+series: [
+{
+name: 'Nutritional Retention',
+type: 'line',
+smooth: true,
+data: [75, 82, 88, 92, 95, 97],
+lineStyle: {
+color: 'rgba(87, 181, 231, 1)'
+},
+areaStyle: {
+color: 'rgba(87, 181, 231, 0.1)'
+}
+},
+{
+name: 'Shelf Life Extension',
+type: 'line',
+smooth: true,
+data: [100, 150, 200, 250, 300, 350],
+lineStyle: {
+color: 'rgba(141, 211, 199, 1)'
+},
+areaStyle: {
+color: 'rgba(141, 211, 199, 0.1)'
+}
+},
+{
+name: 'Energy Efficiency',
+type: 'line',
+smooth: true,
+data: [100, 105, 115, 125, 135, 140],
+lineStyle: {
+color: 'rgba(251, 191, 114, 1)'
+},
+areaStyle: {
+color: 'rgba(251, 191, 114, 0.1)'
+}
+},
+{
+name: 'Quality Consistency',
+type: 'line',
+smooth: true,
+data: [85, 90, 94, 97, 99, 99.8],
+lineStyle: {
+color: 'rgba(252, 141, 98, 1)'
+},
+areaStyle: {
+color: 'rgba(252, 141, 98, 0.1)'
+}
+}
+]
+};
+myChart.setOption(option);
+window.addEventListener('resize', function() {
+myChart.resize();
+});
+});
+</script>
+</body>
+</html>

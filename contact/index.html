@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Pure Harvest Group of Companies Ltd.</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#8B4513',secondary:'#556B2F'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+color: #333333;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.custom-checkbox {
+position: relative;
+display: inline-block;
+width: 20px;
+height: 20px;
+background-color: white;
+border: 2px solid #ddd;
+border-radius: 4px;
+cursor: pointer;
+}
+.custom-checkbox.checked::after {
+content: "";
+position: absolute;
+top: 2px;
+left: 6px;
+width: 6px;
+height: 10px;
+border: solid #8B4513;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.contact-form-popup {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+z-index: 1000;
+}
+</style>
+</head>
+<body class="bg-[#FAFAFA]">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+<div class="container mx-auto px-4 py-8 flex justify-between items-center">
+<a href="/" data-readdy="true"><img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/117959135c1f1a6fecd6b5698ea16259.png" alt="Pure Harvest Logo" class="h-32"></a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center space-x-8">
+<a href="/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Home</a>
+<a href="/shop/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Shop</a>
+<a href="/about/" data-readdy="true" class="text-gray-700 hover:text-primary transition">About Us</a>
+<a href="/retailer/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Become a Retailer</a>
+<a href="/contact/" data-readdy="true" class="text-primary font-medium">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<!-- Social Media Icons -->
+<div class="hidden md:flex items-center space-x-3">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+<!-- Cart Icon -->
+<a href="#" class="relative w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition">
+<i class="ri-shopping-cart-2-line text-xl"></i>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">3</span>
+</a>
+<!-- Mobile Menu Button -->
+<button id="mobile-menu-button" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-menu-line text-2xl"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Navigation -->
+<div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+<div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+<a href="/" data-readdy="true" class="py-2 text-gray-700">Home</a>
+<a href="/shop/" data-readdy="true" class="py-2 text-gray-700">Shop</a>
+<a href="/about/" data-readdy="true" class="py-2 text-gray-700">About Us</a>
+<a href="/retailer/" data-readdy="true" class="py-2 text-gray-700">Become a Retailer</a>
+<a href="/contact/" data-readdy="true" class="py-2 text-primary font-medium">Contact</a>
+<!-- Social Media Icons for Mobile -->
+<div class="flex items-center space-x-4 py-2">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[400px] flex items-center overflow-hidden">
+<div class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=modern%20Caribbean%20business%20office%20with%20professional%20team%20working%20together%2C%20warm%20natural%20lighting%20from%20large%20windows%2C%20tropical%20plants%20in%20background%2C%20clean%20modern%20workspace%20with%20computers%20and%20documents%2C%20professional%20photography%2C%20high%20resolution%2C%20no%20text%2C%20photorealistic&width=1920&height=800&seq=contact-hero&orientation=landscape')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+<div class="container mx-auto px-4 relative z-10">
+<div class="max-w-2xl">
+<h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Get in Touch</h1>
+<p class="text-lg text-white/90 mb-6">We're here to help with your inquiries about our premium Caribbean food products. Contact us today!</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="tel:+18683618990" class="flex items-center bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-medium whitespace-nowrap">
+<span class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-phone-line"></i>
+</span>
+Call Now
+</a>
+<a href="mailto:pureharvest2022@gmail.com" class="flex items-center bg-white hover:bg-white/90 text-primary py-3 px-6 rounded-button font-medium whitespace-nowrap">
+<span class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-mail-line"></i>
+</span>
+Email Us
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Information -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Phone -->
+<div class="text-center">
+<div class="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-phone-line text-2xl"></i>
+</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Phone</h3>
+<p class="text-gray-600 mb-2">Call us during business hours</p>
+<a href="tel:+18683618990" class="text-primary font-medium hover:underline">+1 868 361-8990</a>
+</div>
+<!-- Email -->
+<div class="text-center">
+<div class="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-mail-line text-2xl"></i>
+</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Email</h3>
+<p class="text-gray-600 mb-2">Send us your inquiries</p>
+<a href="mailto:pureharvest2022@gmail.com" class="text-primary font-medium hover:underline">pureharvest2022@gmail.com</a>
+</div>
+<!-- Address -->
+<div class="text-center">
+<div class="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-map-pin-line text-2xl"></i>
+</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Address</h3>
+<p class="text-gray-600 mb-2">Visit our facility</p>
+<p class="text-primary font-medium">Congo Hill, Moriah<br>Tobago</p>
+</div>
+<!-- Emergency -->
+<div class="text-center">
+<div class="w-16 h-16 mx-auto mb-4 rounded-full bg-red-100 flex items-center justify-center">
+<span class="w-8 h-8 flex items-center justify-center text-red-600">
+<i class="ri-alarm-warning-line text-2xl"></i>
+</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Emergency</h3>
+<p class="text-gray-600 mb-2">Urgent inquiries only</p>
+<a href="tel:+18683618990" class="text-red-600 font-medium hover:underline">+1 868 361-8990</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form -->
+<section class="py-16 bg-[#F7F5F2]">
+<div class="container mx-auto px-4">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Send Us a Message</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Have questions about our products or services? Fill out the form below and we'll get back to you within 24 hours.</p>
+</div>
+<div class="bg-white rounded-lg shadow-md p-8">
+<form id="contact-form" action="/api/lead" method="POST" class="space-y-6">
+<input type="hidden" name="type" value="contact">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+<input type="text" name="name" required class="w-full py-3 px-4 rounded-button border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-sm">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+<input type="email" name="email" required class="w-full py-3 px-4 rounded-button border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-sm">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+<input type="tel" name="phone" class="w-full py-3 px-4 rounded-button border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-sm">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Department *</label>
+<div class="relative">
+<button type="button" id="department-dropdown" class="w-full py-3 px-4 rounded-button border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-sm text-left bg-white flex items-center justify-between">
+<span id="department-selected">Select Department</span>
+<span class="w-5 h-5 flex items-center justify-center">
+<i class="ri-arrow-down-s-line"></i>
+</span>
+</button>
+<div id="department-options" class="hidden absolute top-full left-0 right-0 bg-white border border-gray-300 rounded-button mt-1 shadow-lg z-10">
+<div class="py-1">
+<button type="button" class="w-full px-4 py-2 text-left hover:bg-gray-100 text-sm" data-value="sales">Sales & Orders</button>
+<button type="button" class="w-full px-4 py-2 text-left hover:bg-gray-100 text-sm" data-value="support">Customer Support</button>
+<button type="button" class="w-full px-4 py-2 text-left hover:bg-gray-100 text-sm" data-value="partnerships">Business Development</button>
+<button type="button" class="w-full px-4 py-2 text-left hover:bg-gray-100 text-sm" data-value="technical">Technical Support</button>
+<button type="button" class="w-full px-4 py-2 text-left hover:bg-gray-100 text-sm" data-value="general">General Inquiry</button>
+</div>
+</div>
+<input type="hidden" name="department" id="department-input" required>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Subject *</label>
+<input type="text" name="subject" required class="w-full py-3 px-4 rounded-button border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-sm">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+<textarea name="message" required rows="6" class="w-full py-3 px-4 rounded-button border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-sm resize-vertical"></textarea>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2">Attach Files (Optional)</label>
+<div class="border-2 border-dashed border-gray-300 rounded-button p-6 text-center hover:border-primary transition">
+<input type="file" id="file-upload" name="files" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" class="hidden">
+<label for="file-upload" class="cursor-pointer">
+<div class="w-12 h-12 mx-auto mb-3 rounded-full bg-gray-100 flex items-center justify-center">
+<span class="w-6 h-6 flex items-center justify-center text-gray-500">
+<i class="ri-upload-2-line text-xl"></i>
+</span>
+</div>
+<p class="text-gray-600 mb-1">Click to upload files</p>
+<p class="text-sm text-gray-500">PDF, DOC, JPG, PNG up to 10MB each</p>
+</label>
+<div id="file-list" class="mt-4 space-y-2 hidden"></div>
+</div>
+</div>
+<div class="flex items-start">
+<div id="privacy-checkbox" class="custom-checkbox mt-1 mr-3"></div>
+<label class="text-sm text-gray-600">I agree to the processing of my personal data and accept the <a href="#" class="text-primary hover:underline">Privacy Policy</a> *</label>
+</div>
+<div class="pt-2"><div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITE_KEY"></div></div>
+<button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-medium whitespace-nowrap">Send Message</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Department Directory -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Departments</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Connect directly with the right team for your specific needs. Each department has dedicated specialists to assist you.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Sales & Orders -->
+<div class="bg-[#F7F5F2] p-8 rounded-lg shadow-md hover:shadow-lg transition">
+<div class="w-16 h-16 mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-shopping-bag-line text-2xl"></i>
+</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Sales & Orders</h3>
+<p class="text-gray-600 mb-4">Product inquiries, bulk orders, pricing, and wholesale opportunities.</p>
+<div class="space-y-2 mb-6">
+<p class="text-sm"><strong>Contact:</strong> Maria Rodriguez</p>
+<p class="text-sm"><strong>Email:</strong> <a href="mailto:pureharvest2022@gmail.com" class="text-primary hover:underline">pureharvest2022@gmail.com</a></p>
+<p class="text-sm"><strong>Phone:</strong> <a href="tel:+18683618990" class="text-primary hover:underline">+1 868 361-8990 ext. 101</a></p>
+</div>
+<button class="contact-dept-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap" data-dept="sales">Contact Sales</button>
+</div>
+<!-- Customer Support -->
+<div class="bg-[#F7F5F2] p-8 rounded-lg shadow-md hover:shadow-lg transition">
+<div class="w-16 h-16 mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-customer-service-2-line text-2xl"></i>
+</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Customer Support</h3>
+<p class="text-gray-600 mb-4">Order status, returns, product support, and general assistance.</p>
+<div class="space-y-2 mb-6">
+<p class="text-sm"><strong>Contact:</strong> James Thompson</p>
+<p class="text-sm"><strong>Email:</strong> <a href="mailto:pureharvest2022@gmail.com" class="text-primary hover:underline">pureharvest2022@gmail.com</a></p>
+<p class="text-sm"><strong>Phone:</strong> <a href="tel:+18683618990" class="text-primary hover:underline">+1 868 361-8990 ext. 102</a></p>
+</div>
+<button class="contact-dept-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap" data-dept="support">Contact Support</button>
+</div>
+<!-- Business Development -->
+<div class="bg-[#F7F5F2] p-8 rounded-lg shadow-md hover:shadow-lg transition">
+<div class="w-16 h-16 mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-handshake-line text-2xl"></i>
+</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Business Development</h3>
+<p class="text-gray-600 mb-4">Partnerships, distribution, export opportunities, and strategic alliances.</p>
+<div class="space-y-2 mb-6">
+<p class="text-sm"><strong>Contact:</strong> Sarah Williams</p>
+<p class="text-sm"><strong>Email:</strong> <a href="mailto:pureharvest2022@gmail.com" class="text-primary hover:underline">pureharvest2022@gmail.com</a></p>
+<p class="text-sm"><strong>Phone:</strong> <a href="tel:+18683618990" class="text-primary hover:underline">+1 868 361-8990 ext. 103</a></p>
+</div>
+<button class="contact-dept-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap" data-dept="partnerships">Contact Team</button>
+</div>
+<!-- Technical Support -->
+<div class="bg-[#F7F5F2] p-8 rounded-lg shadow-md hover:shadow-lg transition">
+<div class="w-16 h-16 mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-tools-line text-2xl"></i>
+</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Technical Support</h3>
+<p class="text-gray-600 mb-4">Product specifications, usage guidelines, and technical documentation.</p>
+<div class="space-y-2 mb-6">
+<p class="text-sm"><strong>Contact:</strong> Michael Chen</p>
+<p class="text-sm"><strong>Email:</strong> <a href="mailto:pureharvest2022@gmail.com" class="text-primary hover:underline">pureharvest2022@gmail.com</a></p>
+<p class="text-sm"><strong>Phone:</strong> <a href="tel:+18683618990" class="text-primary hover:underline">+1 868 361-8990 ext. 104</a></p>
+</div>
+<button class="contact-dept-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap" data-dept="technical">Contact Technical</button>
+</div>
+<!-- Quality Assurance -->
+<div class="bg-[#F7F5F2] p-8 rounded-lg shadow-md hover:shadow-lg transition">
+<div class="w-16 h-16 mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-shield-check-line text-2xl"></i>
+</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Quality Assurance</h3>
+<p class="text-gray-600 mb-4">Product quality concerns, certifications, and compliance inquiries.</p>
+<div class="space-y-2 mb-6">
+<p class="text-sm"><strong>Contact:</strong> Dr. Patricia Johnson</p>
+<p class="text-sm"><strong>Email:</strong> <a href="mailto:pureharvest2022@gmail.com" class="text-primary hover:underline">pureharvest2022@gmail.com</a></p>
+<p class="text-sm"><strong>Phone:</strong> <a href="tel:+18683618990" class="text-primary hover:underline">+1 868 361-8990 ext. 105</a></p>
+</div>
+<button class="contact-dept-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap" data-dept="quality">Contact QA</button>
+</div>
+<!-- Media & PR -->
+<div class="bg-[#F7F5F2] p-8 rounded-lg shadow-md hover:shadow-lg transition">
+<div class="w-16 h-16 mb-6 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-megaphone-line text-2xl"></i>
+</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Media & PR</h3>
+<p class="text-gray-600 mb-4">Press inquiries, media kits, interviews, and brand collaborations.</p>
+<div class="space-y-2 mb-6">
+<p class="text-sm"><strong>Contact:</strong> Lisa Martinez</p>
+<p class="text-sm"><strong>Email:</strong> <a href="mailto:pureharvest2022@gmail.com" class="text-primary hover:underline">pureharvest2022@gmail.com</a></p>
+<p class="text-sm"><strong>Phone:</strong> <a href="tel:+18683618990" class="text-primary hover:underline">+1 868 361-8990 ext. 106</a></p>
+</div>
+<button class="contact-dept-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap" data-dept="media">Contact PR</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Location Map -->
+<section class="py-16 bg-[#F7F5F2]">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Visit Our Facility</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Located in the heart of Tobago, our modern facility is where we craft our premium Caribbean food products with care and precision.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="bg-white p-8 rounded-lg shadow-md">
+<h3 class="text-2xl font-bold mb-6">Location Details</h3>
+<div class="space-y-4">
+<div class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-1 mr-4">
+<i class="ri-map-pin-line"></i>
+</span>
+<div>
+<h4 class="font-bold mb-1">Address</h4>
+<p class="text-gray-600">Congo Hill, Moriah<br>Tobago, Trinidad and Tobago</p>
+</div>
+</div>
+<div class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-1 mr-4">
+<i class="ri-car-line"></i>
+</span>
+<div>
+<h4 class="font-bold mb-1">Parking</h4>
+<p class="text-gray-600">Free parking available on-site<br>Accessible parking spaces available</p>
+</div>
+</div>
+<div class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-1 mr-4">
+<i class="ri-bus-line"></i>
+</span>
+<div>
+<h4 class="font-bold mb-1">Public Transport</h4>
+<p class="text-gray-600">Accessible by local bus routes<br>Taxi services available</p>
+</div>
+</div>
+<div class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-1 mr-4">
+<i class="ri-time-line"></i>
+</span>
+<div>
+<h4 class="font-bold mb-1">Facility Tours</h4>
+<p class="text-gray-600">Available by appointment<br>Contact us to schedule a visit</p>
+</div>
+</div>
+</div>
+<button class="mt-6 bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-medium whitespace-nowrap">Get Directions</button>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-96 w-full">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9630.676278641991!2d-60.7317352553271!3d11.230655029207476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c4853036890a5f9%3A0x7d2592c416e08f00!2sMoriah!5e1!3m2!1sen!2stt!4v1752821110984!5m2!1sen!2stt" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Business Hours -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Business Hours</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Our team is available during these hours to assist you with your inquiries and orders.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-[#F7F5F2] p-8 rounded-lg shadow-md">
+<h3 class="text-xl font-bold mb-6 flex items-center">
+<span class="w-6 h-6 flex items-center justify-center text-primary mr-3">
+<i class="ri-building-line"></i>
+</span>
+Office Hours
+</h3>
+<div class="space-y-3">
+<div class="flex justify-between items-center py-2 border-b border-gray-200">
+<span class="font-medium">Monday - Friday</span>
+<span class="text-primary font-bold">8:00 AM - 5:00 PM</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-gray-200">
+<span class="font-medium">Saturday</span>
+<span class="text-primary font-bold">9:00 AM - 2:00 PM</span>
+</div>
+<div class="flex justify-between items-center py-2">
+<span class="font-medium">Sunday</span>
+<span class="text-gray-500">Closed</span>
+</div>
+</div>
+<p class="text-sm text-gray-600 mt-4">
+<span class="w-4 h-4 flex items-center justify-center text-gray-500 mr-2 inline-block">
+<i class="ri-time-zone-line"></i>
+</span>
+Atlantic Standard Time (AST)
+</p>
+</div>
+<div class="bg-[#F7F5F2] p-8 rounded-lg shadow-md">
+<h3 class="text-xl font-bold mb-6 flex items-center">
+<span class="w-6 h-6 flex items-center justify-center text-primary mr-3">
+<i class="ri-customer-service-2-line"></i>
+</span>
+Customer Support
+</h3>
+<div class="space-y-3">
+<div class="flex justify-between items-center py-2 border-b border-gray-200">
+<span class="font-medium">Monday - Friday</span>
+<span class="text-primary font-bold">7:00 AM - 7:00 PM</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-gray-200">
+<span class="font-medium">Saturday</span>
+<span class="text-primary font-bold">8:00 AM - 4:00 PM</span>
+</div>
+<div class="flex justify-between items-center py-2">
+<span class="font-medium">Sunday</span>
+<span class="text-primary font-bold">10:00 AM - 2:00 PM</span>
+</div>
+</div>
+<p class="text-sm text-gray-600 mt-4">
+<span class="w-4 h-4 flex items-center justify-center text-gray-500 mr-2 inline-block">
+<i class="ri-phone-line"></i>
+</span>
+Emergency support available 24/7
+</p>
+</div>
+</div>
+<div class="mt-8 bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+<div class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-yellow-600 mt-0.5 mr-3">
+<i class="ri-information-line"></i>
+</span>
+<div>
+<h4 class="font-bold text-yellow-800 mb-2">Holiday Schedule</h4>
+<p class="text-yellow-700 text-sm">Our hours may vary during public holidays and special occasions. Please check our social media or call ahead during holiday periods for updated hours.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Media -->
+<section class="py-16 bg-[#F7F5F2]">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Connect With Us</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Follow us on social media for the latest updates, recipes, and behind-the-scenes content from Pure Harvest.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+<!-- Instagram -->
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition group">
+<div class="text-center">
+<div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition">
+<span class="w-8 h-8 flex items-center justify-center text-white">
+<i class="ri-instagram-line text-2xl"></i>
+</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Instagram</h3>
+<p class="text-gray-600 mb-4">@pureharvestltd2022</p>
+<p class="text-sm text-gray-500">Follow for product photos, recipes, and daily updates</p>
+</div>
+</a>
+<!-- Facebook -->
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition group">
+<div class="text-center">
+<div class="w-16 h-16 mx-auto mb-4 rounded-full bg-blue-600 flex items-center justify-center group-hover:scale-110 transition">
+<span class="w-8 h-8 flex items-center justify-center text-white">
+<i class="ri-facebook-line text-2xl"></i>
+</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Facebook</h3>
+<p class="text-gray-600 mb-4">Pure Harvest Group</p>
+<p class="text-sm text-gray-500">Join our community for news, events, and customer stories</p>
+</div>
+</a>
+<!-- TikTok -->
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition group">
+<div class="text-center">
+<div class="w-16 h-16 mx-auto mb-4 rounded-full bg-black flex items-center justify-center group-hover:scale-110 transition">
+<span class="w-8 h-8 flex items-center justify-center text-white">
+<i class="ri-tiktok-line text-2xl"></i>
+</span>
+</div>
+<h3 class="text-xl font-bold mb-2">TikTok</h3>
+<p class="text-gray-600 mb-4">@pureharvest0</p>
+<p class="text-sm text-gray-500">Watch quick recipes and behind-the-scenes content</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Find quick answers to common questions about our products, orders, and services.</p>
+</div>
+<div class="space-y-4">
+<div class="bg-[#F7F5F2] rounded-lg">
+<button class="faq-toggle w-full p-6 text-left flex items-center justify-between font-medium hover:bg-gray-50 transition">
+<span>What are your shipping options and delivery times?</span>
+<span class="w-5 h-5 flex items-center justify-center transform transition-transform">
+<i class="ri-arrow-down-s-line"></i>
+</span>
+</button>
+<div class="faq-content hidden px-6 pb-6">
+<p class="text-gray-600">We offer standard shipping (5-7 business days) and express shipping (2-3 business days) within Trinidad and Tobago. International shipping is available with delivery times varying by destination. Free shipping is available on orders over $300.</p>
+</div>
+</div>
+<div class="bg-[#F7F5F2] rounded-lg">
+<button class="faq-toggle w-full p-6 text-left flex items-center justify-between font-medium hover:bg-gray-50 transition">
+<span>Do you offer bulk pricing for wholesale orders?</span>
+<span class="w-5 h-5 flex items-center justify-center transform transition-transform">
+<i class="ri-arrow-down-s-line"></i>
+</span>
+</button>
+<div class="faq-content hidden px-6 pb-6">
+<p class="text-gray-600">Yes, we offer competitive wholesale pricing for bulk orders. Please contact our Sales department at pureharvest2022@gmail.com or call +1 868 361-8990 ext. 101 for custom pricing based on your order volume and requirements.</p>
+</div>
+</div>
+<div class="bg-[#F7F5F2] rounded-lg">
+<button class="faq-toggle w-full p-6 text-left flex items-center justify-between font-medium hover:bg-gray-50 transition">
+<span>What certifications do your products have?</span>
+<span class="w-5 h-5 flex items-center justify-center transform transition-transform">
+<i class="ri-arrow-down-s-line"></i>
+</span>
+</button>
+<div class="faq-content hidden px-6 pb-6">
+<p class="text-gray-600">Our products are HACCP certified, GMP certified, and we maintain strict quality control standards. We also have Certificate of Origin documentation for international trade. All certifications are available upon request.</p>
+</div>
+</div>
+<div class="bg-[#F7F5F2] rounded-lg">
+<button class="faq-toggle w-full p-6 text-left flex items-center justify-between font-medium hover:bg-gray-50 transition">
+<span>How long do your products stay fresh?</span>
+<span class="w-5 h-5 flex items-center justify-center transform transition-transform">
+<i class="ri-arrow-down-s-line"></i>
+</span>
+</button>
+<div class="faq-content hidden px-6 pb-6">
+<p class="text-gray-600">Our dehydrated products have a shelf life of 12-24 months when stored in a cool, dry place. Mixed nuts and seeds should be consumed within 6-12 months for optimal freshness. All products include expiration dates on packaging.</p>
+</div>
+</div>
+<div class="bg-[#F7F5F2] rounded-lg">
+<button class="faq-toggle w-full p-6 text-left flex items-center justify-between font-medium hover:bg-gray-50 transition">
+<span>Can I visit your facility for a tour?</span>
+<span class="w-5 h-5 flex items-center justify-center transform transition-transform">
+<i class="ri-arrow-down-s-line"></i>
+</span>
+</button>
+<div class="faq-content hidden px-6 pb-6">
+<p class="text-gray-600">Yes, we offer facility tours by appointment. Please contact us at least 48 hours in advance to schedule your visit. Tours are available Monday through Friday during business hours and include our production areas and quality control processes.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter -->
+<section class="py-16 bg-primary">
+<div class="container mx-auto px-4">
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Stay Connected</h2>
+<p class="text-white/80 mb-8">Subscribe to our newsletter for product updates, special offers, and Caribbean-inspired recipes delivered to your inbox.</p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto" action="https://readdy.ai/api/form/d1rbhfoo12an1bd69oqg" method="POST">
+<input type="email" name="email" placeholder="Your email address" class="flex-1 py-3 px-4 rounded-button border-none focus:outline-none focus:ring-2 focus:ring-white/30 text-gray-800 text-sm">
+<button type="submit" class="bg-white hover:bg-white/90 text-primary py-3 px-8 rounded-button font-medium whitespace-nowrap">Subscribe</button>
+</form>
+<p class="text-white/60 text-sm mt-4">We respect your privacy and will never share your information.</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#2A2A2A] text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- Company Info -->
+<div>
+<a href="/" data-readdy="true" class="mb-6 inline-block"><img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/117959135c1f1a6fecd6b5698ea16259.png" alt="Pure Harvest Logo" class="h-24"></a>
+<p class="text-gray-400 mb-6">Pure Harvest Group of Companies Ltd. brings the authentic flavors of Tobago to kitchens around the world.</p>
+<div class="flex space-x-4">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h3 class="text-lg font-bold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="/" data-readdy="true" class="text-gray-400 hover:text-white transition">Home</a></li>
+<li><a href="/shop/" data-readdy="true" class="text-gray-400 hover:text-white transition">Shop</a></li>
+<li><a href="/about/" data-readdy="true" class="text-gray-400 hover:text-white transition">About Us</a></li>
+<li><a href="/retailer/" data-readdy="true" class="text-gray-400 hover:text-white transition">Become a Retailer</a></li>
+<li><a href="/contact/" data-readdy="true" class="text-gray-400 hover:text-white transition">Contact</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Terms & Conditions</a></li>
+</ul>
+</div>
+<!-- Contact Info -->
+<div>
+<h3 class="text-lg font-bold mb-6">Contact Us</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-map-pin-line"></i>
+</span>
+<span class="text-gray-400">Congo Hill, Moriah, Tobago</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-phone-line"></i>
+</span>
+<span class="text-gray-400">+1 868 361-8990</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-mail-line"></i>
+</span>
+<span class="text-gray-400">pureharvest2022@gmail.com</span>
+</li>
+</ul>
+<div class="mt-6">
+<h4 class="text-sm font-bold mb-3">We Accept</h4>
+<div class="flex space-x-3">
+<span class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-visa-fill text-xl"></i>
+</span>
+<span class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-mastercard-fill text-xl"></i>
+</span>
+<span class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-paypal-fill text-xl"></i>
+</span>
+</div>
+</div>
+</div>
+<!-- Newsletter -->
+<div>
+<h3 class="text-lg font-bold mb-6">Newsletter</h3>
+<p class="text-gray-400 mb-4">Subscribe to receive updates, access to exclusive deals, and more.</p>
+<form class="space-y-3">
+<input type="email" placeholder="Your email address" class="w-full py-3 px-4 rounded-button bg-white/10 border-none text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/30 text-sm">
+<button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white py-3 px-4 rounded-button font-medium whitespace-nowrap">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-700 pt-8">
+<p class="text-gray-500 text-center">&copy; 2025 Pure Harvest Group of Companies Ltd. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<!-- Contact Success Popup -->
+<div id="contact-success-popup" class="contact-form-popup hidden">
+<div class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-xl p-8 max-w-md w-full text-center">
+<div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-100 flex items-center justify-center">
+<i class="ri-check-line text-3xl text-green-500"></i>
+</div>
+<h3 class="text-2xl font-bold mb-2">Message Sent!</h3>
+<p class="text-gray-600 mb-6">Thank you for contacting us. We'll get back to you within 24 hours.</p>
+<button onclick="closeSuccessPopup()" class="bg-primary hover:bg-primary/90 text-white py-3 px-8 rounded-button font-medium whitespace-nowrap">Close</button>
+</div>
+</div>
+<!-- Department Contact Popup -->
+<div id="dept-contact-popup" class="contact-form-popup hidden">
+<div class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-xl p-8 max-w-xl w-full max-h-[90vh] overflow-y-auto">
+<button onclick="closeDeptPopup()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+<i class="ri-close-line text-xl"></i>
+</button>
+<div class="text-center mb-6">
+<h3 class="text-2xl font-bold mb-2" id="dept-title">Contact Department</h3>
+<p class="text-gray-600">Send a direct message to our specialized team</p>
+</div>
+<form id="dept-contact-form" class="space-y-4">
+<input type="hidden" id="dept-type" name="department">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">Name *</label>
+<input type="text" name="name" required class="w-full py-2 px-3 rounded-button border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-sm">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+<input type="email" name="email" required class="w-full py-2 px-3 rounded-button border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-sm">
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">Subject *</label>
+<input type="text" name="subject" required class="w-full py-2 px-3 rounded-button border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-sm">
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-1">Message *</label>
+<textarea name="message" required rows="4" class="w-full py-2 px-3 rounded-button border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-sm resize-vertical"></textarea>
+</div>
+<button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white py-3 px-4 rounded-button font-medium whitespace-nowrap">Send Message</button>
+</form>
+</div>
+</div>
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+});
+});
+</script>
+<script id="contact-form-script">
+document.addEventListener('DOMContentLoaded', function() {
+const contactForm = document.getElementById('contact-form');
+const successPopup = document.getElementById('contact-success-popup');
+const privacyCheckbox = document.getElementById('privacy-checkbox');
+const departmentDropdown = document.getElementById('department-dropdown');
+const departmentOptions = document.getElementById('department-options');
+const departmentSelected = document.getElementById('department-selected');
+const departmentInput = document.getElementById('department-input');
+const fileUpload = document.getElementById('file-upload');
+const fileList = document.getElementById('file-list');
+// Privacy checkbox toggle
+privacyCheckbox.addEventListener('click', () => {
+privacyCheckbox.classList.toggle('checked');
+});
+// Department dropdown
+departmentDropdown.addEventListener('click', () => {
+departmentOptions.classList.toggle('hidden');
+});
+// Department selection
+departmentOptions.addEventListener('click', (e) => {
+if (e.target.hasAttribute('data-value')) {
+const value = e.target.getAttribute('data-value');
+const text = e.target.textContent;
+departmentSelected.textContent = text;
+departmentInput.value = value;
+departmentOptions.classList.add('hidden');
+}
+});
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+if (!departmentDropdown.contains(e.target) && !departmentOptions.contains(e.target)) {
+departmentOptions.classList.add('hidden');
+}
+});
+// File upload handling
+fileUpload.addEventListener('change', (e) => {
+const files = Array.from(e.target.files);
+if (files.length > 0) {
+fileList.classList.remove('hidden');
+fileList.innerHTML = '';
+files.forEach((file, index) => {
+const fileItem = document.createElement('div');
+fileItem.className = 'flex items-center justify-between p-2 bg-gray-50 rounded text-sm';
+fileItem.innerHTML = `
+<span class="truncate">${file.name}</span>
+<button type="button" class="text-red-500 hover:text-red-700 ml-2" onclick="removeFile(${index})">
+<i class="ri-close-line"></i>
+</button>
+`;
+fileList.appendChild(fileItem);
+});
+}
+});
+// Remove file function
+window.removeFile = function(index) {
+const dt = new DataTransfer();
+const files = Array.from(fileUpload.files);
+files.splice(index, 1);
+files.forEach(file => dt.items.add(file));
+fileUpload.files = dt.files;
+if (files.length === 0) {
+fileList.classList.add('hidden');
+} else {
+const event = new Event('change');
+fileUpload.dispatchEvent(event);
+}
+};
+// Form submission
+contactForm.addEventListener('submit', async (e) => {
+e.preventDefault();
+// Validation
+let isValid = true;
+const requiredFields = contactForm.querySelectorAll('[required]');
+requiredFields.forEach(field => {
+if (!field.value.trim()) {
+field.classList.add('border-red-500');
+isValid = false;
+} else {
+field.classList.remove('border-red-500');
+}
+});
+if (!privacyCheckbox.classList.contains('checked')) {
+isValid = false;
+privacyCheckbox.parentElement.classList.add('text-red-500');
+} else {
+privacyCheckbox.parentElement.classList.remove('text-red-500');
+}
+if (!isValid) return;
+const submitButton = contactForm.querySelector('button[type="submit"]');
+submitButton.disabled = true;
+submitButton.innerHTML = '<i class="ri-loader-4-line animate-spin mr-2"></i>Sending...';
+// Simulate form submission
+setTimeout(() => {
+successPopup.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+contactForm.reset();
+privacyCheckbox.classList.remove('checked');
+departmentSelected.textContent = 'Select Department';
+departmentInput.value = '';
+fileList.classList.add('hidden');
+submitButton.disabled = false;
+submitButton.innerHTML = 'Send Message';
+}, 1500);
+});
+// Close success popup
+window.closeSuccessPopup = function() {
+successPopup.classList.add('hidden');
+document.body.style.overflow = 'auto';
+};
+// Close popup when clicking outside
+successPopup.addEventListener('click', (e) => {
+if (e.target === successPopup) {
+closeSuccessPopup();
+}
+});
+});
+</script>
+<script id="department-contact-script">
+document.addEventListener('DOMContentLoaded', function() {
+const deptButtons = document.querySelectorAll('.contact-dept-btn');
+const deptPopup = document.getElementById('dept-contact-popup');
+const deptForm = document.getElementById('dept-contact-form');
+const deptTitle = document.getElementById('dept-title');
+const deptType = document.getElementById('dept-type');
+const departmentTitles = {
+sales: 'Contact Sales Team',
+support: 'Contact Customer Support',
+partnerships: 'Contact Business Development',
+technical: 'Contact Technical Support',
+quality: 'Contact Quality Assurance',
+media: 'Contact Media & PR'
+};
+deptButtons.forEach(button => {
+button.addEventListener('click', () => {
+const dept = button.getAttribute('data-dept');
+deptTitle.textContent = departmentTitles[dept] || 'Contact Department';
+deptType.value = dept;
+deptPopup.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+});
+});
+window.closeDeptPopup = function() {
+deptPopup.classList.add('hidden');
+document.body.style.overflow = 'auto';
+deptForm.reset();
+};
+deptForm.addEventListener('submit', (e) => {
+e.preventDefault();
+const submitButton = deptForm.querySelector('button[type="submit"]');
+submitButton.disabled = true;
+submitButton.innerHTML = '<i class="ri-loader-4-line animate-spin mr-2"></i>Sending...';
+setTimeout(() => {
+closeDeptPopup();
+document.getElementById('contact-success-popup').classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+submitButton.disabled = false;
+submitButton.innerHTML = 'Send Message';
+}, 1500);
+});
+deptPopup.addEventListener('click', (e) => {
+if (e.target === deptPopup) {
+closeDeptPopup();
+}
+});
+});
+</script>
+<script id="faq-script">
+document.addEventListener('DOMContentLoaded', function() {
+const faqToggles = document.querySelectorAll('.faq-toggle');
+faqToggles.forEach(toggle => {
+toggle.addEventListener('click', () => {
+const content = toggle.nextElementSibling;
+const icon = toggle.querySelector('i');
+if (content.classList.contains('hidden')) {
+content.classList.remove('hidden');
+icon.style.transform = 'rotate(180deg)';
+} else {
+content.classList.add('hidden');
+icon.style.transform = 'rotate(0deg)';
+}
+});
+});
+});
+</script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</body>
+</html>

@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certificate of Incorporation | Pure Harvest Group of Companies Ltd.</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#8B4513',secondary:'#556B2F'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+color: #333333;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.custom-checkbox {
+position: relative;
+display: inline-block;
+width: 20px;
+height: 20px;
+background-color: white;
+border: 2px solid #ddd;
+border-radius: 4px;
+cursor: pointer;
+}
+.custom-checkbox.checked::after {
+content: "";
+position: absolute;
+top: 2px;
+left: 6px;
+width: 6px;
+height: 10px;
+border: solid #8B4513;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.certificate-container {
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath fill='%23f3f4f6' d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z'/%3E%3C/svg%3E");
+}
+.certificate-image {
+position: relative;
+}
+.certificate-image::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%238B4513' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+z-index: 1;
+pointer-events: none;
+}
+.certificate-watermark {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) rotate(-45deg);
+font-size: 8rem;
+color: rgba(139, 69, 19, 0.05);
+font-weight: bold;
+white-space: nowrap;
+pointer-events: none;
+z-index: 10;
+}
+.custom-radio {
+position: relative;
+display: inline-block;
+width: 20px;
+height: 20px;
+background-color: white;
+border: 2px solid #ddd;
+border-radius: 50%;
+cursor: pointer;
+}
+.custom-radio.checked::after {
+content: "";
+position: absolute;
+top: 4px;
+left: 4px;
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background-color: #8B4513;
+}
+.range-slider {
+-webkit-appearance: none;
+width: 100%;
+height: 8px;
+border-radius: 4px;
+background: #e5e7eb;
+outline: none;
+}
+.range-slider::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background: #8B4513;
+cursor: pointer;
+border: 2px solid white;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.range-slider::-moz-range-thumb {
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background: #8B4513;
+cursor: pointer;
+border: 2px solid white;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.certificate-seal {
+position: absolute;
+bottom: 40px;
+right: 40px;
+width: 120px;
+height: 120px;
+background-color: rgba(139, 69, 19, 0.1);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 5;
+}
+.certificate-seal::before {
+content: "";
+position: absolute;
+top: 10px;
+left: 10px;
+right: 10px;
+bottom: 10px;
+border: 2px dashed rgba(139, 69, 19, 0.3);
+border-radius: 50%;
+}
+.certificate-seal::after {
+content: "";
+position: absolute;
+top: 20px;
+left: 20px;
+right: 20px;
+bottom: 20px;
+border: 1px solid rgba(139, 69, 19, 0.5);
+border-radius: 50%;
+}
+.page-controls {
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 1rem;
+}
+.page-controls button {
+background-color: #f3f4f6;
+border: 1px solid #e5e7eb;
+color: #4b5563;
+width: 36px;
+height: 36px;
+border-radius: 4px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 2px;
+cursor: pointer;
+transition: all 0.2s;
+}
+.page-controls button:hover {
+background-color: #e5e7eb;
+}
+.page-controls button.active {
+background-color: #8B4513;
+color: white;
+border-color: #8B4513;
+}
+</style>
+</head>
+<body class="bg-[#FAFAFA]">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+<div class="container mx-auto px-4 py-6 flex justify-between items-center">
+<a href="/" data-readdy="true"><img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/117959135c1f1a6fecd6b5698ea16259.png" alt="Pure Harvest Logo" class="h-24"></a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center space-x-8">
+<a href="/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Home</a>
+<a href="/shop/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Shop</a>
+<a href="/about/" data-readdy="true" class="text-gray-700 hover:text-primary transition">About Us</a>
+<a href="/retailer/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Become a Retailer</a>
+<a href="#" class="text-gray-700 hover:text-primary transition">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<!-- Social Media Icons -->
+<div class="hidden md:flex items-center space-x-3">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+<!-- Cart Icon -->
+<a href="#" class="relative w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition">
+<i class="ri-shopping-cart-2-line text-xl"></i>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">3</span>
+</a>
+<!-- Mobile Menu Button -->
+<button id="mobile-menu-button" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-menu-line text-2xl"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Navigation -->
+<div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+<div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+<a href="/" data-readdy="true" class="py-2 text-gray-700">Home</a>
+<a href="/shop/" data-readdy="true" class="py-2 text-gray-700">Shop</a>
+<a href="/about/" data-readdy="true" class="py-2 text-gray-700">About Us</a>
+<a href="/retailer/" data-readdy="true" class="py-2 text-gray-700">Become a Retailer</a>
+<a href="#" class="py-2 text-gray-700">Contact</a>
+<!-- Social Media Icons for Mobile -->
+<div class="flex items-center space-x-4 py-2">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Breadcrumb -->
+<div class="bg-white border-b">
+<div class="container mx-auto px-4 py-3">
+<div class="flex items-center text-sm text-gray-500">
+<a href="/" data-readdy="true" class="hover:text-primary transition">Home</a>
+<span class="mx-2">/</span>
+<a href="/about/" data-readdy="true" class="hover:text-primary transition">About Us</a>
+<span class="mx-2">/</span>
+<span class="text-primary">Certificate of Incorporation</span>
+</div>
+</div>
+</div>
+<!-- Main Content -->
+<main class="py-12">
+<div class="container mx-auto px-4">
+<!-- Back Button -->
+<div class="mb-8">
+<a href="/" data-readdy="true" class="inline-flex items-center text-gray-600 hover:text-primary transition">
+<i class="ri-arrow-left-line mr-2"></i>
+Back to Home
+</a>
+</div>
+<!-- Certificate Header -->
+<div class="mb-8 text-center">
+<h1 class="text-3xl md:text-4xl font-bold mb-4">Certificate of Incorporation</h1>
+<p class="text-gray-600 max-w-3xl mx-auto">Official document certifying the legal formation of Pure Harvest Group of Companies Ltd. as a registered business entity in Trinidad and Tobago.</p>
+</div>
+<!-- Certificate Display Section -->
+<div class="flex flex-col lg:flex-row gap-8 mb-12">
+<!-- Certificate Viewer -->
+<div class="w-full lg:w-2/3">
+<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+<!-- Certificate Controls -->
+<div class="bg-gray-50 border-b px-4 py-3 flex items-center justify-between">
+<div class="flex items-center space-x-4">
+<button id="zoom-out" class="w-8 h-8 flex items-center justify-center rounded-full bg-white border border-gray-200 text-gray-600 hover:text-primary hover:border-primary transition">
+<i class="ri-zoom-out-line"></i>
+</button>
+<div class="relative w-24">
+<input type="range" id="zoom-slider" min="50" max="150" value="100" class="range-slider">
+<div class="text-xs text-gray-500 mt-1 text-center"><span id="zoom-level">100</span>%</div>
+</div>
+<button id="zoom-in" class="w-8 h-8 flex items-center justify-center rounded-full bg-white border border-gray-200 text-gray-600 hover:text-primary hover:border-primary transition">
+<i class="ri-zoom-in-line"></i>
+</button>
+</div>
+<div class="flex items-center space-x-2">
+<button id="print-certificate" class="inline-flex items-center text-sm text-gray-600 hover:text-primary transition">
+<i class="ri-printer-line mr-1"></i>
+<span class="hidden sm:inline">Print</span>
+</button>
+</div>
+</div>
+<!-- Certificate Document -->
+<div class="certificate-container p-4 relative overflow-hidden" style="height: 600px;">
+<div id="certificate-content" class="bg-white border border-gray-200 rounded-lg mx-auto relative certificate-image" style="width: 100%; max-width: 800px; height: 550px; transform-origin: center; transform: scale(1);">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/dc5f71e528a00251554c90e2125a2fff.png" alt="Certificate of Incorporation" class="w-full h-full object-contain">
+</div>
+</div>
+<!-- Page Controls -->
+<div class="bg-gray-50 border-t px-4 py-3 flex items-center justify-center">
+<div class="page-controls">
+<button class="active">1</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Certificate Information -->
+<div class="w-full lg:w-1/3">
+<div class="bg-white rounded-lg shadow-lg p-6">
+<h2 class="text-xl font-bold mb-4">Certificate Information</h2>
+<div class="space-y-4">
+<div>
+<h3 class="text-sm font-medium text-gray-500">Company Name</h3>
+<p class="font-semibold">Pure Harvest Group of Companies Limited</p>
+</div>
+<div>
+<h3 class="text-sm font-medium text-gray-500">Registration Number</h3>
+<p class="font-semibold">C2022061507741</p>
+</div>
+<div>
+<h3 class="text-sm font-medium text-gray-500">Date of Incorporation</h3>
+<p class="font-semibold">June 15th, 2022</p>
+</div>
+<div>
+<h3 class="text-sm font-medium text-gray-500">Registered Address</h3>
+<p class="font-semibold">Congo Hill, Moriah, Tobago</p>
+</div>
+<div>
+<h3 class="text-sm font-medium text-gray-500">Business Type</h3>
+<p class="font-semibold">Limited Liability Company</p>
+</div>
+<div>
+<h3 class="text-sm font-medium text-gray-500">Status</h3>
+<p class="inline-flex items-center">
+<span class="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+<span class="font-semibold">Active</span>
+</p>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<!-- Certificate Explanation -->
+<div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+<h2 class="text-2xl font-bold mb-6">Understanding Your Certificate of Incorporation</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="text-lg font-bold mb-3 text-primary">What is a Certificate of Incorporation?</h3>
+<p class="text-gray-600 mb-4">A Certificate of Incorporation is an official document issued by the government that confirms the legal existence of a company. It serves as proof that your business has been properly registered and is recognized as a separate legal entity.</p>
+<p class="text-gray-600 mb-4">This certificate is a fundamental document for any business as it establishes the company's legal identity, separate from its owners or shareholders, and grants it the ability to enter into contracts, own assets, and conduct business operations.</p>
+<h3 class="text-lg font-bold mb-3 text-primary">Legal Significance</h3>
+<ul class="space-y-2 text-gray-600">
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Establishes the company as a distinct legal entity</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Provides limited liability protection for shareholders</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Enables the company to enter into contracts and agreements</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Allows the company to own property and assets</span>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-3 text-primary">Business Operations Benefits</h3>
+<ul class="space-y-2 text-gray-600 mb-6">
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Required for opening business bank accounts</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Necessary for applying for business loans and credit</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Essential for registering for taxes and permits</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Builds credibility with customers, suppliers, and partners</span>
+</li>
+</ul>
+<h3 class="text-lg font-bold mb-3 text-primary">Verification for Third Parties</h3>
+<p class="text-gray-600 mb-4">This certificate can be used to verify the legal status of Pure Harvest Group of Companies Ltd. for various business purposes:</p>
+<ul class="space-y-2 text-gray-600">
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Establishing business relationships with suppliers and distributors</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Applying for business licenses and permits</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Entering into contracts with customers and partners</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Related Documents -->
+<div class="mb-12">
+<h2 class="text-2xl font-bold mb-6">Related Company Documents</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+<div class="w-12 h-12 flex items-center justify-center text-primary mb-4">
+<i class="ri-file-list-3-line text-3xl"></i>
+</div>
+<h3 class="text-lg font-bold mb-2">Articles of Incorporation</h3>
+<p class="text-gray-600 text-sm mb-4">Defines the company's purpose, structure, and operational guidelines.</p>
+<a href="#" class="inline-flex items-center text-primary font-medium">
+View Document
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+<div class="w-12 h-12 flex items-center justify-center text-primary mb-4">
+<i class="ri-government-line text-3xl"></i>
+</div>
+<h3 class="text-lg font-bold mb-2">Business License</h3>
+<p class="text-gray-600 text-sm mb-4">Official permission to operate the business in Trinidad and Tobago.</p>
+<a href="#" class="inline-flex items-center text-primary font-medium">
+View Document
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+<div class="w-12 h-12 flex items-center justify-center text-primary mb-4">
+<i class="ri-shield-check-line text-3xl"></i>
+</div>
+<h3 class="text-lg font-bold mb-2">HACCP Certification</h3>
+<p class="text-gray-600 text-sm mb-4">Food safety management system certification for our production.</p>
+<a href="#" class="inline-flex items-center text-primary font-medium">
+View Document
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+<div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+<div class="w-12 h-12 flex items-center justify-center text-primary mb-4">
+<i class="ri-award-line text-3xl"></i>
+</div>
+<h3 class="text-lg font-bold mb-2">ISO 22000:2018</h3>
+<p class="text-gray-600 text-sm mb-4">International food safety management system certification.</p>
+<a href="#" class="inline-flex items-center text-primary font-medium">
+View Document
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- FAQ Section -->
+<div class="bg-white rounded-lg shadow-lg p-8">
+<h2 class="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+<div class="space-y-6">
+<div>
+<h3 class="text-lg font-bold mb-2">Why is a Certificate of Incorporation important?</h3>
+<p class="text-gray-600">A Certificate of Incorporation is crucial as it establishes your business as a legal entity, separate from its owners. This provides limited liability protection and enables the company to enter into contracts, own assets, and conduct business operations legally.</p>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-2">What information is included in the Certificate of Incorporation?</h3>
+<p class="text-gray-600">The Certificate of Incorporation includes essential company details such as the company name, registration number, date of incorporation, registered address, and business type. This information serves as official proof of the company's registration.</p>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-2">How do I obtain a certified copy of this certificate?</h3>
+<p class="text-gray-600">You can request a certified copy by clicking the "Request Certified Copy" button on this page. Our team will process your request and provide you with an officially stamped and signed copy for your records or business needs.</p>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-2">What other documents should be kept with the Certificate of Incorporation?</h3>
+<p class="text-gray-600">Important documents to keep alongside your Certificate of Incorporation include Articles of Incorporation, business licenses, tax registration documents, shareholder agreements, and any industry-specific certifications or permits.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#2A2A2A] text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- Company Info -->
+<div>
+<a href="/" data-readdy="true" class="mb-6 inline-block"><img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/117959135c1f1a6fecd6b5698ea16259.png" alt="Pure Harvest Logo" class="h-24"></a>
+<p class="text-gray-400 mb-6">Pure Harvest Group of Companies Ltd. brings the authentic flavors of Trinidad and Tobago to kitchens around the world.</p>
+<div class="flex space-x-4">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h3 class="text-lg font-bold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="/" data-readdy="true" class="text-gray-400 hover:text-white transition">Home</a></li>
+<li><a href="/shop/" data-readdy="true" class="text-gray-400 hover:text-white transition">Shop</a></li>
+<li><a href="/about/" data-readdy="true" class="text-gray-400 hover:text-white transition">About Us</a></li>
+<li><a href="/retailer/" data-readdy="true" class="text-gray-400 hover:text-white transition">Become a Retailer</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Terms & Conditions</a></li>
+</ul>
+</div>
+<!-- Contact Info -->
+<div>
+<h3 class="text-lg font-bold mb-6">Contact Us</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-map-pin-line"></i>
+</span>
+<span class="text-gray-400">Congo Hill, Moriah, Tobago</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-phone-line"></i>
+</span>
+<span class="text-gray-400">+1 868 361-8990</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-mail-line"></i>
+</span>
+<span class="text-gray-400">pureharvest2022@gmail.com</span>
+</li>
+</ul>
+<div class="mt-6">
+<h4 class="text-sm font-bold mb-3">We Accept</h4>
+<div class="flex space-x-3">
+<span class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-visa-fill text-xl"></i>
+</span>
+<span class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-mastercard-fill text-xl"></i>
+</span>
+<span class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-paypal-fill text-xl"></i>
+</span>
+</div>
+</div>
+</div>
+<!-- Newsletter -->
+<div>
+<h3 class="text-lg font-bold mb-6">Newsletter</h3>
+<p class="text-gray-400 mb-4">Subscribe to receive updates, access to exclusive deals, and more.</p>
+<form class="space-y-3">
+<input type="email" placeholder="Your email address" class="w-full py-3 px-4 rounded-button bg-white/10 border-none text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/30">
+<button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white py-3 px-4 rounded-button font-medium whitespace-nowrap">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-700 pt-8">
+<p class="text-gray-500 text-center">&copy; 2025 Pure Harvest Group of Companies Ltd. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+<!-- Success Notification -->
+<div id="success-notification" class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 hidden flex items-center">
+<i class="ri-check-line mr-2 text-xl"></i>
+<span id="notification-message">Request submitted successfully!</span>
+</div>
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', function() {
+if (mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.remove('hidden');
+} else {
+mobileMenu.classList.add('hidden');
+}
+});
+});
+</script>
+<script id="certificate-viewer-script">
+document.addEventListener('DOMContentLoaded', function() {
+const zoomSlider = document.getElementById('zoom-slider');
+const zoomLevel = document.getElementById('zoom-level');
+const zoomIn = document.getElementById('zoom-in');
+const zoomOut = document.getElementById('zoom-out');
+const certificateContent = document.getElementById('certificate-content');
+// Update zoom level display and certificate scale
+function updateZoom() {
+const value = zoomSlider.value;
+zoomLevel.textContent = value;
+certificateContent.style.transform = `scale(${value/100})`;
+}
+zoomSlider.addEventListener('input', updateZoom);
+zoomIn.addEventListener('click', function() {
+if (zoomSlider.value < parseInt(zoomSlider.max)) {
+zoomSlider.value = parseInt(zoomSlider.value) + 10;
+updateZoom();
+}
+});
+zoomOut.addEventListener('click', function() {
+if (zoomSlider.value > parseInt(zoomSlider.min)) {
+zoomSlider.value = parseInt(zoomSlider.value) - 10;
+updateZoom();
+}
+});
+// Print certificate
+const printButton = document.getElementById('print-certificate');
+printButton.addEventListener('click', function() {
+window.print();
+});
+});
+</script>
+<script id="popup-handlers-script">
+document.addEventListener('DOMContentLoaded', function() {
+// Success Notification
+const notification = document.getElementById('success-notification');
+const notificationMessage = document.getElementById('notification-message');
+function showNotification(message) {
+notificationMessage.textContent = message;
+notification.classList.remove('hidden');
+setTimeout(function() {
+notification.classList.add('hidden');
+}, 5000);
+}
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop | Pure Harvest Group of Companies Ltd.</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#8B4513',secondary:'#556B2F'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+color: #333333;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.custom-checkbox {
+position: relative;
+display: inline-block;
+width: 20px;
+height: 20px;
+background-color: white;
+border: 2px solid #ddd;
+border-radius: 4px;
+cursor: pointer;
+}
+.custom-checkbox.checked::after {
+content: "";
+position: absolute;
+top: 2px;
+left: 6px;
+width: 6px;
+height: 10px;
+border: solid #8B4513;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.price-slider {
+-webkit-appearance: none;
+width: 100%;
+height: 6px;
+border-radius: 5px;
+background: #ddd;
+outline: none;
+}
+.price-slider::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 18px;
+height: 18px;
+border-radius: 50%;
+background: #8B4513;
+cursor: pointer;
+}
+.price-slider::-moz-range-thumb {
+width: 18px;
+height: 18px;
+border-radius: 50%;
+background: #8B4513;
+cursor: pointer;
+border: none;
+}
+.stock-indicator {
+display: inline-block;
+width: 8px;
+height: 8px;
+border-radius: 50%;
+margin-right: 6px;
+}
+.in-stock {
+background-color: #10B981;
+}
+.low-stock {
+background-color: #F59E0B;
+}
+.out-of-stock {
+background-color: #EF4444;
+}
+.category-tab.active {
+color: #8B4513;
+border-color: #8B4513;
+}
+.filter-tag {
+background-color: #F3F4F6;
+padding: 4px 10px;
+border-radius: 9999px;
+font-size: 0.875rem;
+display: inline-flex;
+align-items: center;
+margin-right: 8px;
+margin-bottom: 8px;
+}
+.filter-tag button {
+margin-left: 6px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.product-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.badge {
+position: absolute;
+top: 10px;
+left: 10px;
+padding: 4px 8px;
+border-radius: 4px;
+font-size: 0.75rem;
+font-weight: 500;
+color: white;
+}
+.badge-natural {
+background-color: #10B981;
+}
+.badge-tobago {
+background-color: #6366F1;
+}
+.badge-new {
+background-color: #F59E0B;
+}
+.badge-bestseller {
+background-color: #8B4513;
+}
+.skeleton {
+background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+background-size: 200% 100%;
+animation: skeleton-loading 1.5s infinite;
+}
+@keyframes skeleton-loading {
+0% {
+background-position: 200% 0;
+}
+100% {
+background-position: -200% 0;
+}
+}
+</style>
+</head>
+<body class="bg-[#FAFAFA]">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+<div class="container mx-auto px-4 py-8 flex justify-between items-center">
+<a href="/" data-readdy="true"><img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/117959135c1f1a6fecd6b5698ea16259.png" alt="Pure Harvest Logo" class="h-32"></a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center space-x-8">
+<a href="/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Home</a>
+<a href="#" class="text-primary font-medium">Shop</a>
+<a href="/about/" data-readdy="true" class="text-gray-700 hover:text-primary transition">About Us</a>
+<a href="/retailer/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Become a Retailer</a>
+<a href="/contact/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<!-- Social Media Icons -->
+<div class="hidden md:flex items-center space-x-3">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+<!-- Cart Icon -->
+<a href="/cart/" data-readdy="true" class="relative w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition duration-200">
+<i class="ri-shopping-cart-2-line text-xl"></i>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-xs w-5 h-5 flex items-center justify-center rounded-full transition-transform duration-200">2</span>
+</a>
+<!-- Mobile Menu Button -->
+<button id="mobile-menu-button" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-menu-line text-2xl"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Navigation -->
+<div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+<div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+<a href="/" data-readdy="true" class="py-2 text-gray-700">Home</a>
+<a href="#" class="py-2 text-primary font-medium">Shop</a>
+<a href="/about/" data-readdy="true" class="py-2 text-gray-700">About Us</a>
+<a href="/retailer/" data-readdy="true" class="py-2 text-gray-700">Become a Retailer</a>
+<a href="/contact/" data-readdy="true" class="py-2 text-gray-700">Contact</a>
+<!-- Social Media Icons for Mobile -->
+<div class="flex items-center space-x-4 py-2">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Promotional Banner -->
+<div class="bg-primary text-white py-2 text-center">
+<p class="text-sm md:text-base">Free shipping on orders over $300 | Now available at Food Hall</p>
+</div>
+<!-- Shop Header -->
+<section class="bg-[#F7F5F2] py-12">
+<div class="container mx-auto px-4">
+<div class="max-w-4xl mx-auto text-center">
+<h1 class="text-4xl md:text-5xl font-bold mb-4">Our Products</h1>
+<p class="text-gray-600 text-lg">Discover our range of all-natural Caribbean food products, crafted with care in Tobago</p>
+</div>
+</div>
+</section>
+<!-- Search and Filter Bar -->
+<section class="sticky top-[73px] z-40 bg-white shadow-sm py-4 border-b">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row items-stretch gap-4">
+<!-- Search Bar -->
+<div class="relative flex-grow">
+<input type="text" placeholder="Search products..." class="w-full h-full pl-10 pr-4 py-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-sm">
+<span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 flex items-center justify-center">
+<i class="ri-search-line"></i>
+</span>
+</div>
+<!-- Filter Dropdown -->
+<div class="flex gap-2">
+<div class="relative">
+<button id="display-count-btn" class="h-full flex items-center justify-between gap-2 px-4 py-3 bg-white border border-gray-300 rounded text-gray-700 hover:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-sm whitespace-nowrap">
+<span>Show: <span id="current-display-count">12</span></span>
+<span class="w-5 h-5 flex items-center justify-center">
+<i class="ri-arrow-down-s-line"></i>
+</span>
+</button>
+<div id="display-count-dropdown" class="hidden absolute left-0 top-full mt-1 w-32 bg-white shadow-lg rounded-md z-10 py-1 border border-gray-200">
+<button class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-count="12">12 per page</button>
+<button class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-count="24">24 per page</button>
+<button class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-count="36">36 per page</button>
+</div>
+</div>
+<div class="relative">
+<button id="category-filter-btn" class="h-full flex items-center justify-between gap-2 px-4 py-3 bg-white border border-gray-300 rounded text-gray-700 hover:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-sm whitespace-nowrap">
+<span>Category</span>
+<span class="w-5 h-5 flex items-center justify-center">
+<i class="ri-arrow-down-s-line"></i>
+</span>
+</button>
+<div id="category-dropdown" class="hidden absolute left-0 top-full mt-1 w-56 bg-white shadow-lg rounded-md z-10 py-1 border border-gray-200">
+<div class="py-1 px-3">
+<div class="flex items-center py-2">
+<div id="all-categories-checkbox" class="custom-checkbox mr-3"></div>
+<label class="text-sm cursor-pointer">All Categories</label>
+</div>
+<div class="flex items-center py-2">
+<div id="spices-checkbox" class="custom-checkbox mr-3"></div>
+<label class="text-sm cursor-pointer">Dehydrated Spices</label>
+</div>
+<div class="flex items-center py-2">
+<div id="nuts-checkbox" class="custom-checkbox mr-3"></div>
+<label class="text-sm cursor-pointer">Nutri-Fuse Nut Mixes</label>
+</div>
+<div class="flex items-center py-2">
+<div id="caramel-checkbox" class="custom-checkbox mr-3"></div>
+<label class="text-sm cursor-pointer">Caramel Browning</label>
+</div>
+<div class="flex items-center py-2">
+<div id="accra-checkbox" class="custom-checkbox mr-3"></div>
+<label class="text-sm cursor-pointer">Accra Mixes</label>
+</div>
+<div class="flex items-center py-2">
+<div id="fruits-checkbox" class="custom-checkbox mr-3"></div>
+<label class="text-sm cursor-pointer">Dehydrated Fruits</label>
+</div>
+<div class="flex items-center py-2">
+<div id="coming-checkbox" class="custom-checkbox mr-3"></div>
+<label class="text-sm cursor-pointer">Coming Soon</label>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<button id="price-filter-btn" class="h-full flex items-center justify-between gap-2 px-4 py-3 bg-white border border-gray-300 rounded text-gray-700 hover:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-sm whitespace-nowrap">
+<span>Price Range</span>
+<span class="w-5 h-5 flex items-center justify-center">
+<i class="ri-arrow-down-s-line"></i>
+</span>
+</button>
+<div id="price-dropdown" class="hidden absolute left-0 top-full mt-1 w-64 bg-white shadow-lg rounded-md z-10 p-4 border border-gray-200">
+<div class="mb-4">
+<div class="flex justify-between mb-2">
+<span class="text-sm text-gray-600">Min: $<span id="min-price-display">0</span></span>
+<span class="text-sm text-gray-600">Max: $<span id="max-price-display">200</span></span>
+</div>
+<input type="range" id="min-price" min="0" max="200" value="0" class="price-slider mb-3">
+<input type="range" id="max-price" min="0" max="200" value="200" class="price-slider">
+</div>
+<button id="apply-price" class="w-full bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm font-medium whitespace-nowrap">Apply</button>
+</div>
+</div>
+<div class="relative">
+<button id="sort-filter-btn" class="h-full flex items-center justify-between gap-2 px-4 py-3 bg-white border border-gray-300 rounded text-gray-700 hover:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-sm whitespace-nowrap">
+<span>Sort By</span>
+<span class="w-5 h-5 flex items-center justify-center">
+<i class="ri-arrow-down-s-line"></i>
+</span>
+</button>
+<div id="sort-dropdown" class="hidden absolute right-0 top-full mt-1 w-48 bg-white shadow-lg rounded-md z-10 py-1 border border-gray-200">
+<button class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Featured</button>
+<button class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Price: Low to High</button>
+<button class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Price: High to Low</button>
+<button class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Newest</button>
+<button class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Best Selling</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Filters -->
+<div id="active-filters" class="flex flex-wrap mt-4">
+<!-- Filter tags will be added dynamically -->
+</div>
+</div>
+</section>
+<!-- Category Tabs -->
+<section class="bg-white py-4 border-b">
+<div class="container mx-auto px-4">
+<div class="flex overflow-x-auto pb-2 -mx-2 scrollbar-hide">
+<button class="category-tab active flex-shrink-0 px-6 py-3 mx-2 text-sm font-medium border-b-2 border-transparent whitespace-nowrap" onclick="filterByCategory('All Products')">
+All Products
+</button>
+<button class="category-tab flex-shrink-0 px-6 py-3 mx-2 text-sm font-medium border-b-2 border-transparent text-gray-600 whitespace-nowrap" onclick="filterByCategory('Dehydrated Spices')">
+Dehydrated Spices
+</button>
+<button class="category-tab flex-shrink-0 px-6 py-3 mx-2 text-sm font-medium border-b-2 border-transparent text-gray-600 whitespace-nowrap" onclick="filterByCategory('Nutri-Fuse Nut Mixes')">
+Nutri-Fuse Nut Mixes
+</button>
+<button class="category-tab flex-shrink-0 px-6 py-3 mx-2 text-sm font-medium border-b-2 border-transparent text-gray-600 whitespace-nowrap" onclick="filterByCategory('Caramel Browning')">
+Caramel Browning
+</button>
+<button class="category-tab flex-shrink-0 px-6 py-3 mx-2 text-sm font-medium border-b-2 border-transparent text-gray-600 whitespace-nowrap" onclick="filterByCategory('Accra Mixes')">
+Accra Mixes
+</button>
+<button class="category-tab flex-shrink-0 px-6 py-3 mx-2 text-sm font-medium border-b-2 border-transparent text-gray-600 whitespace-nowrap" onclick="filterByCategory('Dehydrated Fruits')">
+Dehydrated Fruits
+</button>
+<button class="category-tab flex-shrink-0 px-6 py-3 mx-2 text-sm font-medium border-b-2 border-transparent text-gray-600 whitespace-nowrap" onclick="filterByCategory('Coming Soon')">
+Coming Soon
+</button>
+</div>
+</div>
+</section>
+<!-- Products Grid -->
+<section class="py-12">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- Product 1 -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/789412ca589c2a678f1b9aec72ea529b.png" alt="Pure Garlic Powder" class="w-full h-full object-cover object-top">
+<div class="badge badge-natural">100% Natural</div>
+<div class="badge badge-tobago" style="top: 40px;">Made in Tobago</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Dehydrated Spices</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator in-stock"></span>
+In Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Garlic Powder</h3>
+<p class="text-gray-600 text-sm mb-3">Fine ground garlic powder with intense flavor, perfect for seasoning any dish.</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$3.00</span>
+<button onclick="addToCart(this)" class="add-to-cart-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/54dd3c87a80f0beb6cd7e1cedb1890a0.jpeg" alt="Nutri-Fuse Lightly Salted" class="w-full h-full object-cover object-top">
+<div class="badge badge-bestseller">Bestseller</div>
+<div class="badge badge-tobago" style="top: 40px;">Made in Tobago</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Nutri-Fuse Nut Mixes</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator in-stock"></span>
+In Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Nutri-Fuse Lightly Salted</h3>
+<p class="text-gray-600 text-sm mb-3">Premium mixed nuts with a hint of sea salt, perfect for healthy snacking.</p>
+<div class="space-y-3">
+<div class="flex items-center space-x-4">
+<label class="flex items-center">
+<input type="radio" name="size-nutrifuse-lightly" value="320g" class="hidden" checked>
+<span class="w-5 h-5 border-2 border-gray-300 rounded-full flex items-center justify-center mr-2">
+<span class="w-3 h-3 rounded-full bg-primary hidden"></span>
+</span>
+<span class="text-sm">320g - $8.00</span>
+</label>
+<label class="flex items-center">
+<input type="radio" name="size-nutrifuse-lightly" value="75g" class="hidden">
+<span class="w-5 h-5 border-2 border-gray-300 rounded-full flex items-center justify-center mr-2">
+<span class="w-3 h-3 rounded-full bg-primary hidden"></span>
+</span>
+<span class="text-sm">75g - $3.00</span>
+</label>
+</div>
+<button onclick="addToCart(this)" class="add-to-cart-btn w-full bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/7d347ed42abc280f7774c3a162d9cbc0.png" alt="Bay Leaf Caramel Browning" class="w-full h-full object-cover object-top">
+<div class="badge badge-natural">100% Natural</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Caramel Browning</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator in-stock"></span>
+In Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Bay Leaf Caramel Browning</h3>
+<p class="text-gray-600 text-sm mb-3">Traditional caramel browning infused with bay leaf for authentic Tobago flavor.</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$4.00</span>
+<button onclick="addToCart(this)" class="add-to-cart-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/550eeb899cfc064ec1ee6c8037992e37.png" alt="Dehydrated Mango Slices" class="w-full h-full object-cover object-top">
+<div class="badge badge-new">New</div>
+<div class="badge badge-natural" style="top: 40px;">100% Natural</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Dehydrated Fruits</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator in-stock"></span>
+In Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Dehydrated Mango Slices</h3>
+<p class="text-gray-600 text-sm mb-3">Sweet and tangy dehydrated mango slices with no added sugar or preservatives.</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$4.00</span>
+<button onclick="addToCart(this)" class="add-to-cart-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/796f23f7a623763726a6ab5f507f765f.jpeg" alt="Nutri-Fuse Dark Chocolate" class="w-full h-full object-cover object-top">
+<div class="badge badge-bestseller">Bestseller</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Nutri-Fuse Nut Mixes</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator in-stock"></span>
+In Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Nutri-Fuse Dark Chocolate</h3>
+<p class="text-gray-600 text-sm mb-3">Premium mixed nuts coated in rich dark chocolate for a decadent treat.</p>
+<div class="space-y-3">
+<div class="flex items-center space-x-4">
+<label class="flex items-center">
+<input type="radio" name="size-nutrifuse-dark" value="320g" class="hidden" checked>
+<span class="w-5 h-5 border-2 border-gray-300 rounded-full flex items-center justify-center mr-2">
+<span class="w-3 h-3 rounded-full bg-primary hidden"></span>
+</span>
+<span class="text-sm">320g - $8.00</span>
+</label>
+<label class="flex items-center">
+<input type="radio" name="size-nutrifuse-dark" value="75g" class="hidden">
+<span class="w-5 h-5 border-2 border-gray-300 rounded-full flex items-center justify-center mr-2">
+<span class="w-3 h-3 rounded-full bg-primary hidden"></span>
+</span>
+<span class="text-sm">75g - $3.00</span>
+</label>
+</div>
+<button onclick="addToCart(this)" class="add-to-cart-btn w-full bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 6 -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/88c52669f3281105e09729de27e3b09e.jpeg" alt="Dehydrated Bay Leaves" class="w-full h-full object-cover object-top">
+<div class="badge badge-natural">100% Natural</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Dehydrated Spices</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator in-stock"></span>
+In Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Dehydrated Bay Leaves</h3>
+<p class="text-gray-600 text-sm mb-3">Aromatic dried bay leaves, essential for Caribbean stews and soups.</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$3.00</span>
+<button onclick="addToCart(this)" class="add-to-cart-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 7 -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/f8bca7f25b7c1b3a9dcf5a115414b8a6.png" alt="Saltfish Accra Mix" class="w-full h-full object-cover object-top">
+<div class="badge badge-tobago">Made in Tobago</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Accra Mixes</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator low-stock"></span>
+Low Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Saltfish Accra Mix</h3>
+<p class="text-gray-600 text-sm mb-3">Traditional saltfish accra mix, just add water for authentic Caribbean fritters.</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$5.00</span>
+<button onclick="addToCart(this)" class="add-to-cart-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Smoke Fish Accra -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/8d73d157c24272127cab9e0a4c516490.png" alt="Smoke Fish Accra Mix" class="w-full h-full object-cover object-top">
+<div class="badge badge-tobago">Made in Tobago</div>
+<div class="badge badge-new" style="top: 40px;">New</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Accra Mixes</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator in-stock"></span>
+In Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Smoke Fish Accra Mix</h3>
+<p class="text-gray-600 text-sm mb-3">Delicious smoked fish accra mix, perfectly seasoned for authentic Caribbean fritters.</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$5.00</span>
+<button onclick="addToCart(this)" class="add-to-cart-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 8 -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/aeb48fb40f7e51443d20b5de29c9abaf.png" alt="Dehydrated Papaya Chunks" class="w-full h-full object-cover object-top">
+<div class="badge badge-natural">100% Natural</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Dehydrated Fruits</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator in-stock"></span>
+In Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Dehydrated Papaya</h3>
+<p class="text-gray-600 text-sm mb-3">Sweet tropical papaya chunks, dehydrated to preserve flavor and nutrients.</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$4.00</span>
+<button onclick="addToCart(this)" class="add-to-cart-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 9 -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/8fde9ef44852b6aab79441efdf66de41.jpeg" alt="Nutri-Fuse Red Skin" class="w-full h-full object-contain">
+<div class="badge badge-new">New</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Nutri-Fuse Nut Mixes</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator in-stock"></span>
+In Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Red Skins</h3>
+<p class="text-gray-600 text-sm mb-3">Premium mix featuring red skin peanuts and other nutritious nuts and seeds.</p>
+<div class="space-y-3">
+<div class="flex items-center space-x-4">
+<label class="flex items-center">
+<input type="radio" name="size-nutrifuse-red" value="320g" class="hidden" checked>
+<span class="w-5 h-5 border-2 border-gray-300 rounded-full flex items-center justify-center mr-2">
+<span class="w-3 h-3 rounded-full bg-primary hidden"></span>
+</span>
+<span class="text-sm">320g - $3.00</span>
+</label>
+<label class="flex items-center">
+<input type="radio" name="size-nutrifuse-red" value="75g" class="hidden">
+<span class="w-5 h-5 border-2 border-gray-300 rounded-full flex items-center justify-center mr-2">
+<span class="w-3 h-3 rounded-full bg-primary hidden"></span>
+</span>
+<span class="text-sm">75g - $2.00</span>
+</label>
+</div>
+<button onclick="addToCart(this)" class="add-to-cart-btn w-full bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 10 -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/789ef69981ce6098db9f92137405fdbe.png" alt="Local Hot Pepper Powder" class="w-full h-full object-cover object-top">
+<div class="badge badge-natural">100% Natural</div>
+<div class="badge badge-tobago" style="top: 40px;">Made in Tobago</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Dehydrated Spices</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator low-stock"></span>
+Low Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Local Hot Pepper Powder</h3>
+<p class="text-gray-600 text-sm mb-3">Fiery hot pepper powder made from locally grown Trinbago peppers.</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$3.00</span>
+<button onclick="addToCart(this)" class="add-to-cart-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 11 -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/e04942b7d1a711ea556d03b97b6c88d6.png" alt="Pimento Power" class="w-full h-full object-cover object-top">
+<div class="badge badge-natural">100% Natural</div>
+<div class="badge badge-tobago" style="top: 40px;">Made in Tobago</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Dehydrated Spices</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator in-stock"></span>
+In Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Pimento Power</h3>
+<p class="text-gray-600 text-sm mb-3">Ground pimento spice with a unique blend of sweet and spicy flavors, perfect for marinades and seasonings.</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$3.00</span>
+<button onclick="addToCart(this)" class="add-to-cart-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 12 -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/4bb8368ac06fd42849ec62b693944e64.png" alt="Spicy Pimento Power" class="w-full h-full object-cover object-top">
+<div class="badge badge-natural">100% Natural</div>
+<div class="badge badge-new" style="top: 40px;">New</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Dehydrated Spices</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator in-stock"></span>
+In Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Spicy Pimento Power</h3>
+<p class="text-gray-600 text-sm mb-3">Our signature pimento powder blended with local hot peppers for an extra kick of heat and flavor.</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$3.00</span>
+<button onclick="addToCart(this)" class="add-to-cart-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Nutri-Fuse Buss-A-Nut -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/2c51d98214e4e28b803df18f0d7cfa64.jpeg" alt="Nutri-Fuse Buss-A-Nut" class="w-full h-full object-cover object-top">
+<div class="badge badge-natural">100% Natural</div>
+<div class="badge badge-new" style="top: 40px;">New</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Nutri-Fuse Nut Mixes</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator in-stock"></span>
+In Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Nutri-Fuse Buss-A-Nut</h3>
+<p class="text-gray-600 text-sm mb-3">A delightful blend of roasted nuts with a unique Caribbean seasoning blend.</p>
+<div class="space-y-3">
+<div class="flex items-center space-x-4">
+<label class="flex items-center">
+<input type="radio" name="size-nutrifuse-buss" value="320g" class="hidden" checked>
+<span class="w-5 h-5 border-2 border-gray-300 rounded-full flex items-center justify-center mr-2">
+<span class="w-3 h-3 rounded-full bg-primary hidden"></span>
+</span>
+<span class="text-sm">320g - $8.00</span>
+</label>
+<label class="flex items-center">
+<input type="radio" name="size-nutrifuse-buss" value="75g" class="hidden">
+<span class="w-5 h-5 border-2 border-gray-300 rounded-full flex items-center justify-center mr-2">
+<span class="w-3 h-3 rounded-full bg-primary hidden"></span>
+</span>
+<span class="text-sm">75g - $3.00</span>
+</label>
+</div>
+<button onclick="addToCart(this)" class="add-to-cart-btn w-full bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Nutri-Fuse Seasoned -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/746590c19e3033d47841e784de903e88.jpeg" alt="Nutri-Fuse Seasoned" class="w-full h-full object-cover object-top">
+<div class="badge badge-natural">100% Natural</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Nutri-Fuse Nut Mixes</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator in-stock"></span>
+In Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Nutri-Fuse Seasoned</h3>
+<p class="text-gray-600 text-sm mb-3">Premium mixed nuts with a special blend of Caribbean herbs and spices.</p>
+<div class="space-y-3">
+<div class="flex items-center space-x-4">
+<label class="flex items-center">
+<input type="radio" name="size-nutrifuse-seasoned" value="320g" class="hidden" checked>
+<span class="w-5 h-5 border-2 border-gray-300 rounded-full flex items-center justify-center mr-2">
+<span class="w-3 h-3 rounded-full bg-primary hidden"></span>
+</span>
+<span class="text-sm">320g - $8.00</span>
+</label>
+<label class="flex items-center">
+<input type="radio" name="size-nutrifuse-seasoned" value="75g" class="hidden">
+<span class="w-5 h-5 border-2 border-gray-300 rounded-full flex items-center justify-center mr-2">
+<span class="w-3 h-3 rounded-full bg-primary hidden"></span>
+</span>
+<span class="text-sm">75g - $3.00</span>
+</label>
+</div>
+<button onclick="addToCart(this)" class="add-to-cart-btn w-full bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 13 -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/c3bcba343850089eb8c6771707a0a8de.png" alt="Nutmeg Caramel Browning" class="w-full h-full object-cover object-top">
+<div class="badge badge-bestseller">Bestseller</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Caramel Browning</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator in-stock"></span>
+In Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Nutmeg Infused Caramel Browning</h3>
+<p class="text-gray-600 text-sm mb-3">Rich caramel browning infused with nutmeg for a warm, aromatic flavor.</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$4.00</span>
+<button onclick="addToCart(this)" class="add-to-cart-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 14 -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/93fdeb896d1d1f60b791c79cf5866599.jpeg" alt="Curry Infused Caramel Browning" class="w-full h-full object-cover object-top">
+<div class="badge badge-natural">100% Natural</div>
+<div class="badge badge-new" style="top: 40px;">New</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Caramel Browning</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator in-stock"></span>
+In Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Curry Infused Caramel Browning</h3>
+<p class="text-gray-600 text-sm mb-3">A unique fusion of traditional caramel browning with aromatic curry spices, perfect for adding depth to Caribbean dishes.</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$4.00</span>
+<button onclick="addToCart(this)" class="add-to-cart-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Dehydrated Pommecythere -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/92ce95542258b0e7528e1ffaecf4865e.png" alt="Dehydrated Pommecythere" class="w-full h-full object-cover object-top">
+<div class="badge badge-natural">100% Natural</div>
+<div class="badge badge-new" style="top: 40px;">New</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Dehydrated Fruits</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator in-stock"></span>
+In Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Dehydrated Pommecythere</h3>
+<p class="text-gray-600 text-sm mb-3">Sweet and tangy dehydrated golden apple slices, preserving the unique tropical flavor of Tobago's pommecythere.</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$4.00</span>
+<button onclick="addToCart(this)" class="add-to-cart-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Dehydrated Bananas -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/3e99c70f8329cd7659b75dc32aa37eb2.png" alt="Dehydrated Bananas" class="w-full h-full object-cover object-top">
+<div class="badge badge-natural">100% Natural</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Dehydrated Fruits</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator in-stock"></span>
+In Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Dehydrated Bananas</h3>
+<p class="text-gray-600 text-sm mb-3">Naturally sweet banana chips, perfectly dehydrated to create a delicious and healthy snack with no added sugars.</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$4.00</span>
+<button onclick="addToCart(this)" class="add-to-cart-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Dehydrated Sapodilla -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/e85db3f4baa4a4e341273eb6b91f48cd.png" alt="Dehydrated Sapodilla" class="w-full h-full object-cover object-top">
+<div class="badge badge-natural">100% Natural</div>
+<div class="badge badge-bestseller">Bestseller</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Dehydrated Fruits</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator in-stock"></span>
+In Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Dehydrated Sapodilla</h3>
+<p class="text-gray-600 text-sm mb-3">Sweet and caramel-like dehydrated sapodilla slices, capturing the unique flavor of this tropical delicacy.</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$4.00</span>
+<button onclick="addToCart(this)" class="add-to-cart-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Dehydrated Star Fruit -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Elegantly%20arranged%20dehydrated%20star%20fruit%20slices%20displaying%20their%20distinctive%20star%20shape%20on%20a%20modern%20white%20plate.%20The%20dried%20fruit%20maintains%20its%20beautiful%20geometric%20pattern%20with%20a%20translucent%20golden%20color.%20Professional%20food%20photography%20with%20soft%2C%20natural%20lighting%20against%20a%20clean%2C%20light%20background.&width=800&height=800&seq=4&orientation=squarish" alt="Dehydrated Star Fruit" class="w-full h-full object-cover object-top">
+<div class="badge badge-natural">100% Natural</div>
+<div class="badge badge-new" style="top: 40px;">New</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Dehydrated Fruits</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator in-stock"></span>
+In Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Dehydrated Star Fruit</h3>
+<p class="text-gray-600 text-sm mb-3">Crispy and naturally sweet star fruit chips, preserving their unique star shape and tropical flavor.</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$4.00</span>
+<button onclick="addToCart(this)" class="add-to-cart-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Dehydrated Mammy Apple -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Beautifully%20presented%20dehydrated%20mamey%20sapote%20%28mammy%20apple%29%20slices%20arranged%20on%20a%20pristine%20white%20plate.%20The%20dried%20fruit%20pieces%20show%20a%20rich%20reddish-orange%20color%20characteristic%20of%20mamey%20sapote.%20Professional%20food%20photography%20with%20soft%2C%20diffused%20lighting%20on%20a%20clean%2C%20minimalist%20background.&width=800&height=800&seq=5&orientation=squarish" alt="Dehydrated Mammy Apple" class="w-full h-full object-cover object-top">
+<div class="badge badge-natural">100% Natural</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Dehydrated Fruits</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator in-stock"></span>
+In Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Dehydrated Mammy Apple</h3>
+<p class="text-gray-600 text-sm mb-3">Sweet and creamy dehydrated mammy apple slices, preserving the unique tropical flavor of this Caribbean favorite.</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$4.00</span>
+<button onclick="addToCart(this)" class="add-to-cart-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 12 -->
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="relative h-64 overflow-hidden">
+<img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/34230757bfef08cf2c763969a428e3a7.jpeg" alt="Chicken Accra Mix" class="w-full h-full object-cover object-top">
+<div class="badge badge-tobago">Made in Tobago</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-gray-500">Accra Mixes</span>
+<span class="flex items-center text-sm">
+<span class="stock-indicator out-of-stock"></span>
+Out of Stock
+</span>
+</div>
+<h3 class="text-lg font-bold mb-1">Chicken Accra Mix</h3>
+<p class="text-gray-600 text-sm mb-3">Savory chicken accra mix, perfectly seasoned for delicious fritters.</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$5.00</span>
+<button class="bg-gray-300 text-gray-600 py-2 px-4 rounded-button text-sm cursor-not-allowed whitespace-nowrap">Out of Stock</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center mt-12">
+<nav class="flex items-center space-x-2">
+<a href="#" class="pagination-link prev-page w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:text-primary hover:border-primary transition">
+<i class="ri-arrow-left-s-line text-xl"></i>
+</a>
+<a href="#" class="pagination-link w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white">1</a>
+<a href="#" class="pagination-link w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:text-primary hover:border-primary transition">2</a>
+<a href="#" class="pagination-link next-page w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:text-primary hover:border-primary transition">
+<i class="ri-arrow-right-s-line text-xl"></i>
+</a>
+</nav>
+</div>
+</div>
+</section>
+<!-- Trust Badges -->
+<section class="bg-white py-12 border-t">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="flex items-center justify-center md:justify-start">
+<div class="w-12 h-12 flex items-center justify-center text-primary mr-4">
+<i class="ri-truck-line text-3xl"></i>
+</div>
+<div>
+<h3 class="font-bold mb-1">Free Shipping</h3>
+<p class="text-gray-600 text-sm">On orders over $1500</p>
+</div>
+</div>
+<div class="flex items-center justify-center md:justify-start">
+<div class="w-12 h-12 flex items-center justify-center text-primary mr-4">
+<i class="ri-leaf-line text-3xl"></i>
+</div>
+<div>
+<h3 class="font-bold mb-1">100% Natural</h3>
+<p class="text-gray-600 text-sm">No artificial ingredients</p>
+</div>
+</div>
+<div class="flex items-center justify-center md:justify-start">
+<div class="w-12 h-12 flex items-center justify-center text-primary mr-4">
+<i class="ri-secure-payment-line text-3xl"></i>
+</div>
+<div>
+<h3 class="font-bold mb-1">Secure Payment</h3>
+<p class="text-gray-600 text-sm">100% secure checkout</p>
+</div>
+</div>
+<div class="flex items-center justify-center md:justify-start">
+<div class="w-12 h-12 flex items-center justify-center text-primary mr-4">
+<i class="ri-customer-service-2-line text-3xl"></i>
+</div>
+<div>
+<h3 class="font-bold mb-1">Customer Support</h3>
+<p class="text-gray-600 text-sm">Dedicated support team</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter -->
+<section class="py-16 bg-primary">
+<div class="container mx-auto px-4">
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Stay Updated</h2>
+<p class="text-white/80 mb-8">Subscribe to our newsletter for new product announcements, recipes, and exclusive offers</p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+<input type="email" placeholder="Your email address" class="flex-1 py-3 px-4 rounded-button border-none focus:outline-none focus:ring-2 focus:ring-white/30 text-gray-800">
+<button type="submit" class="bg-white hover:bg-white/90 text-primary py-3 px-8 rounded-button font-medium whitespace-nowrap">Subscribe</button>
+</form>
+<p class="text-white/60 text-sm mt-4">We respect your privacy and will never share your information.</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#2A2A2A] text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- Company Info -->
+<div>
+<a href="/" data-readdy="true" class="mb-6 inline-block"><img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/117959135c1f1a6fecd6b5698ea16259.png" alt="Pure Harvest Logo" class="h-24"></a>
+<p class="text-gray-400 mb-6">Pure Harvest Group of Companies Ltd. brings the authentic flavors of Trinidad and Tobago to kitchens around the world.</p>
+<div class="flex space-x-4">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h3 class="text-lg font-bold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="/" data-readdy="true" class="text-gray-400 hover:text-white transition">Home</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Shop</a></li>
+<li><a href="/about/" data-readdy="true" class="text-gray-400 hover:text-white transition">About Us</a></li>
+<li><a href="/retailer/" data-readdy="true" class="text-gray-400 hover:text-white transition">Become a Retailer</a></li>
+<li><a href="/contact/" data-readdy="true" class="text-gray-400 hover:text-white transition">Contact</a></li>
+<li><a href="/privacy-policy/" data-readdy="true" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Terms & Conditions</a></li>
+</ul>
+</div>
+<!-- Contact Info -->
+<div>
+<h3 class="text-lg font-bold mb-6">Contact Us</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-map-pin-line"></i>
+</span>
+<span class="text-gray-400">Congo Hill, Moriah, Tobago</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-phone-line"></i>
+</span>
+<span class="text-gray-400">+1 868 361-8990</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-mail-line"></i>
+</span>
+<span class="text-gray-400">pureharvest2022@gmail.com</span>
+</li>
+</ul>
+<div class="mt-6">
+<h4 class="text-sm font-bold mb-3">We Accept</h4>
+<div class="flex space-x-3">
+<span class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-visa-fill text-xl"></i>
+</span>
+<span class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-mastercard-fill text-xl"></i>
+</span>
+<span class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-paypal-fill text-xl"></i>
+</span>
+</div>
+</div>
+</div>
+<!-- Newsletter -->
+<div>
+<h3 class="text-lg font-bold mb-6">Newsletter</h3>
+<p class="text-gray-400 mb-4">Subscribe to receive updates, access to exclusive deals, and more.</p>
+<form class="space-y-3">
+<input type="email" placeholder="Your email address" class="w-full py-3 px-4 rounded-button bg-white/10 border-none text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/30">
+<button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white py-3 px-4 rounded-button font-medium whitespace-nowrap">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-700 pt-8">
+<p class="text-gray-500 text-center">&copy; 2025 Pure Harvest Group of Companies Ltd. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<!-- Product Modal -->
+<div id="product-modal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-white">
+<div class="min-h-screen">
+<div class="fixed inset-0 bg-black bg-opacity-75 transition-opacity" onclick="closeProductModal()"></div>
+<div class="relative w-full h-full bg-white overflow-y-auto">
+<div class="sticky top-0 z-10 bg-white border-b">
+<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+<button onclick="closeProductModal()" class="flex items-center text-gray-500 hover:text-gray-700 focus:outline-none">
+<i class="ri-arrow-left-line text-2xl mr-2"></i>
+<span class="text-sm font-medium">Back to Shop</span>
+</button>
+<button onclick="closeProductModal()" class="text-gray-500 hover:text-gray-700 focus:outline-none">
+<i class="ri-close-line text-2xl"></i>
+</button>
+</div>
+</div>
+<div class="container mx-auto px-4 py-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+<div class="relative">
+<div class="aspect-square overflow-hidden rounded-lg mb-4 cursor-zoom-in" onclick="toggleImageZoom(this)">
+<img id="modal-product-image" src="" alt="" class="w-full h-full object-cover object-top transition-transform duration-300">
+</div>
+<div id="modal-badges" class="absolute top-4 left-4 space-y-2"></div>
+<div class="flex justify-center space-x-2 mt-4">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+<div class="w-2 h-2 rounded-full bg-gray-300"></div>
+</div>
+</div>
+<div class="lg:sticky lg:top-28">
+<span id="modal-category" class="text-sm text-gray-500"></span>
+<h2 id="modal-product-name" class="text-2xl lg:text-3xl font-bold mt-2 mb-4"></h2>
+<div id="modal-stock-status" class="flex items-center mb-4"></div>
+<p id="modal-product-description" class="text-gray-600 mb-6"></p>
+<div class="mb-6">
+<span class="text-2xl font-bold text-primary" id="modal-product-price"></span>
+</div>
+<div class="space-y-4">
+<div class="flex items-center space-x-4">
+<div class="w-32">
+<label class="block text-sm text-gray-600 mb-1">Quantity</label>
+<div class="flex items-center border rounded-button">
+<button class="px-3 py-2 text-gray-600 hover:text-primary" onclick="updateQuantity(-1)">-</button>
+<input type="number" id="quantity" value="1" min="1" class="w-full text-center border-none focus:ring-0" readonly>
+<button class="px-3 py-2 text-gray-600 hover:text-primary" onclick="updateQuantity(1)">+</button>
+</div>
+</div>
+<button id="add-to-cart-btn" class="flex-1 bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-medium whitespace-nowrap">
+Add to Cart
+</button>
+<!-- Toast Notification -->
+<div id="toast-notification" class="fixed top-4 right-4 z-50 transform translate-x-full opacity-0 transition-all duration-300 bg-green-50 text-green-800 px-6 py-4 rounded-lg shadow-lg flex items-center">
+<i class="ri-checkbox-circle-line text-xl mr-2"></i>
+<span>Item added to cart successfully!</span>
+</div>
+</div>
+<div class="flex items-center space-x-4 text-sm text-gray-600">
+<div class="flex items-center">
+<i class="ri-truck-line mr-2"></i>
+Free shipping over $300
+</div>
+<div class="flex items-center">
+<i class="ri-leaf-line mr-2"></i>
+100% Natural
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Related Products -->
+<div class="border-t mt-12">
+<div class="container mx-auto px-4 py-12">
+<h3 class="text-2xl font-bold mb-8">You May Also Like</h3>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6" id="related-products">
+<!-- Related products will be dynamically inserted here -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', function() {
+if (mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.remove('hidden');
+} else {
+mobileMenu.classList.add('hidden');
+}
+});
+});
+</script>
+<style>
+input[type="radio"]:checked + span span {
+display: block;
+}
+</style>
+<script id="modal-script">
+document.addEventListener('DOMContentLoaded', function() {
+let cartCount = 0;
+window.addToCart = function(button) {
+// Get product info
+const productCard = button.closest('.product-card');
+const productName = productCard.querySelector('.font-bold').textContent;
+const productPrice = productCard.querySelector('.text-primary').textContent;
+// Update cart count
+cartCount++;
+const cartCountElement = document.querySelector('.absolute');
+cartCountElement.textContent = cartCount;
+// Animate cart icon
+const cartIcon = cartCountElement.parentElement;
+cartIcon.classList.add('scale-125');
+setTimeout(() => {
+cartIcon.classList.remove('scale-125');
+}, 200);
+// Animate button
+button.classList.add('bg-green-600');
+button.innerHTML = '<i class="ri-check-line mr-1"></i>Added';
+setTimeout(() => {
+button.classList.remove('bg-green-600');
+button.innerHTML = 'Add to Cart';
+}, 1500);
+// Show toast notification
+const toast = document.createElement('div');
+toast.className = 'fixed top-4 right-4 z-50 bg-green-50 text-green-800 px-6 py-4 rounded-lg shadow-lg flex items-center transform transition-all duration-300';
+toast.innerHTML = `
+<i class="ri-checkbox-circle-line text-xl mr-2"></i>
+<span>${productName} added to cart</span>
+`;
+document.body.appendChild(toast);
+// Animate toast in
+setTimeout(() => {
+toast.classList.add('translate-x-0');
+toast.classList.remove('translate-x-full');
+}, 100);
+// Remove toast after delay
+setTimeout(() => {
+toast.classList.add('translate-x-full');
+toast.classList.remove('translate-x-0');
+setTimeout(() => {
+toast.remove();
+}, 300);
+}, 3000);
+};
+function showToast() {
+const toast = document.getElementById('toast-notification');
+toast.classList.remove('translate-x-full', 'opacity-0');
+setTimeout(() => {
+toast.classList.add('translate-x-full', 'opacity-0');
+}, 3000);
+}
+function updateCartCount() {
+cartCount++;
+const cartCountElement = document.querySelector('.absolute');
+cartCountElement.textContent = cartCount;
+// Animate cart icon
+const cartIcon = cartCountElement.parentElement;
+cartIcon.classList.add('scale-125');
+setTimeout(() => {
+cartIcon.classList.remove('scale-125');
+}, 200);
+}
+document.getElementById('add-to-cart-btn').addEventListener('click', function() {
+showToast();
+updateCartCount();
+});
+window.toggleImageZoom = function(container) {
+const img = container.querySelector('img');
+container.classList.toggle('fixed');
+container.classList.toggle('inset-0');
+container.classList.toggle('z-[60]');
+container.classList.toggle('bg-black');
+container.classList.toggle('bg-opacity-90');
+container.classList.toggle('cursor-zoom-in');
+container.classList.toggle('cursor-zoom-out');
+container.classList.toggle('p-4');
+container.classList.toggle('aspect-square');
+img.classList.toggle('object-contain');
+if (container.classList.contains('fixed')) {
+document.body.style.overflow = 'hidden';
+} else {
+document.body.style.overflow = '';
+}
+};
+window.openProductModal = function(productCard) {
+const modal = document.getElementById('product-modal');
+document.documentElement.style.overflow = 'hidden';
+const modalImage = document.getElementById('modal-product-image');
+const modalCategory = document.getElementById('modal-category');
+const modalName = document.getElementById('modal-product-name');
+const modalStockStatus = document.getElementById('modal-stock-status');
+const modalDescription = document.getElementById('modal-product-description');
+const modalPrice = document.getElementById('modal-product-price');
+const modalBadges = document.getElementById('modal-badges');
+const relatedProducts = document.getElementById('related-products');
+// Get data from clicked product card
+const image = productCard.querySelector('img').src;
+const category = productCard.querySelector('.text-gray-500').textContent;
+const name = productCard.querySelector('.font-bold').textContent;
+const description = productCard.querySelector('.text-gray-600').textContent;
+const price = productCard.querySelector('.text-primary').textContent;
+const stockStatus = productCard.querySelector('.stock-indicator').parentElement.innerHTML;
+const badges = Array.from(productCard.querySelectorAll('.badge')).map(badge => badge.outerHTML).join('');
+// Update modal content
+modalImage.src = image;
+modalCategory.textContent = category;
+modalName.textContent = name;
+modalStockStatus.innerHTML = stockStatus;
+modalDescription.textContent = description;
+modalPrice.textContent = price;
+modalBadges.innerHTML = badges;
+// Generate related products
+const allProducts = Array.from(document.querySelectorAll('.product-card'));
+const relatedProductsHtml = allProducts
+.filter(product => product !== productCard)
+.sort(() => 0.5 - Math.random())
+.slice(0, 4)
+.map(product => {
+const productHtml = product.cloneNode(true);
+productHtml.onclick = () => {
+closeProductModal();
+setTimeout(() => openProductModal(product), 300);
+};
+return productHtml.outerHTML;
+})
+.join('');
+relatedProducts.innerHTML = relatedProductsHtml;
+// Show modal
+modal.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+};
+window.closeProductModal = function() {
+const modal = document.getElementById('product-modal');
+modal.classList.add('hidden');
+document.documentElement.style.overflow = '';
+document.body.style.overflow = '';
+};
+window.updateQuantity = function(change) {
+const quantityInput = document.getElementById('quantity');
+const newValue = Math.max(1, parseInt(quantityInput.value) + change);
+quantityInput.value = newValue;
+};
+});
+</script>
+<script id="product-rotation-script">
+document.addEventListener('DOMContentLoaded', function() {
+const productsGrid = document.querySelector('.grid');
+const productCards = Array.from(productsGrid.children);
+window.itemsPerPage = 12;
+window.showPage = function(pageNum) {
+const visibleCards = Array.from(productCards).filter(card => {
+if (currentCategory === 'All Products') {
+return true;
+}
+const cardCategory = card.querySelector('.text-gray-500').textContent.trim();
+return cardCategory === currentCategory;
+});
+const totalPages = Math.ceil(visibleCards.length / window.itemsPerPage);
+if (pageNum < 1 || pageNum > totalPages) return;
+categoryPages[currentCategory] = pageNum;
+currentPage = pageNum;
+const start = (pageNum - 1) * window.itemsPerPage;
+const end = start + window.itemsPerPage;
+productCards.forEach(card => card.style.display = 'none');
+visibleCards.slice(start, end).forEach(card => card.style.display = 'block');
+updatePaginationUI(pageNum, totalPages);
+};
+// Shuffle function
+function shuffleArray(array) {
+for (let i = array.length - 1; i > 0; i--) {
+const j = Math.floor(Math.random() * (i + 1));
+[array[i], array[j]] = [array[j], array[i]];
+}
+return array;
+}
+// Shuffle product cards
+shuffleArray(productCards);
+productCards.forEach(card => productsGrid.appendChild(card));
+let currentPage = 1;
+let currentCategory = 'All Products';
+let itemsPerPage = 12;
+let totalPages = Math.ceil(productCards.length / itemsPerPage);
+const categoryPages = {
+'All Products': 1,
+'Dehydrated Spices': 1,
+'Nutri-Fuse Nut Mixes': 1,
+'Caramel Browning': 1,
+'Accra Mixes': 1,
+'Dehydrated Fruits': 1,
+'Coming Soon': 1
+};
+function updatePaginationUI(pageNum, totalPages) {
+const paginationLinks = document.querySelectorAll('.pagination-link');
+paginationLinks.forEach(link => {
+if (!link.classList.contains('prev-page') && !link.classList.contains('next-page')) {
+if (parseInt(link.textContent) === pageNum) {
+link.classList.remove('border', 'border-gray-300', 'text-gray-600');
+link.classList.add('bg-primary', 'text-white');
+} else {
+link.classList.remove('bg-primary', 'text-white');
+link.classList.add('border', 'border-gray-300', 'text-gray-600');
+}
+}
+});
+const prevPageBtn = document.querySelector('.prev-page');
+const nextPageBtn = document.querySelector('.next-page');
+if (prevPageBtn) {
+prevPageBtn.classList.toggle('cursor-not-allowed', pageNum === 1);
+prevPageBtn.style.pointerEvents = pageNum === 1 ? 'none' : 'auto';
+}
+if (nextPageBtn) {
+nextPageBtn.classList.toggle('cursor-not-allowed', pageNum === totalPages);
+nextPageBtn.style.pointerEvents = pageNum === totalPages ? 'none' : 'auto';
+}
+const pageNumbers = document.querySelectorAll('.pagination-link:not(.prev-page):not(.next-page)');
+pageNumbers.forEach((link, index) => {
+if (index + 1 <= totalPages) {
+link.style.display = 'flex';
+} else {
+link.style.display = 'none';
+}
+});
+}
+function showPage(pageNum) {
+const visibleCards = Array.from(productCards).filter(card => {
+if (currentCategory === 'All Products') {
+return true;
+}
+const cardCategory = card.querySelector('.text-gray-500').textContent.trim();
+return cardCategory === currentCategory;
+});
+const totalPages = Math.ceil(visibleCards.length / itemsPerPage);
+if (pageNum < 1 || pageNum > totalPages) return;
+categoryPages[currentCategory] = pageNum;
+currentPage = pageNum;
+const start = (pageNum - 1) * itemsPerPage;
+const end = start + itemsPerPage;
+visibleCards.forEach((card, index) => {
+if (index >= start && index < end) {
+card.style.display = 'block';
+} else {
+card.style.display = 'none';
+}
+});
+updatePaginationUI(pageNum, totalPages);
+window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+document.querySelectorAll('.pagination-link').forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+if (this.classList.contains('prev-page')) {
+if (currentPage > 1) showPage(currentPage - 1);
+} else if (this.classList.contains('next-page')) {
+const visibleCards = Array.from(productCards).filter(card => {
+if (currentCategory === 'All Products') return true;
+const cardCategory = card.querySelector('.text-gray-500').textContent.trim();
+return cardCategory === currentCategory;
+});
+const totalPages = Math.ceil(visibleCards.length / itemsPerPage);
+if (currentPage < totalPages) showPage(currentPage + 1);
+} else {
+const pageNum = parseInt(this.textContent);
+if (!isNaN(pageNum)) showPage(pageNum);
+}
+});
+});
+document.querySelectorAll('.pagination-link').forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+if (this.classList.contains('prev-page')) {
+if (currentPage > 1) showPage(currentPage - 1);
+} else if (this.classList.contains('next-page')) {
+if (currentPage < totalPages) showPage(currentPage + 1);
+} else {
+const pageNum = parseInt(this.textContent);
+if (!isNaN(pageNum)) showPage(pageNum);
+}
+});
+});
+showPage(1);
+});
+</script>
+<script id="filter-dropdowns-script">
+document.addEventListener('DOMContentLoaded', function() {
+// Display count dropdown
+const displayCountBtn = document.getElementById('display-count-btn');
+const displayCountDropdown = document.getElementById('display-count-dropdown');
+const currentDisplayCount = document.getElementById('current-display-count');
+displayCountBtn.addEventListener('click', function() {
+displayCountDropdown.classList.toggle('hidden');
+categoryDropdown.classList.add('hidden');
+priceDropdown.classList.add('hidden');
+sortDropdown.classList.add('hidden');
+});
+displayCountDropdown.querySelectorAll('button').forEach(button => {
+button.addEventListener('click', function() {
+const count = parseInt(this.dataset.count);
+window.itemsPerPage = count;
+currentDisplayCount.textContent = count;
+displayCountDropdown.classList.add('hidden');
+window.showPage(1);
+});
+});
+window.filterByCategory = function(category) {
+currentCategory = category;
+const productCards = document.querySelectorAll('.product-card');
+const categoryTabs = document.querySelectorAll('.category-tab');
+categoryTabs.forEach(tab => {
+if(tab.textContent.trim() === category) {
+tab.classList.add('active');
+} else {
+tab.classList.remove('active');
+}
+});
+productCards.forEach(card => {
+const productCategory = card.querySelector('.text-gray-500').textContent.trim();
+if(category === 'All Products') {
+card.style.display = 'block';
+} else if(productCategory === category) {
+card.style.display = 'block';
+} else {
+card.style.display = 'none';
+}
+});
+showPage(categoryPages[category] || 1);
+};
+// Category filter
+const categoryBtn = document.getElementById('category-filter-btn');
+const categoryDropdown = document.getElementById('category-dropdown');
+categoryBtn.addEventListener('click', function() {
+categoryDropdown.classList.toggle('hidden');
+priceDropdown.classList.add('hidden');
+sortDropdown.classList.add('hidden');
+});
+// Price filter
+const priceBtn = document.getElementById('price-filter-btn');
+const priceDropdown = document.getElementById('price-dropdown');
+priceBtn.addEventListener('click', function() {
+priceDropdown.classList.toggle('hidden');
+categoryDropdown.classList.add('hidden');
+sortDropdown.classList.add('hidden');
+});
+// Sort filter
+const sortBtn = document.getElementById('sort-filter-btn');
+const sortDropdown = document.getElementById('sort-dropdown');
+sortBtn.addEventListener('click', function() {
+sortDropdown.classList.toggle('hidden');
+categoryDropdown.classList.add('hidden');
+priceDropdown.classList.add('hidden');
+});
+// Close dropdowns when clicking outside
+document.addEventListener('click', function(event) {
+if (!event.target.closest('#category-filter-btn') && !event.target.closest('#category-dropdown')) {
+categoryDropdown.classList.add('hidden');
+}
+if (!event.target.closest('#price-filter-btn') && !event.target.closest('#price-dropdown')) {
+priceDropdown.classList.add('hidden');
+}
+if (!event.target.closest('#sort-filter-btn') && !event.target.closest('#sort-dropdown')) {
+sortDropdown.classList.add('hidden');
+}
+if (!event.target.closest('#display-count-btn') && !event.target.closest('#display-count-dropdown')) {
+displayCountDropdown.classList.add('hidden');
+}
+});
+// Price range sliders
+const minPriceSlider = document.getElementById('min-price');
+const maxPriceSlider = document.getElementById('max-price');
+const minPriceDisplay = document.getElementById('min-price-display');
+const maxPriceDisplay = document.getElementById('max-price-display');
+minPriceSlider.addEventListener('input', function() {
+const minVal = parseInt(minPriceSlider.value);
+const maxVal = parseInt(maxPriceSlider.value);
+if (minVal > maxVal) {
+minPriceSlider.value = maxVal;
+minPriceDisplay.textContent = maxVal;
+} else {
+minPriceDisplay.textContent = minVal;
+}
+});
+maxPriceSlider.addEventListener('input', function() {
+const minVal = parseInt(minPriceSlider.value);
+const maxVal = parseInt(maxPriceSlider.value);
+if (maxVal < minVal) {
+maxPriceSlider.value = minVal;
+maxPriceDisplay.textContent = minVal;
+} else {
+maxPriceDisplay.textContent = maxVal;
+}
+});
+// Apply price filter
+const applyPriceBtn = document.getElementById('apply-price');
+const activeFilters = document.getElementById('active-filters');
+applyPriceBtn.addEventListener('click', function() {
+const minVal = parseInt(minPriceSlider.value);
+const maxVal = parseInt(maxPriceSlider.value);
+// Check if price filter already exists
+const existingPriceFilter = document.querySelector('.filter-tag[data-type="price"]');
+if (existingPriceFilter) {
+existingPriceFilter.remove();
+}
+// Add new price filter tag
+const filterTag = document.createElement('div');
+filterTag.className = 'filter-tag';
+filterTag.setAttribute('data-type', 'price');
+filterTag.innerHTML = `
+Price: $${minVal} - $${maxVal}
+<button class="remove-filter">
+<i class="ri-close-line"></i>
+</button>
+`;
+activeFilters.appendChild(filterTag);
+priceDropdown.classList.add('hidden');
+// Add event listener to remove button
+const removeBtn = filterTag.querySelector('.remove-filter');
+removeBtn.addEventListener('click', function() {
+filterTag.remove();
+minPriceSlider.value = 0;
+maxPriceSlider.value = 200;
+minPriceDisplay.textContent = 0;
+maxPriceDisplay.textContent = 200;
+});
+});
+// Category checkbox and label handling function
+function handleCategorySelection(checkbox) {
+checkbox.classList.toggle('checked');
+// Get category name
+const categoryName = checkbox.nextElementSibling.textContent.trim();
+// If "All Categories" is checked, uncheck others
+if (checkbox.id === 'all-categories-checkbox' && checkbox.classList.contains('checked')) {
+categoryCheckboxes.forEach(cb => {
+if (cb.id !== 'all-categories-checkbox') {
+cb.classList.remove('checked');
+// Remove any existing category filters
+const categoryFilters = document.querySelectorAll('.filter-tag[data-type="category"]');
+categoryFilters.forEach(filter => filter.remove());
+}
+});
+// Filter to show all products
+window.filterByCategory('All Products');
+categoryDropdown.classList.add('hidden');
+}
+// If any other category is checked, uncheck "All Categories"
+else if (checkbox.id !== 'all-categories-checkbox') {
+document.getElementById('all-categories-checkbox').classList.remove('checked');
+// Add or remove category filter tag
+if (checkbox.classList.contains('checked')) {
+const filterTag = document.createElement('div');
+filterTag.className = 'filter-tag';
+filterTag.setAttribute('data-type', 'category');
+filterTag.setAttribute('data-category', checkbox.id);
+filterTag.innerHTML = `
+${categoryName}
+<button class="remove-filter">
+<i class="ri-close-line"></i>
+</button>
+`;
+activeFilters.appendChild(filterTag);
+// Add event listener to remove button
+const removeBtn = filterTag.querySelector('.remove-filter');
+removeBtn.addEventListener('click', function() {
+filterTag.remove();
+document.getElementById(filterTag.getAttribute('data-category')).classList.remove('checked');
+window.filterByCategory('All Products');
+});
+// Filter products by category
+window.filterByCategory(categoryName);
+categoryDropdown.classList.add('hidden');
+} else {
+// Remove the category filter tag
+const categoryFilter = document.querySelector(`.filter-tag[data-category="${checkbox.id}"]`);
+if (categoryFilter) {
+categoryFilter.remove();
+}
+window.filterByCategory('All Products');
+}
+}
+}
+// Category checkboxes
+const categoryCheckboxes = document.querySelectorAll('#category-dropdown .custom-checkbox');
+categoryCheckboxes.forEach(checkbox => {
+checkbox.addEventListener('click', function() {
+handleCategorySelection(this);
+});
+});
+// Category labels
+const categoryLabels = document.querySelectorAll('#category-dropdown label');
+categoryLabels.forEach(label => {
+label.addEventListener('click', function() {
+const checkbox = this.previousElementSibling;
+handleCategorySelection(checkbox);
+});
+});
+// Category tabs
+const categoryTabs = document.querySelectorAll('.category-tab');
+categoryTabs.forEach(tab => {
+tab.addEventListener('click', function() {
+categoryTabs.forEach(t => t.classList.remove('active'));
+this.classList.add('active');
+});
+});
+});
+</script>
+</body>
+</html>

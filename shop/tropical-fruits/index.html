@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dehydrated Fruits | Pure Harvest Group of Companies Ltd.</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#8B4513',secondary:'#556B2F'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+color: #333333;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+}
+.hero-section {
+background-image: url('https://readdy.ai/api/search-image?query=beautiful%2520arrangement%2520of%2520colorful%2520dehydrated%2520tropical%2520fruits%2520including%2520mango%252C%2520papaya%252C%2520sapodilla%252C%2520banana%252C%2520star%2520fruit%252C%2520and%2520golden%2520apple%2520on%2520a%2520rustic%2520wooden%2520table%2520with%2520soft%2520natural%2520light%252C%2520professional%2520food%2520photography%252C%2520high%2520resolution%252C%2520vibrant%2520colors%252C%2520clean%2520background%252C%2520no%2520text%252C%2520photorealistic&width=1920&height=1080&seq=hero1&orientation=landscape');
+background-size: cover;
+background-position: center;
+position: relative;
+}
+.hero-section::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.3) 100%);
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.custom-checkbox {
+position: relative;
+display: inline-block;
+width: 20px;
+height: 20px;
+background-color: white;
+border: 2px solid #ddd;
+border-radius: 4px;
+cursor: pointer;
+}
+.custom-checkbox.checked::after {
+content: "";
+position: absolute;
+top: 2px;
+left: 6px;
+width: 6px;
+height: 10px;
+border: solid #8B4513;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.quantity-input {
+display: flex;
+align-items: center;
+border: 1px solid #e5e7eb;
+border-radius: 8px;
+overflow: hidden;
+}
+.quantity-input button {
+width: 32px;
+height: 32px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #f9fafb;
+border: none;
+cursor: pointer;
+}
+.quantity-input input {
+width: 40px;
+height: 32px;
+border: none;
+text-align: center;
+font-size: 14px;
+}
+.tab-button {
+position: relative;
+}
+.tab-button.active::after {
+content: '';
+position: absolute;
+bottom: -1px;
+left: 0;
+width: 100%;
+height: 2px;
+background-color: #8B4513;
+}
+.star-rating {
+display: inline-flex;
+}
+.star-rating i {
+color: #FFD700;
+}
+.review-filter-button {
+padding: 6px 12px;
+border-radius: 20px;
+font-size: 14px;
+cursor: pointer;
+}
+.review-filter-button.active {
+background-color: #8B4513;
+color: white;
+}
+</style>
+</head>
+<body class="bg-[#FAFAFA]">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+<a href="/" data-readdy="true"><img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/117959135c1f1a6fecd6b5698ea16259.png" alt="Pure Harvest Logo" class="h-12"></a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center space-x-8">
+<a href="/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Home</a>
+<a href="/shop/" data-readdy="true" class="text-gray-700 hover:text-primary transition">Shop</a>
+<a href="#" class="text-gray-700 hover:text-primary transition">About Us</a>
+<a href="#" class="text-gray-700 hover:text-primary transition">Become a Retailer</a>
+<a href="#" class="text-gray-700 hover:text-primary transition">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<!-- Social Media Icons -->
+<div class="hidden md:flex items-center space-x-3">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+<!-- Cart Icon -->
+<a href="#" class="relative w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition">
+<i class="ri-shopping-cart-2-line text-xl"></i>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">3</span>
+</a>
+<!-- Mobile Menu Button -->
+<button id="mobile-menu-button" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-menu-line text-2xl"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Navigation -->
+<div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+<div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+<a href="/" data-readdy="true" class="py-2 text-gray-700">Home</a>
+<a href="/shop/" data-readdy="true" class="py-2 text-gray-700">Shop</a>
+<a href="#" class="py-2 text-gray-700">About Us</a>
+<a href="#" class="py-2 text-gray-700">Become a Retailer</a>
+<a href="#" class="py-2 text-gray-700">Contact</a>
+<!-- Social Media Icons for Mobile -->
+<div class="flex items-center space-x-4 py-2">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-8 h-8 flex items-center justify-center text-gray-600">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Promotional Banner -->
+<div class="bg-primary text-white py-2 text-center">
+<p class="text-sm md:text-base">Free shipping on orders over $300 | Now available at Food Hall</p>
+</div>
+<!-- Breadcrumbs -->
+<div class="bg-white py-3 shadow-sm">
+<div class="container mx-auto px-4">
+<div class="flex items-center text-sm text-gray-500">
+<a href="/" data-readdy="true" class="hover:text-primary transition">Home</a>
+<span class="mx-2">/</span>
+<a href="/shop/" data-readdy="true" class="hover:text-primary transition">Shop</a>
+<span class="mx-2">/</span>
+<span class="text-primary font-medium">Dehydrated Fruits</span>
+</div>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="hero-section relative h-[500px] flex items-center">
+<div class="container mx-auto px-4 relative z-10">
+<div class="max-w-2xl">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Dehydrated Fruits Collection</h1>
+<p class="text-lg md:text-xl text-white/90 mb-8">Experience the natural sweetness and nutritional benefits of our premium dehydrated tropical fruits, carefully sourced from local Caribbean farmers.</p>
+<div class="flex flex-wrap gap-4">
+<a href="#products" class="bg-primary hover:bg-primary/90 text-white py-3 px-8 rounded-button font-medium whitespace-nowrap">Shop Now</a>
+<a href="#process" class="bg-white hover:bg-white/90 text-primary py-3 px-8 rounded-button font-medium whitespace-nowrap">Learn More</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Showcase -->
+<section id="products" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Dehydrated Fruit Selection</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Discover our range of naturally sweet, preservative-free dehydrated tropical fruits. Each variety is carefully selected at peak ripeness and slowly dehydrated to preserve nutrients and flavor.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Dehydrated Mango -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=beautiful%2520dehydrated%2520mango%2520slices%2520arranged%2520on%2520a%2520wooden%2520surface%252C%2520vibrant%2520orange-yellow%2520color%252C%2520showing%2520texture%2520and%2520natural%2520appearance%252C%2520professional%2520food%2520photography%252C%2520bright%2520natural%2520lighting%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=600&height=400&seq=mango1&orientation=landscape" alt="Dehydrated Mango" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Dehydrated Mango</h3>
+<div class="flex items-center">
+<div class="star-rating mr-1">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+<span class="text-sm text-gray-500">(42)</span>
+</div>
+</div>
+<p class="text-gray-600 mb-4">Sweet and tangy dehydrated mango slices, perfect for snacking or adding to recipes. Rich in vitamins A and C.</p>
+<div class="flex justify-between items-center mb-4">
+<div>
+<select class="text-sm border border-gray-300 rounded py-1 px-2 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary pr-8">
+<option>100g Pack</option>
+<option>250g Pack</option>
+<option>500g Pack</option>
+</select>
+</div>
+<span class="text-primary font-bold">$45.00</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="quantity-input">
+<button class="quantity-decrease">-</button>
+<input type="number" value="1" min="1" class="quantity-value">
+<button class="quantity-increase">+</button>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Dehydrated Sapodilla -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=beautiful%2520dehydrated%2520sapodilla%2520slices%2520arranged%2520on%2520a%2520wooden%2520surface%252C%2520rich%2520brown%2520color%2520with%2520visible%2520texture%252C%2520professional%2520food%2520photography%252C%2520bright%2520natural%2520lighting%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=600&height=400&seq=sapodilla1&orientation=landscape" alt="Dehydrated Sapodilla" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Dehydrated Sapodilla</h3>
+<div class="flex items-center">
+<div class="star-rating mr-1">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-line"></i>
+</div>
+<span class="text-sm text-gray-500">(28)</span>
+</div>
+</div>
+<p class="text-gray-600 mb-4">Naturally sweet sapodilla with a caramel-like flavor. High in fiber and antioxidants. A Caribbean delicacy.</p>
+<div class="flex justify-between items-center mb-4">
+<div>
+<select class="text-sm border border-gray-300 rounded py-1 px-2 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary pr-8">
+<option>100g Pack</option>
+<option>250g Pack</option>
+<option>500g Pack</option>
+</select>
+</div>
+<span class="text-primary font-bold">$55.00</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="quantity-input">
+<button class="quantity-decrease">-</button>
+<input type="number" value="1" min="1" class="quantity-value">
+<button class="quantity-increase">+</button>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Dehydrated Papaya -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=beautiful%2520dehydrated%2520papaya%2520slices%2520arranged%2520on%2520a%2520wooden%2520surface%252C%2520vibrant%2520orange%2520color%252C%2520showing%2520texture%2520and%2520natural%2520appearance%252C%2520professional%2520food%2520photography%252C%2520bright%2520natural%2520lighting%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=600&height=400&seq=papaya1&orientation=landscape" alt="Dehydrated Papaya" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Dehydrated Papaya</h3>
+<div class="flex items-center">
+<div class="star-rating mr-1">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<span class="text-sm text-gray-500">(36)</span>
+</div>
+</div>
+<p class="text-gray-600 mb-4">Tropical papaya slices with a mild, sweet flavor. Excellent source of digestive enzymes and vitamin C.</p>
+<div class="flex justify-between items-center mb-4">
+<div>
+<select class="text-sm border border-gray-300 rounded py-1 px-2 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary pr-8">
+<option>100g Pack</option>
+<option>250g Pack</option>
+<option>500g Pack</option>
+</select>
+</div>
+<span class="text-primary font-bold">$50.00</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="quantity-input">
+<button class="quantity-decrease">-</button>
+<input type="number" value="1" min="1" class="quantity-value">
+<button class="quantity-increase">+</button>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Dehydrated Banana -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=beautiful%2520dehydrated%2520banana%2520slices%2520arranged%2520on%2520a%2520wooden%2520surface%252C%2520golden%2520brown%2520color%252C%2520showing%2520texture%2520and%2520natural%2520appearance%252C%2520professional%2520food%2520photography%252C%2520bright%2520natural%2520lighting%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=600&height=400&seq=banana1&orientation=landscape" alt="Dehydrated Banana" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Dehydrated Banana</h3>
+<div class="flex items-center">
+<div class="star-rating mr-1">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+<span class="text-sm text-gray-500">(31)</span>
+</div>
+</div>
+<p class="text-gray-600 mb-4">Naturally sweet banana chips with no added sugar. Great source of potassium and energy-boosting carbohydrates.</p>
+<div class="flex justify-between items-center mb-4">
+<div>
+<select class="text-sm border border-gray-300 rounded py-1 px-2 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary pr-8">
+<option>100g Pack</option>
+<option>250g Pack</option>
+<option>500g Pack</option>
+</select>
+</div>
+<span class="text-primary font-bold">$40.00</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="quantity-input">
+<button class="quantity-decrease">-</button>
+<input type="number" value="1" min="1" class="quantity-value">
+<button class="quantity-increase">+</button>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Dehydrated Star Fruit -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=beautiful%2520dehydrated%2520star%2520fruit%2520slices%2520arranged%2520on%2520a%2520wooden%2520surface%252C%2520golden%2520yellow%2520color%2520with%2520distinctive%2520star%2520shape%252C%2520professional%2520food%2520photography%252C%2520bright%2520natural%2520lighting%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=600&height=400&seq=starfruit1&orientation=landscape" alt="Dehydrated Star Fruit" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Dehydrated Star Fruit</h3>
+<div class="flex items-center">
+<div class="star-rating mr-1">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-line"></i>
+</div>
+<span class="text-sm text-gray-500">(24)</span>
+</div>
+</div>
+<p class="text-gray-600 mb-4">Unique star-shaped slices with a sweet-tart flavor. Low in calories and rich in antioxidants and vitamin C.</p>
+<div class="flex justify-between items-center mb-4">
+<div>
+<select class="text-sm border border-gray-300 rounded py-1 px-2 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary pr-8">
+<option>100g Pack</option>
+<option>250g Pack</option>
+<option>500g Pack</option>
+</select>
+</div>
+<span class="text-primary font-bold">$60.00</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="quantity-input">
+<button class="quantity-decrease">-</button>
+<input type="number" value="1" min="1" class="quantity-value">
+<button class="quantity-increase">+</button>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Dehydrated Golden Apple -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=beautiful%2520dehydrated%2520golden%2520apple%2520slices%2520arranged%2520on%2520a%2520wooden%2520surface%252C%2520amber%2520golden%2520color%252C%2520showing%2520texture%2520and%2520natural%2520appearance%252C%2520professional%2520food%2520photography%252C%2520bright%2520natural%2520lighting%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=600&height=400&seq=goldenapple1&orientation=landscape" alt="Dehydrated Golden Apple" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Dehydrated Golden Apple</h3>
+<div class="flex items-center">
+<div class="star-rating mr-1">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+<span class="text-sm text-gray-500">(19)</span>
+</div>
+</div>
+<p class="text-gray-600 mb-4">Caribbean golden apple (ambarella) with a unique sweet-sour flavor. Rich in vitamins and minerals.</p>
+<div class="flex justify-between items-center mb-4">
+<div>
+<select class="text-sm border border-gray-300 rounded py-1 px-2 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary pr-8">
+<option>100g Pack</option>
+<option>250g Pack</option>
+<option>500g Pack</option>
+</select>
+</div>
+<span class="text-primary font-bold">$55.00</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="quantity-input">
+<button class="quantity-decrease">-</button>
+<input type="number" value="1" min="1" class="quantity-value">
+<button class="quantity-increase">+</button>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process & Quality Section -->
+<section id="process" class="py-16 bg-[#F7F5F2]">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Dehydration Process</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Learn how we transform fresh tropical fruits into delicious, nutritious dehydrated snacks while preserving their natural flavor and nutrients.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=professional%2520food%2520processing%2520facility%2520with%2520workers%2520carefully%2520preparing%2520tropical%2520fruits%2520for%2520dehydration%252C%2520clean%2520environment%252C%2520workers%2520wearing%2520proper%2520food%2520handling%2520equipment%252C%2520fruits%2520being%2520washed%2520and%2520sliced%252C%2520bright%2520natural%2520lighting%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=800&height=600&seq=process1&orientation=landscape" alt="Fruit Preparation Process" class="w-full h-full object-cover">
+</div>
+</div>
+<div class="space-y-8">
+<div>
+<h3 class="text-2xl font-bold mb-4">From Farm to Package</h3>
+<div class="space-y-6">
+<div class="flex">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold">1</div>
+<div class="ml-4">
+<h4 class="text-lg font-bold mb-1">Careful Selection</h4>
+<p class="text-gray-600">We partner with local farmers to source the freshest, ripest fruits at their peak flavor. Each fruit is hand-selected to ensure quality.</p>
+</div>
+</div>
+<div class="flex">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold">2</div>
+<div class="ml-4">
+<h4 class="text-lg font-bold mb-1">Washing & Preparation</h4>
+<p class="text-gray-600">Fruits are thoroughly washed and carefully sliced to ensure even dehydration. No preservatives or additives are used in our process.</p>
+</div>
+</div>
+<div class="flex">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold">3</div>
+<div class="ml-4">
+<h4 class="text-lg font-bold mb-1">Slow Dehydration</h4>
+<p class="text-gray-600">Our fruits are slowly dehydrated at low temperatures to preserve nutrients, enzymes, and flavor while removing moisture.</p>
+</div>
+</div>
+<div class="flex">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold">4</div>
+<div class="ml-4">
+<h4 class="text-lg font-bold mb-1">Quality Control</h4>
+<p class="text-gray-600">Each batch undergoes rigorous quality testing for moisture content, flavor, and appearance before being carefully packaged.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 bg-white rounded-lg shadow-md overflow-hidden">
+<div class="p-8 md:p-12">
+<h3 class="text-2xl font-bold mb-6 text-center">Benefits of Dehydrated Fruits</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="text-center">
+<div class="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+<i class="ri-timer-line text-primary text-2xl"></i>
+</div>
+<h4 class="font-bold mb-2">Extended Shelf Life</h4>
+<p class="text-gray-600 text-sm">Enjoy tropical fruits year-round with natural preservation that maintains flavor.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+<i class="ri-heart-pulse-line text-primary text-2xl"></i>
+</div>
+<h4 class="font-bold mb-2">Nutrient Dense</h4>
+<p class="text-gray-600 text-sm">Concentrated nutrients and fiber in a convenient, portable form.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+<i class="ri-leaf-line text-primary text-2xl"></i>
+</div>
+<h4 class="font-bold mb-2">100% Natural</h4>
+<p class="text-gray-600 text-sm">No added sugars, preservatives, or artificial ingredients. Just pure fruit.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+<i class="ri-recycle-line text-primary text-2xl"></i>
+</div>
+<h4 class="font-bold mb-2">Eco-Friendly</h4>
+<p class="text-gray-600 text-sm">Reduces food waste by extending the usable life of seasonal fruits.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- History Section -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Our Heritage</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Discover the rich history of tropical fruit preservation in Trinidad and Tobago, and how Pure Harvest continues this tradition with modern techniques.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=beautiful%2520traditional%2520Caribbean%2520market%2520scene%2520with%2520fresh%2520tropical%2520fruits%252C%2520warm%2520sunlight%252C%2520local%2520vendors%252C%2520authentic%2520atmosphere%252C%2520historical%2520setting%252C%2520professional%2520photography%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=800&height=600&seq=history1&orientation=landscape" alt="Traditional Caribbean Market" class="w-full h-full object-cover">
+</div>
+</div>
+<div class="space-y-6">
+<div>
+<h3 class="text-2xl font-bold mb-4">A Legacy of Preservation</h3>
+<p class="text-gray-600 mb-4">For generations, the people of Trinidad and Tobago have practiced the art of fruit preservation, developing techniques to extend the life of seasonal tropical fruits. This tradition was born from necessity in times before modern refrigeration, allowing communities to enjoy their beloved fruits year-round.</p>
+<p class="text-gray-600 mb-4">In 2022, Pure Harvest was established with a vision to revive and modernize these traditional preservation methods. We combine time-honored techniques with modern technology to create premium dehydrated fruits that maintain their nutritional value and authentic taste.</p>
+</div>
+<div class="space-y-4">
+<div class="flex">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<i class="ri-award-line text-xl"></i>
+</div>
+<div class="ml-4">
+<h4 class="text-lg font-bold mb-1">Traditional Roots</h4>
+<p class="text-gray-600">Our methods are inspired by traditional Caribbean preservation techniques.</p>
+</div>
+</div>
+<div class="flex">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<i class="ri-seedling-line text-xl"></i>
+</div>
+<div class="ml-4">
+<h4 class="text-lg font-bold mb-1">Local Partnerships</h4>
+<p class="text-gray-600">We work directly with local farmers to source the finest tropical fruits.</p>
+</div>
+</div>
+<div class="flex">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<i class="ri-recycle-line text-xl"></i>
+</div>
+<div class="ml-4">
+<h4 class="text-lg font-bold mb-1">Sustainable Practice</h4>
+<p class="text-gray-600">Continuing our ancestors' commitment to sustainable food preservation.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Smoothie Recipes -->
+<section class="py-16 bg-[#F7F5F2]">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Tropical Smoothie Recipes</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Create delicious and nutritious smoothies using our dehydrated fruits. These recipes are perfect for a quick breakfast or post-workout refreshment.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Recipe 1 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=vibrant%2520tropical%2520smoothie%2520in%2520a%2520glass%2520with%2520mango%2520and%2520papaya%252C%2520garnished%2520with%2520fresh%2520fruits%252C%2520professional%2520food%2520photography%252C%2520bright%2520natural%2520lighting%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=600&height=400&seq=smoothie1&orientation=landscape" alt="Tropical Paradise Smoothie" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">Tropical Paradise Smoothie</h3>
+<p class="text-gray-600 mb-4">A refreshing blend of mango and papaya with coconut water.</p>
+<div class="space-y-4">
+<div>
+<h4 class="font-bold mb-2">Ingredients:</h4>
+<ul class="text-gray-600 space-y-1">
+<li>• 2 tbsp dehydrated mango</li>
+<li>• 2 tbsp dehydrated papaya</li>
+<li>• 1 cup coconut water</li>
+<li>• 1 banana</li>
+<li>• 1 tbsp honey (optional)</li>
+<li>• Ice cubes</li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-2">Instructions:</h4>
+<ol class="text-gray-600 space-y-1 list-decimal list-inside">
+<li>Soak dehydrated fruits in coconut water for 10 minutes</li>
+<li>Add all ingredients to blender</li>
+<li>Blend until smooth</li>
+<li>Serve immediately</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<!-- Recipe 2 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=creamy%2520golden%2520smoothie%2520with%2520banana%2520and%2520star%2520fruit%252C%2520topped%2520with%2520seeds%252C%2520professional%2520food%2520photography%252C%2520bright%2520natural%2520lighting%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=600&height=400&seq=smoothie2&orientation=landscape" alt="Energy Boost Smoothie" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">Energy Boost Smoothie</h3>
+<p class="text-gray-600 mb-4">A protein-rich blend with banana and star fruit.</p>
+<div class="space-y-4">
+<div>
+<h4 class="font-bold mb-2">Ingredients:</h4>
+<ul class="text-gray-600 space-y-1">
+<li>• 2 tbsp dehydrated banana</li>
+<li>• 2 tbsp dehydrated star fruit</li>
+<li>• 1 cup almond milk</li>
+<li>• 1 scoop vanilla protein powder</li>
+<li>• 1 tbsp chia seeds</li>
+<li>• Ice cubes</li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-2">Instructions:</h4>
+<ol class="text-gray-600 space-y-1 list-decimal list-inside">
+<li>Soak dehydrated fruits in warm water for 10 minutes</li>
+<li>Combine all ingredients in blender</li>
+<li>Blend until creamy</li>
+<li>Top with additional chia seeds</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<!-- Recipe 3 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=tropical%2520green%2520smoothie%2520with%2520sapodilla%2520and%2520golden%2520apple%252C%2520garnished%2520with%2520mint%252C%2520professional%2520food%2520photography%252C%2520bright%2520natural%2520lighting%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=600&height=400&seq=smoothie3&orientation=landscape" alt="Caribbean Green Smoothie" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">Caribbean Green Smoothie</h3>
+<p class="text-gray-600 mb-4">A nutritious blend featuring sapodilla and golden apple.</p>
+<div class="space-y-4">
+<div>
+<h4 class="font-bold mb-2">Ingredients:</h4>
+<ul class="text-gray-600 space-y-1">
+<li>• 2 tbsp dehydrated sapodilla</li>
+<li>• 2 tbsp dehydrated golden apple</li>
+<li>• 2 cups spinach</li>
+<li>• 1 cup coconut water</li>
+<li>• 1 tbsp lime juice</li>
+<li>• Ice cubes</li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-2">Instructions:</h4>
+<ol class="text-gray-600 space-y-1 list-decimal list-inside">
+<li>Soak dehydrated fruits in coconut water</li>
+<li>Blend spinach and liquid first</li>
+<li>Add remaining ingredients and blend</li>
+<li>Garnish with mint leaves</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Nutritional Information -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Nutritional Information</h2>
+<p class="text-gray-600 max-w-3xl mx-auto">Explore the nutritional benefits of our dehydrated fruits. Each variety offers unique health advantages while maintaining the natural goodness of fresh fruit.</p>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="border-b">
+<div class="flex">
+<button class="tab-button active py-4 px-6 font-medium focus:outline-none" data-tab="mango">Mango</button>
+<button class="tab-button py-4 px-6 font-medium focus:outline-none" data-tab="sapodilla">Sapodilla</button>
+<button class="tab-button py-4 px-6 font-medium focus:outline-none" data-tab="papaya">Papaya</button>
+<button class="tab-button py-4 px-6 font-medium focus:outline-none" data-tab="banana">Banana</button>
+<button class="tab-button py-4 px-6 font-medium focus:outline-none" data-tab="starfruit">Star Fruit</button>
+<button class="tab-button py-4 px-6 font-medium focus:outline-none" data-tab="goldenapple">Golden Apple</button>
+</div>
+</div>
+<div class="p-6 md:p-8">
+<!-- Mango Tab -->
+<div class="tab-content" id="mango-content">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="text-xl font-bold mb-4">Dehydrated Mango Nutrition</h3>
+<p class="text-gray-600 mb-6">Our dehydrated mango slices retain most of the nutritional benefits of fresh mangoes, with concentrated flavor and natural sweetness.</p>
+<div class="space-y-4">
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Calories</span>
+<span>320 kcal per 100g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Total Carbohydrates</span>
+<span>78g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Dietary Fiber</span>
+<span>8g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Sugars</span>
+<span>66g (naturally occurring)</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Protein</span>
+<span>3g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Vitamin A</span>
+<span>76% DV</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Vitamin C</span>
+<span>35% DV</span>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4">Health Benefits</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Rich in antioxidants that help protect cells from damage</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>High in vitamin A for eye health and immune function</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Contains dietary fiber that supports digestive health</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Natural source of energy from fruit sugars</span>
+</li>
+</ul>
+<div class="mt-8">
+<h4 class="font-bold mb-3">Serving Suggestions</h4>
+<ul class="space-y-2 text-gray-600">
+<li>• Enjoy as a convenient snack on its own</li>
+<li>• Add to trail mix or granola</li>
+<li>• Blend into smoothies for natural sweetness</li>
+<li>• Chop and add to yogurt or oatmeal</li>
+<li>• Use in baking for natural fruit flavor</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Other tabs would be similar but with different content -->
+<div class="tab-content hidden" id="sapodilla-content">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="text-xl font-bold mb-4">Dehydrated Sapodilla Nutrition</h3>
+<p class="text-gray-600 mb-6">Our dehydrated sapodilla maintains the unique caramel-like sweetness and nutritional benefits of fresh sapodilla.</p>
+<div class="space-y-4">
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Calories</span>
+<span>290 kcal per 100g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Total Carbohydrates</span>
+<span>72g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Dietary Fiber</span>
+<span>12g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Sugars</span>
+<span>58g (naturally occurring)</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Protein</span>
+<span>2.5g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Iron</span>
+<span>15% DV</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Calcium</span>
+<span>8% DV</span>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4">Health Benefits</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>High in tannins with antioxidant properties</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Good source of dietary fiber for digestive health</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Contains minerals essential for bone health</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Natural energy source from complex carbohydrates</span>
+</li>
+</ul>
+<div class="mt-8">
+<h4 class="font-bold mb-3">Serving Suggestions</h4>
+<ul class="space-y-2 text-gray-600">
+<li>• Perfect as a natural sweetener in teas</li>
+<li>• Add to breakfast cereals or oatmeal</li>
+<li>• Mix into homemade energy bars</li>
+<li>• Enjoy as a standalone snack</li>
+<li>• Use in baking for natural sweetness</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-content hidden" id="papaya-content">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="text-xl font-bold mb-4">Dehydrated Papaya Nutrition</h3>
+<p class="text-gray-600 mb-6">Our dehydrated papaya retains the enzyme-rich properties and sweet tropical flavor of fresh papaya.</p>
+<div class="space-y-4">
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Calories</span>
+<span>280 kcal per 100g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Total Carbohydrates</span>
+<span>70g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Dietary Fiber</span>
+<span>9g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Sugars</span>
+<span>60g (naturally occurring)</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Protein</span>
+<span>2g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Vitamin A</span>
+<span>45% DV</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Vitamin C</span>
+<span>30% DV</span>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4">Health Benefits</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Rich in papain enzyme for improved digestion</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>High in antioxidants and beta-carotene</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Supports immune system function</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Promotes healthy skin and collagen production</span>
+</li>
+</ul>
+<div class="mt-8">
+<h4 class="font-bold mb-3">Serving Suggestions</h4>
+<ul class="space-y-2 text-gray-600">
+<li>• Add to tropical fruit salads</li>
+<li>• Blend into smoothies</li>
+<li>• Top yogurt or ice cream</li>
+<li>• Mix into trail mix</li>
+<li>• Use as a natural meat tenderizer</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-content hidden" id="banana-content">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="text-xl font-bold mb-4">Dehydrated Banana Nutrition</h3>
+<p class="text-gray-600 mb-6">Our dehydrated bananas preserve the natural sweetness and potassium-rich benefits of fresh bananas.</p>
+<div class="space-y-4">
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Calories</span>
+<span>310 kcal per 100g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Total Carbohydrates</span>
+<span>76g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Dietary Fiber</span>
+<span>7g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Sugars</span>
+<span>65g (naturally occurring)</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Protein</span>
+<span>3.5g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Potassium</span>
+<span>25% DV</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Magnesium</span>
+<span>12% DV</span>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4">Health Benefits</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Excellent source of quick energy</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>High in potassium for heart health</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Supports muscle recovery after exercise</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Natural mood booster with B vitamins</span>
+</li>
+</ul>
+<div class="mt-8">
+<h4 class="font-bold mb-3">Serving Suggestions</h4>
+<ul class="space-y-2 text-gray-600">
+<li>• Perfect pre-workout snack</li>
+<li>• Add to breakfast cereals</li>
+<li>• Use in baking for natural sweetness</li>
+<li>• Mix into trail mix</li>
+<li>• Blend into smoothies</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-content hidden" id="starfruit-content">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="text-xl font-bold mb-4">Dehydrated Star Fruit Nutrition</h3>
+<p class="text-gray-600 mb-6">Our dehydrated star fruit maintains its unique flavor profile and nutritional benefits while being naturally low in calories.</p>
+<div class="space-y-4">
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Calories</span>
+<span>250 kcal per 100g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Total Carbohydrates</span>
+<span>65g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Dietary Fiber</span>
+<span>10g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Sugars</span>
+<span>52g (naturally occurring)</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Protein</span>
+<span>2g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Vitamin C</span>
+<span>40% DV</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Antioxidants</span>
+<span>High</span>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4">Health Benefits</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Rich in antioxidants and vitamin C</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Supports immune system function</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Low calorie option for weight management</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Good source of dietary fiber</span>
+</li>
+</ul>
+<div class="mt-8">
+<h4 class="font-bold mb-3">Serving Suggestions</h4>
+<ul class="space-y-2 text-gray-600">
+<li>• Enjoy as a low-calorie snack</li>
+<li>• Add to fruit teas</li>
+<li>• Use as garnish for desserts</li>
+<li>• Mix into tropical fruit salads</li>
+<li>• Blend into smoothies</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-content hidden" id="goldenapple-content">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="text-xl font-bold mb-4">Dehydrated Golden Apple Nutrition</h3>
+<p class="text-gray-600 mb-6">Our dehydrated golden apple (ambarella) preserves the unique sweet-sour flavor and nutritional benefits of this Caribbean favorite.</p>
+<div class="space-y-4">
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Calories</span>
+<span>270 kcal per 100g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Total Carbohydrates</span>
+<span>68g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Dietary Fiber</span>
+<span>11g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Sugars</span>
+<span>54g (naturally occurring)</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Protein</span>
+<span>2.5g</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Vitamin C</span>
+<span>35% DV</span>
+</div>
+<div class="flex justify-between border-b pb-2">
+<span class="font-medium">Iron</span>
+<span>10% DV</span>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-4">Health Benefits</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>High in vitamin C for immune support</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Good source of dietary fiber</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Contains natural antioxidants</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Supports digestive health</span>
+</li>
+</ul>
+<div class="mt-8">
+<h4 class="font-bold mb-3">Serving Suggestions</h4>
+<ul class="space-y-2 text-gray-600">
+<li>• Perfect for snacking</li>
+<li>• Add to fruit teas</li>
+<li>• Use in traditional Caribbean recipes</li>
+<li>• Mix into trail mix</li>
+<li>• Blend into tropical smoothies</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<p class="text-gray-500 text-sm mb-4">*Nutritional information is approximate and may vary by batch. Not intended as medical advice.</p>
+<a href="#" class="inline-flex items-center text-primary font-medium">
+Download Complete Nutritional Information
+<span class="ml-2 w-5 h-5 flex items-center justify-center">
+<i class="ri-download-line"></i>
+</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Customer Reviews -->
+<section class="py-16 bg-[#F7F5F2]">
+<div class="container mx-auto px-4">
+<div class="text-center mb-8">
+<h2 class="text-3xl md:text-4xl font-bold mb-4">Customer Reviews</h2>
+<div class="flex items-center justify-center mb-2">
+<div class="star-rating mr-2">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+<span class="font-bold">4.7 out of 5</span>
+</div>
+<p class="text-gray-600">Based on 180 reviews</p>
+</div>
+<div class="flex flex-wrap justify-center gap-3 mb-8">
+<button class="review-filter-button active">All Reviews</button>
+<button class="review-filter-button">5 Star</button>
+<button class="review-filter-button">4 Star</button>
+<button class="review-filter-button">3 Star</button>
+<button class="review-filter-button">2 Star</button>
+<button class="review-filter-button">1 Star</button>
+<button class="review-filter-button">With Photos</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Review 1 -->
+<div class="bg-white p-6 rounded-lg shadow-md">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-start">
+<div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 mr-4">
+<i class="ri-user-3-line text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold">Olivia Richardson</h4>
+<p class="text-gray-500 text-sm">June 12, 2025</p>
+</div>
+</div>
+<div class="star-rating">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<h5 class="font-bold mb-2">Perfect healthy snack for my kids!</h5>
+<p class="text-gray-600 mb-4">I've been searching for healthy snacks that my children will actually eat, and these dehydrated mangoes are a huge hit! They're naturally sweet without any added sugar, and I love that they're getting real fruit nutrition. The texture is perfect - not too tough, not too soft.</p>
+<div class="flex gap-2 mb-4">
+<div class="w-16 h-16 rounded overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=close-up%2520of%2520dehydrated%2520mango%2520slices%2520in%2520a%2520small%2520bowl%252C%2520natural%2520lighting%252C%2520casual%2520home%2520setting%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=100&height=100&seq=review1&orientation=squarish" alt="Review Photo" class="w-full h-full object-cover">
+</div>
+</div>
+<div class="flex items-center text-sm text-gray-500">
+<span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs mr-3">Verified Purchase</span>
+<button class="flex items-center mr-4">
+<i class="ri-thumb-up-line mr-1"></i> Helpful (12)
+</button>
+<button class="flex items-center">
+<i class="ri-flag-line mr-1"></i> Report
+</button>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-white p-6 rounded-lg shadow-md">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-start">
+<div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 mr-4">
+<i class="ri-user-3-line text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold">Marcus Johnson</h4>
+<p class="text-gray-500 text-sm">May 28, 2025</p>
+</div>
+</div>
+<div class="star-rating">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-line"></i>
+</div>
+</div>
+<h5 class="font-bold mb-2">Great flavor, a bit pricey</h5>
+<p class="text-gray-600 mb-4">The dehydrated papaya has amazing flavor - much better than other brands I've tried. You can really taste the difference in quality. My only complaint is the price, which is a bit higher than I'd like to pay regularly. That said, the quality does justify the cost. I'll definitely purchase again for special occasions.</p>
+<div class="flex items-center text-sm text-gray-500">
+<span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs mr-3">Verified Purchase</span>
+<button class="flex items-center mr-4">
+<i class="ri-thumb-up-line mr-1"></i> Helpful (8)
+</button>
+<button class="flex items-center">
+<i class="ri-flag-line mr-1"></i> Report
+</button>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-white p-6 rounded-lg shadow-md">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-start">
+<div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 mr-4">
+<i class="ri-user-3-line text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold">Sophia Williams</h4>
+<p class="text-gray-500 text-sm">June 5, 2025</p>
+</div>
+</div>
+<div class="star-rating">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<h5 class="font-bold mb-2">Sapodilla - a new favorite!</h5>
+<p class="text-gray-600 mb-4">I had never tried sapodilla before ordering these dehydrated slices, and wow - what a discovery! The caramel-like flavor is incredible and so unique. I've already ordered more and have been recommending to all my friends. The texture is perfect and they make a great afternoon pick-me-up snack.</p>
+<div class="flex gap-2 mb-4">
+<div class="w-16 h-16 rounded overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=close-up%2520of%2520dehydrated%2520sapodilla%2520slices%2520in%2520a%2520small%2520bowl%252C%2520natural%2520lighting%252C%2520casual%2520home%2520setting%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=100&height=100&seq=review2&orientation=squarish" alt="Review Photo" class="w-full h-full object-cover">
+</div>
+<div class="w-16 h-16 rounded overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=person%2520holding%2520a%2520piece%2520of%2520dehydrated%2520fruit%252C%2520close-up%2520of%2520hand%2520and%2520fruit%252C%2520natural%2520lighting%252C%2520casual%2520home%2520setting%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=100&height=100&seq=review3&orientation=squarish" alt="Review Photo" class="w-full h-full object-cover">
+</div>
+</div>
+<div class="flex items-center text-sm text-gray-500">
+<span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs mr-3">Verified Purchase</span>
+<button class="flex items-center mr-4">
+<i class="ri-thumb-up-line mr-1"></i> Helpful (15)
+</button>
+<button class="flex items-center">
+<i class="ri-flag-line mr-1"></i> Report
+</button>
+</div>
+</div>
+<!-- Review 4 -->
+<div class="bg-white p-6 rounded-lg shadow-md">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-start">
+<div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 mr-4">
+<i class="ri-user-3-line text-xl"></i>
+</div>
+<div>
+<h4 class="font-bold">Daniel Thompson</h4>
+<p class="text-gray-500 text-sm">May 19, 2025</p>
+</div>
+</div>
+<div class="star-rating">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-line"></i>
+<i class="ri-star-line"></i>
+</div>
+</div>
+<h5 class="font-bold mb-2">Good but inconsistent</h5>
+<p class="text-gray-600 mb-4">I've ordered the dehydrated banana chips three times now. The first two orders were excellent - perfect texture and sweetness. However, my most recent order seemed overdehydrated, making them too tough. I hope this was just a one-time issue with quality control, as I really enjoyed the previous batches.</p>
+<div class="flex items-center text-sm text-gray-500">
+<span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs mr-3">Verified Purchase</span>
+<button class="flex items-center mr-4">
+<i class="ri-thumb-up-line mr-1"></i> Helpful (5)
+</button>
+<button class="flex items-center">
+<i class="ri-flag-line mr-1"></i> Report
+</button>
+</div>
+</div>
+</div>
+<div class="mt-8 text-center">
+<button class="bg-white hover:bg-gray-50 text-gray-800 border border-gray-300 py-2 px-6 rounded-button font-medium whitespace-nowrap">Load More Reviews</button>
+</div>
+</div>
+</section>
+<!-- Related Products -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="text-3xl md:text-4xl font-bold mb-2">You May Also Like</h2>
+<p class="text-gray-600">Other products that pair well with our dehydrated fruits</p>
+</div>
+<div class="flex space-x-2">
+<button id="prev-related" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:text-primary hover:border-primary transition">
+<i class="ri-arrow-left-s-line text-xl"></i>
+</button>
+<button id="next-related" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:text-primary hover:border-primary transition">
+<i class="ri-arrow-right-s-line text-xl"></i>
+</button>
+</div>
+</div>
+<div class="relative overflow-hidden">
+<div id="related-products-container" class="flex space-x-6 transition-transform duration-300">
+<!-- Product 1 -->
+<div class="min-w-[280px] max-w-[280px] bg-white rounded-lg shadow-md overflow-hidden">
+<div class="relative h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=elegant%2520glass%2520jar%2520of%2520dark%2520chocolate%2520covered%2520mixed%2520nuts%252C%2520artfully%2520arranged%2520showing%2520chocolate%2520coating%2520and%2520nut%2520textures%252C%2520professional%2520product%2520photography%2520on%2520clean%2520white%2520background%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=400&height=400&seq=related1&orientation=squarish" alt="Dark Chocolate Mix" class="w-full h-full object-cover object-top">
+<div class="absolute top-3 left-3 bg-primary text-white text-xs py-1 px-2 rounded">Bestseller</div>
+</div>
+<div class="p-5">
+<h3 class="text-lg font-bold mb-1">Dark Chocolate Mix</h3>
+<p class="text-gray-500 text-sm mb-3">250g jar</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$80.00</span>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="min-w-[280px] max-w-[280px] bg-white rounded-lg shadow-md overflow-hidden">
+<div class="relative h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=elegant%2520glass%2520jar%2520of%2520lightly%2520salted%2520mixed%2520nuts%252C%2520showing%2520variety%2520of%2520premium%2520nuts%2520with%2520light%2520salt%2520coating%252C%2520professional%2520product%2520photography%2520on%2520white%2520background%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=400&height=400&seq=related2&orientation=squarish" alt="Lightly Salted Mix" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<h3 class="text-lg font-bold mb-1">Lightly Salted Mix</h3>
+<p class="text-gray-500 text-sm mb-3">250g jar</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$75.00</span>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="min-w-[280px] max-w-[280px] bg-white rounded-lg shadow-md overflow-hidden">
+<div class="relative h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=elegant%2520jar%2520of%2520premium%2520dehydrated%2520garlic%2520powder%252C%2520fine%2520white%2520powder%2520visible%2520through%2520clear%2520glass%252C%2520professional%2520product%2520photography%2520on%2520white%2520background%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=400&height=400&seq=related3&orientation=squarish" alt="Garlic Powder" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<h3 class="text-lg font-bold mb-1">Garlic Powder</h3>
+<p class="text-gray-500 text-sm mb-3">100g jar</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$35.00</span>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="min-w-[280px] max-w-[280px] bg-white rounded-lg shadow-md overflow-hidden">
+<div class="relative h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=elegant%2520jar%2520of%2520premium%2520dehydrated%2520onion%2520powder%252C%2520fine%2520light%2520beige%2520powder%2520visible%2520through%2520clear%2520glass%252C%2520professional%2520product%2520photography%2520on%2520white%2520background%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=400&height=400&seq=related4&orientation=squarish" alt="Onion Powder" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-5">
+<h3 class="text-lg font-bold mb-1">Onion Powder</h3>
+<p class="text-gray-500 text-sm mb-3">100g jar</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$35.00</span>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Product 5 - Fruit Bundle -->
+<div class="min-w-[280px] max-w-[280px] bg-white rounded-lg shadow-md overflow-hidden">
+<div class="relative h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=beautiful%2520gift%2520box%2520with%2520assorted%2520dehydrated%2520tropical%2520fruits%2520in%2520small%2520jars%252C%2520elegant%2520packaging%252C%2520professional%2520product%2520photography%2520on%2520white%2520background%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=400&height=400&seq=related5&orientation=squarish" alt="Tropical Fruit Bundle" class="w-full h-full object-cover object-top">
+<div class="absolute top-3 left-3 bg-[#FF7F50] text-white text-xs py-1 px-2 rounded">Bundle</div>
+</div>
+<div class="p-5">
+<h3 class="text-lg font-bold mb-1">Tropical Fruit Bundle</h3>
+<p class="text-gray-500 text-sm mb-3">4 x 100g jars</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$160.00</span>
+<button class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bulk Purchase CTA -->
+<section class="py-16 bg-[#F7F5F2]">
+<div class="container mx-auto px-4">
+<div class="bg-white rounded-xl overflow-hidden shadow-md">
+<div class="flex flex-col md:flex-row">
+<div class="w-full md:w-1/2 p-8 md:p-12">
+<h2 class="text-3xl md:text-4xl font-bold mb-6">Bulk Orders Available</h2>
+<p class="text-gray-600 mb-6">Looking to purchase our dehydrated fruits in larger quantities? We offer special pricing for bulk orders, perfect for restaurants, cafes, health food stores, or corporate gifts.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Discounted pricing on orders over 10kg</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Custom packaging options available</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Free delivery for orders over $500</span>
+</li>
+<li class="flex items-start">
+<span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+<i class="ri-check-line"></i>
+</span>
+<span>Dedicated account manager for business clients</span>
+</li>
+</ul>
+<a href="#" class="bg-primary hover:bg-primary/90 text-white py-3 px-8 rounded-button font-medium inline-block whitespace-nowrap">Request Bulk Quote</a>
+</div>
+<div class="w-full md:w-1/2 bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=professional%2520food%2520production%2520facility%2520with%2520rows%2520of%2520packaged%2520dehydrated%2520fruit%2520products%2520ready%2520for%2520shipping%252C%2520clean%2520industrial%2520environment%252C%2520organized%2520shelves%2520with%2520product%2520jars%252C%2520bright%2520lighting%252C%2520high%2520resolution%252C%2520no%2520text%252C%2520photorealistic&width=800&height=600&seq=bulk1&orientation=portrait')"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Back to Top Button -->
+<div id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center cursor-pointer opacity-0 transition-opacity duration-300 z-50">
+<i class="ri-arrow-up-line text-xl"></i>
+</div>
+<!-- Footer -->
+<footer class="bg-[#2A2A2A] text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- Company Info -->
+<div>
+<a href="/" data-readdy="true" class="mb-6 inline-block"><img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/117959135c1f1a6fecd6b5698ea16259.png" alt="Pure Harvest Logo" class="h-12"></a>
+<p class="text-gray-400 mb-6">Pure Harvest Group of Companies Ltd. brings the authentic flavors of Trinidad and Tobago to kitchens around the world.</p>
+<div class="flex space-x-4">
+<a href="https://www.instagram.com/pureharvestltd2022/" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=100089070173342" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-facebook-line"></i>
+</a>
+<a href="https://www.tiktok.com/@pureharvest0" data-readdy="true" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h3 class="text-lg font-bold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="/" data-readdy="true" class="text-gray-400 hover:text-white transition">Home</a></li>
+<li><a href="/shop/" data-readdy="true" class="text-gray-400 hover:text-white transition">Shop</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Become a Retailer</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition">Terms & Conditions</a></li>
+</ul>
+</div>
+<!-- Contact Info -->
+<div>
+<h3 class="text-lg font-bold mb-6">Contact Us</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-map-pin-line"></i>
+</span>
+<span class="text-gray-400">Congo Hill, Moriah, Tobago</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-phone-line"></i>
+</span>
+<span class="text-gray-400">+1 868 361-8990</span>
+</li>
+<li class="flex items-start">
+<span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+<i class="ri-mail-line"></i>
+</span>
+<span class="text-gray-400">pureharvest2022@gmail.com</span>
+</li>
+</ul>
+<div class="mt-6">
+<h4 class="text-sm font-bold mb-3">We Accept</h4>
+<div class="flex space-x-3">
+<span class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-visa-fill text-xl"></i>
+</span>
+<span class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-mastercard-fill text-xl"></i>
+</span>
+<span class="w-8 h-8 flex items-center justify-center text-gray-400">
+<i class="ri-paypal-fill text-xl"></i>
+</span>
+</div>
+</div>
+</div>
+<!-- Newsletter -->
+<div>
+<h3 class="text-lg font-bold mb-6">Newsletter</h3>
+<p class="text-gray-400 mb-4">Subscribe to receive updates, access to exclusive deals, and more.</p>
+<form class="space-y-3">
+<input type="email" placeholder="Your email address" class="w-full py-3 px-4 rounded-button bg-white/10 border-none text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/30">
+<button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white py-3 px-4 rounded-button font-medium whitespace-nowrap">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-700 pt-8">
+<p class="text-gray-500 text-center">&copy; 2025 Pure Harvest Group of Companies Ltd. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<!-- Scripts -->
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', function() {
+if (mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.remove('hidden');
+} else {
+mobileMenu.classList.add('hidden');
+}
+});
+});
+</script>
+<script id="quantity-input-script">
+document.addEventListener('DOMContentLoaded', function() {
+const decreaseButtons = document.querySelectorAll('.quantity-decrease');
+const increaseButtons = document.querySelectorAll('.quantity-increase');
+const quantityInputs = document.querySelectorAll('.quantity-value');
+decreaseButtons.forEach((button, index) => {
+button.addEventListener('click', function() {
+const currentValue = parseInt(quantityInputs[index].value);
+if (currentValue > 1) {
+quantityInputs[index].value = currentValue - 1;
+}
+});
+});
+increaseButtons.forEach((button, index) => {
+button.addEventListener('click', function() {
+const currentValue = parseInt(quantityInputs[index].value);
+quantityInputs[index].value = currentValue + 1;
+});
+});
+quantityInputs.forEach(input => {
+input.addEventListener('input', function() {
+if (this.value < 1) {
+this.value = 1;
+}
+});
+});
+});
+</script>
+<script id="tabs-script">
+document.addEventListener('DOMContentLoaded', function() {
+const tabButtons = document.querySelectorAll('.tab-button');
+const tabContents = document.querySelectorAll('.tab-content');
+tabButtons.forEach(button => {
+button.addEventListener('click', function() {
+// Remove active class from all buttons
+tabButtons.forEach(btn => btn.classList.remove('active'));
+// Add active class to clicked button
+this.classList.add('active');
+// Hide all tab contents
+tabContents.forEach(content => content.classList.add('hidden'));
+// Show the selected tab content
+const tabId = this.getAttribute('data-tab');
+const tabContent = document.getElementById(`${tabId}-content`);
+if (tabContent) {
+tabContent.classList.remove('hidden');
+}
+});
+});
+});
+</script>
+<script id="review-filter-script">
+document.addEventListener('DOMContentLoaded', function() {
+const filterButtons = document.querySelectorAll('.review-filter-button');
+filterButtons.forEach(button => {
+button.addEventListener('click', function() {
+// Remove active class from all buttons
+filterButtons.forEach(btn => btn.classList.remove('active'));
+// Add active class to clicked button
+this.classList.add('active');
+// Filter logic would go here in a real implementation
+});
+});
+});
+</script>
+<script id="related-products-script">
+document.addEventListener('DOMContentLoaded', function() {
+const container = document.getElementById('related-products-container');
+const prevButton = document.getElementById('prev-related');
+const nextButton = document.getElementById('next-related');
+const productWidth = 280 + 24; // product width + gap
+let currentPosition = 0;
+// Calculate the maximum scroll position
+const maxScroll = () => {
+const containerWidth = container.parentElement.clientWidth;
+const totalWidth = container.scrollWidth;
+return totalWidth - containerWidth;
+};
+// Update buttons state
+const updateButtons = () => {
+prevButton.disabled = currentPosition <= 0;
+nextButton.disabled = currentPosition >= maxScroll();
+prevButton.style.opacity = prevButton.disabled ? '0.5' : '1';
+nextButton.style.opacity = nextButton.disabled ? '0.5' : '1';
+};
+// Scroll to position
+const scrollToPosition = (position) => {
+currentPosition = Math.max(0, Math.min(position, maxScroll()));
+container.style.transform = `translateX(-${currentPosition}px)`;
+updateButtons();
+};
+// Initialize
+updateButtons();
+// Event listeners
+prevButton.addEventListener('click', () => {
+scrollToPosition(currentPosition - productWidth * 2);
+});
+nextButton.addEventListener('click', () => {
+scrollToPosition(currentPosition + productWidth * 2);
+});
+// Update on resize
+window.addEventListener('resize', () => {
+scrollToPosition(currentPosition);
+});
+});
+</script>
+<script id="back-to-top-script">
+document.addEventListener('DOMContentLoaded', function() {
+const backToTopButton = document.getElementById('back-to-top');
+// Show/hide button based on scroll position
+window.addEventListener('scroll', function() {
+if (window.pageYOffset > 300) {
+backToTopButton.style.opacity = '1';
+} else {
+backToTopButton.style.opacity = '0';
+}
+});
+// Scroll to top when button is clicked
+backToTopButton.addEventListener('click', function() {
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
+});
+</script>
+</body>
+</html>
