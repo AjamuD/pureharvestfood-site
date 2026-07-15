@@ -294,12 +294,12 @@ Free shipping on orders over $300
 </div>
 </div>
 <button id="checkout-btn" class="checkout-btn w-full text-white py-4 px-6 rounded-button font-semibold text-lg mt-6 whitespace-nowrap">
-Proceed to Checkout
+Order on WhatsApp
 </button>
 <div class="flex items-center justify-center space-x-4 mt-4 text-sm text-gray-500">
 <div class="flex items-center">
 <i class="ri-secure-payment-line mr-1"></i>
-Secure Payment
+WhatsApp Ordering
 </div>
 <div class="flex items-center">
 <i class="ri-shield-check-line mr-1"></i>
@@ -395,8 +395,8 @@ Continue Shopping
 <i class="ri-secure-payment-line text-3xl"></i>
 </div>
 <div>
-<h3 class="font-bold mb-1">Secure Payment</h3>
-<p class="text-gray-600 text-sm">100% secure checkout</p>
+<h3 class="font-bold mb-1">WhatsApp Ordering</h3>
+<p class="text-gray-600 text-sm">No card details collected</p>
 </div>
 </div>
 <div class="flex items-center justify-center md:justify-start">
@@ -679,19 +679,10 @@ promoMessage.textContent = 'Invalid promo code';
 promoMessage.className = 'text-sm text-red-600';
 }
 });
-// Checkout button
-document.getElementById('checkout-btn').addEventListener('click', function() {
-this.innerHTML = '<i class="ri-loader-4-line loading-spinner mr-2"></i>Processing...';
-this.disabled = true;
-setTimeout(() => {
-showToast('Redirecting to checkout...', 'success');
-this.innerHTML = 'Proceed to Checkout';
-this.disabled = false;
-}, 2000);
-});
 // Initialize
 updateTotals();
 });
 </script>
+<script src="/assets/js/whatsapp-ordering.js"></script>
 </body>
 </html>
