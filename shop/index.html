@@ -396,19 +396,19 @@ Coming Soon
 <!-- Product 1 -->
 <div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-inventory-key="garlic-powder" onclick="openProductModal(this)">
 <div class="relative h-64 overflow-hidden">
-<img src="/assets/images/products/garlic.webp" alt="Pure Harvest Garlic Powder" class="w-full h-full object-contain">
+<img src="/assets/images/products/garlic.webp" alt="Pure Harvest Garlic Flakes" class="w-full h-full object-contain">
 <div class="badge badge-natural">100% Natural</div>
 </div>
 <div class="p-5">
 <div class="flex justify-between items-center mb-2">
 <span class="text-sm text-gray-500">Dehydrated Spices</span>
 <span class="flex items-center text-sm">
-<span class="stock-indicator in-stock"></span>
-In Stock
+<span class="stock-indicator out-of-stock"></span>
+Out of Stock
 </span>
 </div>
-<h3 class="text-lg font-bold mb-1">Garlic Powder</h3>
-<p class="text-gray-600 text-sm mb-3">Fine ground garlic powder with intense flavor, perfect for seasoning any dish.</p>
+<h3 class="text-lg font-bold mb-1">Garlic Flakes</h3>
+<p class="text-gray-600 text-sm mb-3">Dehydrated garlic flakes with rich flavor, perfect for seasoning any dish.</p>
 <div class="flex justify-between items-center">
 <span class="text-primary font-bold">$3.00</span>
 <button onclick="addToCart(this)" class="add-to-cart-btn bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap">Add to Cart</button>
@@ -1353,17 +1353,16 @@ modalDescription.textContent = description;
 modalPrice.textContent = price;
 modalBadges.innerHTML = badges;
 // Generate related products
-const allProducts = Array.from(document.querySelectorAll('.product-card'));
-const relatedProductsHtml = allProducts
-.filter(product => product !== productCard)
-.sort(() => 0.5 - Math.random())
-.slice(0, 4)
+const allProducts = Array.from(document.querySelectorAll('.product-card'))
+.filter(product => !product.closest('#related-products'));
+const isInventorySpice = productCard.hasAttribute('data-inventory-key');
+const selectedInventoryKey = productCard.getAttribute('data-inventory-key');
+const relatedProductCards = isInventorySpice
+? allProducts.filter(product => product.hasAttribute('data-inventory-key') && product.getAttribute('data-inventory-key') !== selectedInventoryKey)
+: allProducts.filter(product => product.querySelector('h3').textContent.trim() !== name).sort(() => 0.5 - Math.random()).slice(0, 4);
+const relatedProductsHtml = relatedProductCards
 .map(product => {
 const productHtml = product.cloneNode(true);
-productHtml.onclick = () => {
-closeProductModal();
-setTimeout(() => openProductModal(product), 300);
-};
 return productHtml.outerHTML;
 })
 .join('');
@@ -1760,7 +1759,7 @@ window.filterByCategory(window.currentCategory, false);
 <script>
 window.PURE_HARVEST_INVENTORY_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxYMsEv9tGhxRMB5LRsq5z2S-d_UqLtZhnk-0pUSHnkFHFFH8ZvfP2YkMPbaoGcXem-Vg/exec';
 </script>
-<script src="/assets/js/inventory-status.js"></script>
+<script src="/assets/js/inventory-status.js?v=20260715-2"></script>
 <script src="/assets/js/whatsapp-ordering.js"></script>
 </body>
 </html>
