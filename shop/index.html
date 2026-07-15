@@ -127,6 +127,18 @@ height: 100%;
 object-fit: contain !important;
 object-position: center !important;
 }
+.product-card > .relative.h-64::after {
+content: "";
+position: absolute;
+top: 10px;
+right: 10px;
+width: 54px;
+height: 54px;
+background: #ffffff url('/assets/images/proudly-tobago.png') center / contain no-repeat;
+border-radius: 50%;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+z-index: 2;
+}
 #modal-product-image {
 object-fit: contain !important;
 object-position: center !important;
@@ -146,9 +158,6 @@ color: white;
 }
 .badge-natural {
 background-color: #10B981;
-}
-.badge-tobago {
-background-color: #6366F1;
 }
 .badge-new {
 background-color: #F59E0B;
@@ -385,11 +394,10 @@ Coming Soon
 <div class="container mx-auto px-4">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 <!-- Product 1 -->
-<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-inventory-key="garlic-powder" onclick="openProductModal(this)">
 <div class="relative h-64 overflow-hidden">
 <img src="/assets/images/products/garlic.webp" alt="Pure Harvest Garlic Powder" class="w-full h-full object-contain">
 <div class="badge badge-natural">100% Natural</div>
-<div class="badge badge-tobago" style="top: 40px;">Made in Tobago</div>
 </div>
 <div class="p-5">
 <div class="flex justify-between items-center mb-2">
@@ -412,7 +420,6 @@ In Stock
 <div class="relative h-64 overflow-hidden">
 <img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/54dd3c87a80f0beb6cd7e1cedb1890a0.jpeg" alt="Nutri-Fuse Lightly Salted" class="w-full h-full object-cover object-top">
 <div class="badge badge-bestseller">Bestseller</div>
-<div class="badge badge-tobago" style="top: 40px;">Made in Tobago</div>
 </div>
 <div class="p-5">
 <div class="flex justify-between items-center mb-2">
@@ -528,7 +535,7 @@ In Stock
 </div>
 </div>
 <!-- Product 6 -->
-<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-inventory-key="dehydrated-bay-leaves" onclick="openProductModal(this)">
 <div class="relative h-64 overflow-hidden">
 <img src="/assets/images/products/bayleaf.webp" alt="Pure Harvest Dehydrated Bay Leaves" class="w-full h-full object-contain">
 <div class="badge badge-natural">100% Natural</div>
@@ -553,7 +560,6 @@ In Stock
 <div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
 <div class="relative h-64 overflow-hidden">
 <img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/f8bca7f25b7c1b3a9dcf5a115414b8a6.png" alt="Saltfish Accra Mix" class="w-full h-full object-cover object-top">
-<div class="badge badge-tobago">Made in Tobago</div>
 </div>
 <div class="p-5">
 <div class="flex justify-between items-center mb-2">
@@ -575,7 +581,6 @@ Low Stock
 <div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
 <div class="relative h-64 overflow-hidden">
 <img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/8d73d157c24272127cab9e0a4c516490.png" alt="Smoke Fish Accra Mix" class="w-full h-full object-cover object-top">
-<div class="badge badge-tobago">Made in Tobago</div>
 <div class="badge badge-new" style="top: 40px;">New</div>
 </div>
 <div class="p-5">
@@ -654,11 +659,10 @@ In Stock
 </div>
 </div>
 <!-- Product 10 -->
-<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-inventory-key="local-hot-pepper-powder" onclick="openProductModal(this)">
 <div class="relative h-64 overflow-hidden">
 <img src="/assets/images/products/local-hot-pepper.webp" alt="Pure Harvest Local Hot Pepper Powder" class="w-full h-full object-contain">
 <div class="badge badge-natural">100% Natural</div>
-<div class="badge badge-tobago" style="top: 40px;">Made in Tobago</div>
 </div>
 <div class="p-5">
 <div class="flex justify-between items-center mb-2">
@@ -677,11 +681,10 @@ In Stock
 </div>
 </div>
 <!-- Product 11 -->
-<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-inventory-key="pimento-power" onclick="openProductModal(this)">
 <div class="relative h-64 overflow-hidden">
 <img src="/assets/images/products/pimento.webp" alt="Pure Harvest Pimento Powder" class="w-full h-full object-contain">
 <div class="badge badge-natural">100% Natural</div>
-<div class="badge badge-tobago" style="top: 40px;">Made in Tobago</div>
 </div>
 <div class="p-5">
 <div class="flex justify-between items-center mb-2">
@@ -700,7 +703,7 @@ In Stock
 </div>
 </div>
 <!-- Product 12 -->
-<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-inventory-key="spicy-pimento-power" onclick="openProductModal(this)">
 <div class="relative h-64 overflow-hidden">
 <img src="/assets/images/products/spicy-pimento.webp" alt="Pure Harvest Spicy Pimento Powder" class="w-full h-full object-contain">
 <div class="badge badge-natural">100% Natural</div>
@@ -959,7 +962,6 @@ In Stock
 <div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
 <div class="relative h-64 overflow-hidden">
 <img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/34230757bfef08cf2c763969a428e3a7.jpeg" alt="Chicken Accra Mix" class="w-full h-full object-cover object-top">
-<div class="badge badge-tobago">Made in Tobago</div>
 </div>
 <div class="p-5">
 <div class="flex justify-between items-center mb-2">
