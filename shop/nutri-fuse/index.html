@@ -1,43 +1,950 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-TT">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nutri-Fuse | Pure Harvest</title>
-  <meta name="description" content="Ask Pure Harvest about Nutri-Fuse, including current price, available sizes, ingredients, allergens and availability.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.pureharvestfood.com/shop/nutri-fuse/">
-  <meta property="og:type" content="website"><meta property="og:site_name" content="Pure Harvest"><meta property="og:locale" content="en_TT">
-  <meta property="og:title" content="Nutri-Fuse | Pure Harvest"><meta property="og:description" content="Ask Pure Harvest about Nutri-Fuse, including current price, available sizes, ingredients, allergens and availability."><meta property="og:url" content="https://www.pureharvestfood.com/shop/nutri-fuse/"><meta property="og:image" content="https://www.pureharvestfood.com/assets/images/brand/pure-harvest-logo.png"><meta property="og:image:alt" content="Pure Harvest logo">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="/assets/images/brand/pure-harvest-logo.png" type="image/png">
-  <link rel="stylesheet" href="/assets/css/site.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Pure Harvest Group of Companies Ltd.","url":"https://www.pureharvestfood.com","email":"pureharvest2022@gmail.com","telephone":"+1 868 361-8990","address":{"@type":"PostalAddress","streetAddress":"Congo Hill","addressLocality":"Moriah","addressRegion":"Tobago","addressCountry":"TT"},"founder":{"@type":"Person","name":"Ajamu Daniel"},"sameAs":["https://www.instagram.com/pureharvestltd2022/","https://www.facebook.com/profile.php?id=100089070173342","https://www.tiktok.com/@pureharvest0"]}</script>
-  <script src="/assets/js/site.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="/" aria-label="Pure Harvest Group of Companies Ltd. home">
-        <img src="/assets/images/brand/pure-harvest-logo.png" alt="Pure Harvest" width="1200" height="700">
-        <span>Pure Harvest Group of Companies Ltd.</span>
-      </a>
-      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">Menu</button>
-      <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation"><ul class="nav-list">
-        <li><a href="/">Home</a></li><li><a href="/shop/" aria-current="page">Products</a></li><li><a href="/about/">About Us</a></li><li><a href="/retailer/">Become a Retailer</a></li><li><a href="/certificates/">Company Documents</a></li><li><a href="/contact/">Contact</a></li>
-      </ul></nav>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nutri-Fuse Line | Pure Harvest Group of Companies Ltd.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}
+.hero-section {
+    background-image: url('/assets/images/generated/nuts-and-snacks.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.3) 100%);
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.custom-radio {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.custom-radio.checked::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #8B4513;
+}
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #E5E7EB;
+}
+.timeline-item:first-child::before {
+    top: 24px;
+}
+.timeline-item:last-child::before {
+    height: 24px;
+}
+.timeline-dot {
+    position: absolute;
+    left: -5px;
+    top: 24px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #8B4513;
+}
+.process-step::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: -16px;
+    width: 32px;
+    height: 1px;
+    background-color: #E5E7EB;
+}
+.process-step:last-child::after {
+    display: none;
+}
+</style>
+<link rel="stylesheet" href="/assets/css/site.css">
+<meta name="description" content="Ask Pure Harvest about the Nutri-Fuse range, current varieties, ingredients, sizes and prices."><meta property="og:title" content="Nutri-Fuse Line | Pure Harvest Group of Companies Ltd."><meta property="og:description" content="Ask Pure Harvest about the Nutri-Fuse range, current varieties, ingredients, sizes and prices."><meta property="og:url" content="https://www.pureharvestfood.com/shop/nutri-fuse/"><meta property="og:image" content="https://www.pureharvestfood.com/assets/images/brand/pure-harvest-logo.png"><link rel="canonical" href="https://www.pureharvestfood.com/shop/nutri-fuse/"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Pure Harvest Group of Companies Ltd.","url":"https://www.pureharvestfood.com","telephone":"+1 868 361-8990","email":"pureharvest2022@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Congo Hill","addressLocality":"Moriah","addressRegion":"Tobago","addressCountry":"TT"},"founder":{"@type":"Person","name":"Ajamu Daniel"},"sameAs":["https://www.instagram.com/pureharvestltd2022/","https://www.facebook.com/profile.php?id=100089070173342","https://www.tiktok.com/@pureharvest0"]}</script><script src="/assets/js/production.js" defer></script></head>
+<body class="bg-[#FAFAFA]">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="/"><img src="/assets/images/brand/pure-harvest-logo.png" alt="Pure Harvest Logo" class="h-12" width="1200" height="700" decoding="async"></a>
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-8">
+            <a href="/" class="text-gray-700 hover:text-primary transition">Home</a>
+            <a href="/shop/" class="text-primary font-medium">Products</a>
+            <a href="/" class="text-gray-700 hover:text-primary transition">About Us</a>
+            <a href="/" class="text-gray-700 hover:text-primary transition">Become a Retailer</a>
+            <a href="/contact/" class="text-gray-700 hover:text-primary transition">Contact</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+            <!-- Social Media Icons -->
+            <div class="hidden md:flex items-center space-x-3">
+                <a href="https://www.instagram.com/pureharvestltd2022/" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+                    <i class="ri-instagram-line"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100089070173342" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+                    <i class="ri-facebook-line"></i>
+                </a>
+                <a href="https://www.tiktok.com/@pureharvest0" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition">
+                    <i class="ri-tiktok-line"></i>
+                </a>
+            </div>
+            <!-- Cart Icon -->
+            <a href="https://wa.me/18683618990?text=Hello%20Pure%20Harvest%2C%20I%20would%20like%20to%20place%20an%20order.%20Please%20send%20me%20the%20current%20product%20list%2C%20prices%20and%20availability." class="relative w-10 h-10 flex items-center justify-center text-gray-700 hover:text-primary transition" target="_blank" rel="noopener noreferrer" aria-label="Order on WhatsApp">
+                <i class="ri-shopping-cart-2-line text-xl"></i>
+                </a>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
+                <i class="ri-menu-line text-2xl"></i>
+            </button>
+        </div>
     </div>
-  </header>
-  <main id="main-content"><section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="/">Home</a> / <a href="/shop/">Products</a> / Nutri-Fuse</div><div class="eyebrow">Product enquiry</div><h1>Nutri-Fuse</h1><p class="lead">Enquire about the current Nutri-Fuse range, available varieties and ordering options.</p></div></section><section class="section alt"><div class="container product-grid"><div><img class="card-media" style="border-radius:var(--radius)" src="/assets/images/products/mixes.svg" alt="Illustration representing nutri-fuse" width="800" height="600"></div><div><span class="tag">Contact for current price</span><h2>Product information</h2><div class="detail-list"><div class="detail"><strong>Sizes</strong>Ask about available sizes</div><div class="detail"><strong>Availability</strong>Availability may vary</div><div class="detail"><strong>Ingredients & allergens</strong>Contact us for current information</div><div class="detail"><strong>Retail & wholesale</strong>Enquiries welcome</div></div><p>Pure Harvest will confirm current product details directly. No order is confirmed until Pure Harvest responds and agrees the products, price, payment and delivery arrangements.</p><div class="actions"><a class="button olive" href="https://wa.me/18683618990?text=Hello%20Pure%20Harvest%2C%20I%20would%20like%20to%20ask%20about%20Nutri-Fuse.%20Please%20send%20me%20the%20current%20price%2C%20sizes%20and%20availability." target="_blank" rel="noopener noreferrer">Ask About This Product</a><a class="button secondary" href="/retailer/">Wholesale enquiry</a></div></div></div></section></main>
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div><h2>Pure Harvest Group of Companies Ltd.</h2><p>Caribbean food products and ingredients from Tobago, Trinidad and Tobago.</p><ul class="social-list"><li><a href="https://www.instagram.com/pureharvestltd2022/" target="_blank" rel="noopener noreferrer">Instagram<span class="sr-only"> (opens in a new tab)</span></a></li><li><a href="https://www.facebook.com/profile.php?id=100089070173342" target="_blank" rel="noopener noreferrer">Facebook<span class="sr-only"> (opens in a new tab)</span></a></li><li><a href="https://www.tiktok.com/@pureharvest0" target="_blank" rel="noopener noreferrer">TikTok<span class="sr-only"> (opens in a new tab)</span></a></li></ul></div>
-      <div><h3>Explore</h3><ul class="footer-links"><li><a href="/shop/">Products</a></li><li><a href="/about/">About Us</a></li><li><a href="/retailer/">Retailer Enquiries</a></li><li><a href="/certificates/">Company Documents</a></li></ul></div>
-      <div><h3>Contact</h3><p>Congo Hill, Moriah, Tobago, Trinidad and Tobago<br><a href="tel:+18683618990">+1 868 361-8990</a><br><a href="mailto:pureharvest2022@gmail.com">pureharvest2022@gmail.com</a></p><p><a href="/privacy-policy/">Privacy Policy</a><br><a href="/terms-and-conditions/">Terms and Conditions</a></p></div>
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+        <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+            <a href="/" class="py-2 text-gray-700">Home</a>
+            <a href="/shop/" class="py-2 text-primary font-medium">Products</a>
+            <a href="/" class="py-2 text-gray-700">About Us</a>
+            <a href="/" class="py-2 text-gray-700">Become a Retailer</a>
+            <a href="/contact/" class="py-2 text-gray-700">Contact</a>
+            <!-- Social Media Icons for Mobile -->
+            <div class="flex items-center space-x-4 py-2">
+                <a href="/" class="w-8 h-8 flex items-center justify-center text-gray-600">
+                    <i class="ri-instagram-line"></i>
+                </a>
+                <a href="/" class="w-8 h-8 flex items-center justify-center text-gray-600">
+                    <i class="ri-facebook-line"></i>
+                </a>
+                <a href="/" class="w-8 h-8 flex items-center justify-center text-gray-600">
+                    <i class="ri-tiktok-line"></i>
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="container footer-bottom">© 2026 Pure Harvest Group of Companies Ltd. All rights reserved.</div>
-  </footer>
-  <a class="button olive whatsapp-float" href="https://wa.me/18683618990?text=Hello%20Pure%20Harvest%2C%20I%20would%20like%20to%20place%20an%20order.%20Please%20send%20me%20the%20current%20product%20list%2C%20prices%20and%20availability." target="_blank" rel="noopener noreferrer" aria-label="Order on WhatsApp (opens in a new tab)">Order on WhatsApp</a>
+</header>
+
+<!-- Breadcrumb -->
+<div class="bg-white border-b">
+    <div class="container mx-auto px-4 py-3">
+        <nav class="flex items-center text-sm">
+            <a href="/" class="text-gray-500 hover:text-primary">Home</a>
+            <span class="mx-2 text-gray-400">/</span>
+            <a href="/shop/" class="text-gray-500 hover:text-primary">Products</a>
+            <span class="mx-2 text-gray-400">/</span>
+            <span class="text-primary font-medium">Nutri-Fuse Line</span>
+        </nav>
+    </div>
+</div>
+
+<!-- Hero Section -->
+<section class="hero-section relative h-[500px] flex items-center">
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-2xl">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Nutri-Fuse Line</h1>
+            <p class="text-lg md:text-xl text-white/90 mb-8">Premium mixed nuts and seeds crafted with natural ingredients for a nutritious and delicious snacking experience</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#products" class="bg-primary hover:bg-primary/90 text-white py-3 px-8 rounded-button font-medium whitespace-nowrap">Shop Now</a>
+                <a href="#benefits" class="bg-white hover:bg-white/90 text-primary py-3 px-8 rounded-button font-medium whitespace-nowrap">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Showcase -->
+<section id="products" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row gap-12">
+            <!-- Product Images -->
+            <div class="w-full lg:w-1/2">
+                <div class="relative h-[500px] rounded-lg overflow-hidden mb-4">
+                    <img id="main-product-image" src="/assets/images/generated/nuts-and-snacks.webp" alt="Nutri-Fuse Mixed Nuts" class="w-full h-full object-cover object-top" width="1536" height="1024" decoding="async" loading="lazy">
+                    <div id="product-badge" class="absolute top-4 left-4 bg-primary text-white text-sm py-1 px-3 rounded">Bestseller</div>
+                </div>
+                <div class="flex space-x-4">
+                    <div class="w-24 h-24 rounded-md overflow-hidden cursor-pointer border-2 border-primary">
+                        <img src="/assets/images/generated/nuts-and-snacks.webp" alt="Nutri-Fuse Mixed Nuts Thumbnail 1" class="w-full h-full object-cover object-top" width="1536" height="1024" decoding="async" loading="lazy">
+                    </div>
+                    <div class="w-24 h-24 rounded-md overflow-hidden cursor-pointer border-2 border-transparent hover:border-primary">
+                        <img src="/assets/images/generated/nuts-and-snacks.webp" alt="Nutri-Fuse Mixed Nuts Thumbnail 2" class="w-full h-full object-cover object-top" width="1536" height="1024" decoding="async" loading="lazy">
+                    </div>
+                    <div class="w-24 h-24 rounded-md overflow-hidden cursor-pointer border-2 border-transparent hover:border-primary">
+                        <img src="/assets/images/generated/nuts-and-snacks.webp" alt="Nutri-Fuse Mixed Nuts Thumbnail 3" class="w-full h-full object-cover object-top" width="1536" height="1024" decoding="async" loading="lazy">
+                    </div>
+                    <div class="w-24 h-24 rounded-md overflow-hidden cursor-pointer border-2 border-transparent hover:border-primary">
+                        <img src="/assets/images/generated/nuts-and-snacks.webp" alt="Nutri-Fuse Mixed Nuts Thumbnail 4" class="w-full h-full object-cover object-top" width="1536" height="1024" decoding="async" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Information -->
+            <div class="w-full lg:w-1/2">
+                <div class="mb-2">
+                    <a href="/" class="inline-flex items-center text-gray-500 hover:text-primary mb-4">
+                        <span class="w-5 h-5 flex items-center justify-center mr-1">
+                            <i class="ri-arrow-left-line"></i>
+                        </span>
+                        Back to Shop
+                    </a>
+                </div>
+                <h2 id="product-title" class="text-3xl font-bold mb-2">Nutri-Fuse Mixed Nuts &amp; Seeds</h2>
+                <div class="flex items-center mb-4">
+                    <div class="flex text-primary mr-2">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                    </div>
+                    <span class="text-gray-600 text-sm">4.8 (124 reviews)</span>
+                </div>
+                <p id="product-price" class="text-2xl font-bold text-primary mb-6">Contact for price</p>
+                <p class="text-gray-600 mb-8">Our signature blend of premium nuts and seeds, carefully selected for optimal nutrition and flavor. Perfect for snacking, cooking, or adding to your favorite recipes.</p>
+                
+                <!-- Size Options -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-medium mb-3">Size</h3>
+                    <div class="flex space-x-4">
+                        <button id="size-75g" class="size-option px-4 py-2 border-2 border-primary bg-primary text-white rounded-button whitespace-nowrap">75g</button>
+                        <button id="size-320g" class="size-option px-4 py-2 border-2 border-gray-200 rounded-button whitespace-nowrap">320g</button>
+                    </div>
+                </div>
+                
+                <!-- Flavor Options -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-medium mb-3">Flavor</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        <div id="flavor-lightly-salted" class="flavor-option flex items-center space-x-2 p-3 border-2 border-primary rounded-lg cursor-pointer">
+                            <div class="custom-radio checked"></div>
+                            <span>Lightly Salted</span>
+                        </div>
+                        <div id="flavor-seasoned" class="flavor-option flex items-center space-x-2 p-3 border-2 border-gray-200 rounded-lg cursor-pointer">
+                            <div class="custom-radio"></div>
+                            <span>Seasoned</span>
+                        </div>
+                        <div id="flavor-buss-ah-nut" class="flavor-option flex items-center space-x-2 p-3 border-2 border-gray-200 rounded-lg cursor-pointer">
+                            <div class="custom-radio"></div>
+                            <span>Buss-ah-nut</span>
+                        </div>
+                        <div id="flavor-dark-chocolate" class="flavor-option flex items-center space-x-2 p-3 border-2 border-gray-200 rounded-lg cursor-pointer">
+                            <div class="custom-radio"></div>
+                            <span>Dark Chocolate</span>
+                        </div>
+                        <div id="flavor-red-skins" class="flavor-option flex items-center space-x-2 p-3 border-2 border-gray-200 rounded-lg cursor-pointer">
+                            <div class="custom-radio"></div>
+                            <span>Red Skins</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quantity and Add to Cart -->
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
+                    <div class="flex items-center border-2 border-gray-200 rounded-button w-40">
+                        <button id="decrease-quantity" class="w-10 h-12 flex items-center justify-center text-gray-600 hover:text-primary" aria-label="Decrease quantity">
+                            <i class="ri-subtract-line"></i>
+                        </button>
+                        <input type="number" id="quantity" value="1" min="1" class="w-20 h-12 text-center border-none focus:outline-none" aria-label="Quantity">
+                        <button id="increase-quantity" class="w-10 h-12 flex items-center justify-center text-gray-600 hover:text-primary" aria-label="Increase quantity">
+                            <i class="ri-add-line"></i>
+                        </button>
+                    </div>
+                    <a id="add-to-cart" class="flex-1 bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-button font-medium whitespace-nowrap" href="https://wa.me/18683618990?text=Hello%20Pure%20Harvest%2C%20I%20would%20like%20to%20ask%20about%20Nutri-Fuse%20Mixed%20Nuts%20%26%20Seeds.%20Please%20send%20me%20the%20current%20price%2C%20sizes%20and%20availability." target="_blank" rel="noopener noreferrer">Ask on WhatsApp</a>
+                </div>
+                
+                <!-- Additional Info -->
+                <div class="flex flex-col space-y-3 text-gray-600">
+                    <div class="flex items-start">
+                        <span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+                            <i class="ri-leaf-line"></i>
+                        </span>
+                        <span>Contact us for current ingredient information ingredients, no preservatives</span>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-2">
+                            <i class="ri-recycle-line"></i>
+                        </span>
+                        <span>Eco-friendly packaging</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Details Tabs -->
+<!-- Brand History -->
+<section id="history" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">The Nutri-Fuse Story</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">From humble beginnings to becoming a beloved Caribbean brand, discover the journey behind our premium nut and seed blends</p>
+        </div>
+        
+        <div class="relative max-w-4xl mx-auto">
+            <!-- Timeline -->
+            <div class="pl-12 border-l border-gray-200">
+                <!-- 2020 -->
+                <div class="timeline-item relative pb-12">
+                    <div class="timeline-dot"></div>
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="w-full md:w-1/3">
+                            <div class="font-bold text-2xl text-primary mb-2">2020</div>
+                            <div class="text-lg font-medium">The Beginning</div>
+                        </div>
+                        <div class="w-full md:w-2/3">
+                            <div class="bg-[#F7F5F2] rounded-lg p-6">
+                                <p class="text-gray-600 mb-4">The idea for Nutri-Fuse was born during the global pandemic when our founder, Sarah Williams, began experimenting with creating nutritious snacks using locally sourced ingredients from Trinidad and Tobago.</p>
+                                <p class="text-gray-600">Starting with just a small home kitchen operation, Sarah developed the first Lightly Salted blend, focusing on highlighting the natural flavors of premium nuts and seeds.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2021 -->
+                <div class="timeline-item relative pb-12">
+                    <div class="timeline-dot"></div>
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="w-full md:w-1/3">
+                            <div class="font-bold text-2xl text-primary mb-2">2021</div>
+                            <div class="text-lg font-medium">Expanding Flavors</div>
+                        </div>
+                        <div class="w-full md:w-2/3">
+                            <div class="bg-[#F7F5F2] rounded-lg p-6">
+                                <p class="text-gray-600 mb-4">As word spread about the quality of our nut blends, demand grew rapidly. We expanded our flavor offerings to include Seasoned and Buss-ah-nut varieties, incorporating traditional Caribbean spices and flavors.</p>
+                                <p class="text-gray-600">We also established partnerships with local farmers to ensure a steady supply of high-quality ingredients while supporting the local economy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2022 -->
+                <div class="timeline-item relative pb-12">
+                    <div class="timeline-dot"></div>
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="w-full md:w-1/3">
+                            <div class="font-bold text-2xl text-primary mb-2">2022</div>
+                            <div class="text-lg font-medium">Official Launch</div>
+                        </div>
+                        <div class="w-full md:w-2/3">
+                            <div class="bg-[#F7F5F2] rounded-lg p-6">
+                                <p class="text-gray-600 mb-4">The Nutri-Fuse line was officially launched as part of the newly formed Pure Harvest Group of Companies Ltd. We opened our first dedicated production facility in Tobago, implementing strict quality control measures.</p>
+                                <p class="text-gray-600">The Dark Chocolate variety was introduced and quickly became a customer favorite, offering a perfect balance of indulgence and nutrition.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2023 -->
+                <div class="timeline-item relative pb-12">
+                    <div class="timeline-dot"></div>
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="w-full md:w-1/3">
+                            <div class="font-bold text-2xl text-primary mb-2">2023</div>
+                            <div class="text-lg font-medium">Regional Recognition</div>
+                        </div>
+                        <div class="w-full md:w-2/3">
+                            <div class="bg-[#F7F5F2] rounded-lg p-6">
+                                <p class="text-gray-600 mb-4">Nutri-Fuse gained recognition throughout the Caribbean region, winning the "Best New Food Product" award at the Caribbean Food Expo. We expanded distribution to major supermarkets and specialty food stores across Trinidad and Tobago.</p>
+                                <p class="text-gray-600">The Red Skins variety was added to the lineup, featuring nuts with their natural skins intact for maximum nutritional benefit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2024-Present -->
+                <div class="timeline-item relative">
+                    <div class="timeline-dot"></div>
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="w-full md:w-1/3">
+                            <div class="font-bold text-2xl text-primary mb-2">2024-Present</div>
+                            <div class="text-lg font-medium">Growing Globally</div>
+                        </div>
+                        <div class="w-full md:w-2/3">
+                            <div class="bg-[#F7F5F2] rounded-lg p-6">
+                                <p class="text-gray-600 mb-4">Today, Nutri-Fuse products are available throughout the Caribbean and have begun expanding into international markets. We remain committed to our founding principles of quality, sustainability, and supporting local communities.</p>
+                                <p class="text-gray-600">We continue to innovate with new flavors and packaging options while maintaining the premium quality that our customers have come to expect from the Nutri-Fuse name.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Production Process -->
+<!-- Health Benefits -->
+<!-- Flavor Profiles -->
+<section class="py-16 bg-[#F7F5F2]">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Flavor Profiles</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">Explore our range of delicious flavors, each crafted to deliver a unique and satisfying snacking experience</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Lightly Salted -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="h-48 overflow-hidden">
+                    <img src="/assets/images/generated/nuts-and-snacks.webp" alt="Lightly Salted" class="w-full h-full object-cover object-top" width="1536" height="1024" decoding="async" loading="lazy">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="text-xl font-bold">Lightly Salted</h3>
+                        <div class="bg-primary/10 text-primary text-xs py-1 px-2 rounded">Customer Favorite</div>
+                    </div>
+                    <p class="text-gray-600 mb-4">Our classic blend with just a touch of sea salt to enhance the natural flavors of premium nuts and seeds. Perfect for everyday snacking.</p>
+                    <div class="mb-4">
+                        <h4 class="font-medium mb-2">Key Ingredients:</h4>
+                        <p class="text-gray-600">Almonds, Cashews, Walnuts, Pumpkin Seeds, Sunflower Seeds, Sea Salt</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium mb-2">Pairs Well With:</h4>
+                        <p class="text-gray-600">Fresh fruit, cheese platters, or enjoyed on its own as a protein-rich snack</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Seasoned -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="h-48 overflow-hidden">
+                    <img src="/assets/images/generated/nuts-and-snacks.webp" alt="Seasoned" class="w-full h-full object-cover object-top" width="1536" height="1024" decoding="async" loading="lazy">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="text-xl font-bold">Seasoned</h3>
+                        <div class="bg-primary/10 text-primary text-xs py-1 px-2 rounded">Spice Lover's Choice</div>
+                    </div>
+                    <p class="text-gray-600 mb-4">A savory blend featuring traditional Caribbean herbs and spices for a bold, flavorful snacking experience that captures the essence of island cuisine.</p>
+                    <div class="mb-4">
+                        <h4 class="font-medium mb-2">Key Ingredients:</h4>
+                        <p class="text-gray-600">Almonds, Cashews, Peanuts, Pumpkin Seeds, Caribbean Herb Blend, Sea Salt</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium mb-2">Pairs Well With:</h4>
+                        <p class="text-gray-600">Cold beverages, as a topping for salads, or as part of a spicy trail mix</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Buss-ah-nut -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="h-48 overflow-hidden">
+                    <img src="/assets/images/generated/nuts-and-snacks.webp" alt="Buss-ah-nut" class="w-full h-full object-cover object-top" width="1536" height="1024" decoding="async" loading="lazy">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="text-xl font-bold">Buss-ah-nut</h3>
+                        <div class="bg-primary/10 text-primary text-xs py-1 px-2 rounded">Bold &amp; Spicy</div>
+                    </div>
+                    <p class="text-gray-600 mb-4">A unique sweet and spicy blend that delivers a burst of flavor with every bite. Features a proprietary spice mix that will tantalize your taste buds.</p>
+                    <div class="mb-4">
+                        <h4 class="font-medium mb-2">Key Ingredients:</h4>
+                        <p class="text-gray-600">Cashews, Peanuts, Almonds, Honey, Caribbean Pepper Blend, Sea Salt</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium mb-2">Pairs Well With:</h4>
+                        <p class="text-gray-600">Cold beer, as a party snack, or as a spicy addition to homemade trail mix</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dark Chocolate -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="h-48 overflow-hidden">
+                    <img src="/assets/images/generated/nuts-and-snacks.webp" alt="Dark Chocolate" class="w-full h-full object-cover object-top" width="1536" height="1024" decoding="async" loading="lazy">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="text-xl font-bold">Dark Chocolate</h3>
+                        <div class="bg-primary/10 text-primary text-xs py-1 px-2 rounded">Bestseller</div>
+                    </div>
+                    <p class="text-gray-600 mb-4">A decadent blend featuring premium nuts coated in rich dark chocolate made from Trinidad and Tobago cocoa. The perfect balance of indulgence and nutrition.</p>
+                    <div class="mb-4">
+                        <h4 class="font-medium mb-2">Key Ingredients:</h4>
+                        <p class="text-gray-600">Almonds, Cashews, Dark Chocolate (70% cocoa), Cocoa Powder, Organic Cane Sugar</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium mb-2">Pairs Well With:</h4>
+                        <p class="text-gray-600">Coffee, red wine, or as a dessert alternative that satisfies sweet cravings</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Red Skins -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="h-48 overflow-hidden">
+                    <img src="/assets/images/generated/nuts-and-snacks.webp" alt="Red Skins" class="w-full h-full object-cover object-top" width="1536" height="1024" decoding="async" loading="lazy">
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="text-xl font-bold">Red Skins</h3>
+                        <div class="bg-primary/10 text-primary text-xs py-1 px-2 rounded">Most Nutritious</div>
+                    </div>
+                    <p class="text-gray-600 mb-4">Our most nutritious blend featuring nuts with their natural skins intact, preserving maximum antioxidant content and delivering a more robust flavor profile.</p>
+                    <div class="mb-4">
+                        <h4 class="font-medium mb-2">Key Ingredients:</h4>
+                        <p class="text-gray-600">Skin-on Almonds, Skin-on Peanuts, Walnuts, Pumpkin Seeds, Himalayan Pink Salt</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium mb-2">Pairs Well With:</h4>
+                        <p class="text-gray-600">Green tea, as a topping for oatmeal, or blended into smoothies for added nutrition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recipe Suggestions -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-end mb-8">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-2">Recipe Suggestions</h2>
+                <p class="text-gray-600">Creative ways to enjoy Nutri-Fuse products beyond snacking</p>
+            </div>
+            <div class="flex space-x-2">
+                <button id="prev-recipe" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:text-primary hover:border-primary transition" aria-label="Previous">
+                    <i class="ri-arrow-left-s-line text-xl"></i>
+                </button>
+                <button id="next-recipe" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:text-primary hover:border-primary transition" aria-label="Next">
+                    <i class="ri-arrow-right-s-line text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="relative overflow-hidden">
+            <div id="recipe-container" class="flex space-x-6 transition-transform duration-300">
+                <!-- Recipe 1 -->
+                <div class="min-w-[300px] max-w-[300px] bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="/assets/images/generated/nuts-and-snacks.webp" alt="Nutri-Fuse Breakfast Bowl" class="w-full h-full object-cover object-top" width="1536" height="1024" decoding="async" loading="lazy">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold mb-2">Nutri-Fuse Breakfast Bowl</h3>
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span class="flex items-center mr-4">
+                                <i class="ri-time-line mr-1"></i> 10 mins
+                            </span>
+                            <span class="flex items-center">
+                                <i class="ri-bar-chart-line mr-1"></i> Easy
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Greek yogurt topped with Lightly Salted Nutri-Fuse mix, fresh berries, and a drizzle of honey for a nutritious start to your day.</p>
+                        <a href="/" class="inline-flex items-center text-primary font-medium text-sm">
+                            View Recipe
+                            <span class="ml-1 w-4 h-4 flex items-center justify-center">
+                                <i class="ri-arrow-right-line"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Recipe 2 -->
+                <div class="min-w-[300px] max-w-[300px] bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="/assets/images/generated/tropical-fruits.webp" alt="Nutri-Fuse Chocolate Bark" class="w-full h-full object-cover object-top" width="1536" height="1024" decoding="async" loading="lazy">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold mb-2">Nutri-Fuse Chocolate Bark</h3>
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span class="flex items-center mr-4">
+                                <i class="ri-time-line mr-1"></i> 30 mins
+                            </span>
+                            <span class="flex items-center">
+                                <i class="ri-bar-chart-line mr-1"></i> Medium
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Homemade chocolate bark studded with Red Skins Nutri-Fuse mix and dried fruits for a delicious treat that's perfect for gifting.</p>
+                        <a href="/" class="inline-flex items-center text-primary font-medium text-sm">
+                            View Recipe
+                            <span class="ml-1 w-4 h-4 flex items-center justify-center">
+                                <i class="ri-arrow-right-line"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Recipe 3 -->
+                <div class="min-w-[300px] max-w-[300px] bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="/assets/images/generated/nuts-and-snacks.webp" alt="Nutri-Fuse Harvest Salad" class="w-full h-full object-cover object-top" width="1536" height="1024" decoding="async" loading="lazy">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold mb-2">Nutri-Fuse Harvest Salad</h3>
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span class="flex items-center mr-4">
+                                <i class="ri-time-line mr-1"></i> 15 mins
+                            </span>
+                            <span class="flex items-center">
+                                <i class="ri-bar-chart-line mr-1"></i> Easy
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Mixed greens topped with Seasoned Nutri-Fuse mix, goat cheese, dried cranberries, and balsamic vinaigrette for a satisfying meal.</p>
+                        <a href="/" class="inline-flex items-center text-primary font-medium text-sm">
+                            View Recipe
+                            <span class="ml-1 w-4 h-4 flex items-center justify-center">
+                                <i class="ri-arrow-right-line"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Recipe 4 -->
+                <div class="min-w-[300px] max-w-[300px] bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="/assets/images/generated/tropical-fruits.webp" alt="Nutri-Fuse Banana Bread" class="w-full h-full object-cover object-top" width="1536" height="1024" decoding="async" loading="lazy">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold mb-2">Nutri-Fuse Banana Bread</h3>
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span class="flex items-center mr-4">
+                                <i class="ri-time-line mr-1"></i> 60 mins
+                            </span>
+                            <span class="flex items-center">
+                                <i class="ri-bar-chart-line mr-1"></i> Medium
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Moist banana bread studded with Lightly Salted Nutri-Fuse mix for added texture and nutrition. Perfect for breakfast or snacking.</p>
+                        <a href="/" class="inline-flex items-center text-primary font-medium text-sm">
+                            View Recipe
+                            <span class="ml-1 w-4 h-4 flex items-center justify-center">
+                                <i class="ri-arrow-right-line"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Recipe 5 -->
+                <div class="min-w-[300px] max-w-[300px] bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="/assets/images/generated/nuts-and-snacks.webp" alt="Nutri-Fuse Energy Bites" class="w-full h-full object-cover object-top" width="1536" height="1024" decoding="async" loading="lazy">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold mb-2">Nutri-Fuse Energy Bites</h3>
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span class="flex items-center mr-4">
+                                <i class="ri-time-line mr-1"></i> 20 mins
+                            </span>
+                            <span class="flex items-center">
+                                <i class="ri-bar-chart-line mr-1"></i> Easy
+                            </span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">No-bake energy bites made with Dark Chocolate Nutri-Fuse mix, dates, and coconut. Perfect for pre-workout fuel or an afternoon pick-me-up.</p>
+                        <a href="/" class="inline-flex items-center text-primary font-medium text-sm">
+                            View Recipe
+                            <span class="ml-1 w-4 h-4 flex items-center justify-center">
+                                <i class="ri-arrow-right-line"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Related Products -->
+<section class="py-16 bg-[#F7F5F2]">
+    <div class="container mx-auto px-4">
+        <div class="mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-2">You May Also Like</h2>
+            <p class="text-gray-600">Other products from our Nutri-Fuse line</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Product 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="/assets/images/generated/tropical-fruits.webp" alt="Nutri-Fuse Trail Mix" class="w-full h-full object-cover object-top" width="1536" height="1024" decoding="async" loading="lazy">
+                    <div class="absolute top-3 left-3 bg-[#FF7F50] text-white text-xs py-1 px-2 rounded">New</div>
+                </div>
+                <div class="p-5">
+                    <h3 class="text-lg font-bold mb-1">Nutri-Fuse Trail Mix</h3>
+                    <p class="text-gray-500 text-sm mb-3">250g jar</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary font-bold">Contact for price</span>
+                        <a class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap" href="https://wa.me/18683618990?text=Hello%20Pure%20Harvest%2C%20I%20would%20like%20to%20ask%20about%20Nutri-Fuse%20Trail%20Mix.%20Please%20send%20me%20the%20current%20price%2C%20sizes%20and%20availability." target="_blank" rel="noopener noreferrer">Ask on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="/assets/images/generated/nuts-and-snacks.webp" alt="Nutri-Fuse Nut Butter" class="w-full h-full object-cover object-top" width="1536" height="1024" decoding="async" loading="lazy">
+                </div>
+                <div class="p-5">
+                    <h3 class="text-lg font-bold mb-1">Nutri-Fuse Nut Butter</h3>
+                    <p class="text-gray-500 text-sm mb-3">200g jar</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary font-bold">Contact for price</span>
+                        <a class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap" href="https://wa.me/18683618990?text=Hello%20Pure%20Harvest%2C%20I%20would%20like%20to%20ask%20about%20Nutri-Fuse%20Nut%20Butter.%20Please%20send%20me%20the%20current%20price%2C%20sizes%20and%20availability." target="_blank" rel="noopener noreferrer">Ask on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="/assets/images/generated/nuts-and-snacks.webp" alt="Nutri-Fuse Granola" class="w-full h-full object-cover object-top" width="1536" height="1024" decoding="async" loading="lazy">
+                    <div class="absolute top-3 left-3 bg-primary text-white text-xs py-1 px-2 rounded">Bestseller</div>
+                </div>
+                <div class="p-5">
+                    <h3 class="text-lg font-bold mb-1">Nutri-Fuse Granola</h3>
+                    <p class="text-gray-500 text-sm mb-3">300g jar</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary font-bold">Contact for price</span>
+                        <a class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap" href="https://wa.me/18683618990?text=Hello%20Pure%20Harvest%2C%20I%20would%20like%20to%20ask%20about%20Nutri-Fuse%20Granola.%20Please%20send%20me%20the%20current%20price%2C%20sizes%20and%20availability." target="_blank" rel="noopener noreferrer">Ask on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="/assets/images/generated/nuts-and-snacks.webp" alt="Nutri-Fuse Gift Box" class="w-full h-full object-cover object-top" width="1536" height="1024" decoding="async" loading="lazy">
+                </div>
+                <div class="p-5">
+                    <h3 class="text-lg font-bold mb-1">Nutri-Fuse Gift Box</h3>
+                    <p class="text-gray-500 text-sm mb-3">4 x 75g jars</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary font-bold">Contact for price</span>
+                        <a class="bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-button text-sm whitespace-nowrap" href="https://wa.me/18683618990?text=Hello%20Pure%20Harvest%2C%20I%20would%20like%20to%20ask%20about%20Nutri-Fuse%20Gift%20Box.%20Please%20send%20me%20the%20current%20price%2C%20sizes%20and%20availability." target="_blank" rel="noopener noreferrer">Ask on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[#2A2A2A] text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <!-- Company Info -->
+            <div>
+                <a href="/" class="mb-6 inline-block"><img src="/assets/images/brand/pure-harvest-logo.png" alt="Pure Harvest Logo" class="h-12" width="1200" height="700" decoding="async"></a>
+                <p class="text-gray-400 mb-6">Pure Harvest Group of Companies Ltd. brings the authentic flavors of Trinidad and Tobago to kitchens around the world.</p>
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/pureharvestltd2022/" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100089070173342" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+                        <i class="ri-facebook-line"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@pureharvest0" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition">
+                        <i class="ri-tiktok-line"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                <ul class="space-y-3">
+                    <li><a href="/" class="text-gray-400 hover:text-white transition">Home</a></li>
+                    <li><a href="/shop/" class="text-gray-400 hover:text-white transition">Products</a></li>
+                    <li><a href="/" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                    <li><a href="/" class="text-gray-400 hover:text-white transition">Become a Retailer</a></li>
+                    <li><a href="/contact/" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    <li><a href="/privacy-policy/" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                    <li><a href="/terms-and-conditions/" class="text-gray-400 hover:text-white transition">Terms &amp; Conditions</a></li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-lg font-bold mb-6">Contact Us</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+                            <i class="ri-map-pin-line"></i>
+                        </span>
+                        <span class="text-gray-400">Congo Hill, Moriah, Tobago</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+                            <i class="ri-phone-line"></i>
+                        </span>
+                        <span class="text-gray-400">+1 868 361-8990</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="w-5 h-5 flex items-center justify-center text-gray-400 mt-0.5 mr-3">
+                            <i class="ri-mail-line"></i>
+                        </span>
+                        <span class="text-gray-400">pureharvest2022@gmail.com</span>
+                    </li>
+                </ul>
+                <div class="mt-6">
+                    <h4 class="text-sm font-bold mb-3">We Accept</h4>
+                    </div>
+            </div>
+            <!-- Newsletter -->
+            <div>
+                <h3 class="text-lg font-bold mb-6">Newsletter</h3>
+                <p class="text-gray-400 mb-4">Subscribe to receive updates, access to exclusive deals, and more.</p>
+                <a href="https://wa.me/18683618990?text=Hello%20Pure%20Harvest%2C%20I%20would%20like%20to%20receive%20company%20and%20product%20updates." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-primary text-white px-5 py-3 rounded-button font-medium">Contact us on WhatsApp</a></div>
+        </div>
+        <div class="border-t border-gray-700 pt-8">
+            <p class="text-gray-500 text-center">© 2026 Pure Harvest Group of Companies Ltd. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuButton.addEventListener('click', function() {
+        if (mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.remove('hidden');
+        } else {
+            mobileMenu.classList.add('hidden');
+        }
+    });
+});
+</script>
+
+<script id="product-tabs-script">
+document.addEventListener('DOMContentLoaded', function() {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons and contents
+            tabButtons.forEach(btn => {
+                btn.classList.remove('border-primary', 'text-primary');
+                btn.classList.add('border-transparent', 'text-gray-500');
+            });
+            
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Add active class to clicked button and corresponding content
+            this.classList.add('border-primary', 'text-primary');
+            this.classList.remove('border-transparent', 'text-gray-500');
+            
+            const tabId = this.id.replace('tab-', 'content-');
+            document.getElementById(tabId).classList.add('active');
+        });
+    });
+});
+</script>
+
+<script id="recipe-carousel-script">
+document.addEventListener('DOMContentLoaded', function() {
+    const container = document.getElementById('recipe-container');
+    const prevButton = document.getElementById('prev-recipe');
+    const nextButton = document.getElementById('next-recipe');
+    const recipeWidth = 300 + 24; // recipe width + gap
+    let currentPosition = 0;
+    
+    // Calculate the maximum scroll position
+    const maxScroll = () => {
+        const containerWidth = container.parentElement.clientWidth;
+        const totalWidth = container.scrollWidth;
+        return totalWidth - containerWidth;
+    };
+    
+    // Update buttons state
+    const updateButtons = () => {
+        prevButton.disabled = currentPosition <= 0;
+        nextButton.disabled = currentPosition >= maxScroll();
+        prevButton.style.opacity = prevButton.disabled ? '0.5' : '1';
+        nextButton.style.opacity = nextButton.disabled ? '0.5' : '1';
+    };
+    
+    // Scroll to position
+    const scrollToPosition = (position) => {
+        currentPosition = Math.max(0, Math.min(position, maxScroll()));
+        container.style.transform = `translateX(-${currentPosition}px)`;
+        updateButtons();
+    };
+    
+    // Initialize
+    updateButtons();
+    
+    // Event listeners
+    prevButton.addEventListener('click', () => {
+        scrollToPosition(currentPosition - recipeWidth * 2);
+    });
+    
+    nextButton.addEventListener('click', () => {
+        scrollToPosition(currentPosition + recipeWidth * 2);
+    });
+    
+    // Update on resize
+    window.addEventListener('resize', () => {
+        scrollToPosition(currentPosition);
+    });
+});
+</script>
+
+<script id="product-image-script">
+document.addEventListener('DOMContentLoaded', function() {
+    const thumbnails = document.querySelectorAll('.w-24.h-24');
+    const mainImage = document.getElementById('main-product-image');
+    
+    thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', function() {
+            // Remove border from all thumbnails
+            thumbnails.forEach(t => {
+                t.classList.remove('border-primary');
+                t.classList.add('border-transparent');
+            });
+            
+            // Add border to clicked thumbnail
+            this.classList.add('border-primary');
+            this.classList.remove('border-transparent');
+            
+            // Update main image
+            mainImage.src = this.querySelector('img').src.replace('width=200&height=200', 'width=800&height=800');
+        });
+    });
+});
+</script>
 </body>
 </html>
