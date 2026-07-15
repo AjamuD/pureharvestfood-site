@@ -114,6 +114,26 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
 transform: translateY(-5px);
 box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
+.product-card > .relative.h-64 {
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 0.75rem;
+background-color: #ffffff;
+}
+.product-card > .relative.h-64 > img {
+width: 100%;
+height: 100%;
+object-fit: contain !important;
+object-position: center !important;
+}
+#modal-product-image {
+object-fit: contain !important;
+object-position: center !important;
+padding: 1rem;
+background-color: #ffffff;
+box-sizing: border-box;
+}
 .badge {
 position: absolute;
 top: 10px;
