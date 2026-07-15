@@ -1,37 +1,18 @@
-Pure Harvest website deployment
-================================
+Replace your current GitHub repo contents with this folder's contents.
 
-This is a static website for Pure Harvest Group of Companies Ltd. GitHub Pages
-serves it at https://www.pureharvestfood.com.
+1) Download the ZIP I provided and unzip it.
+2) In your GitHub repo (pureharvestfood-site):
+   - Delete everything in the repo (folders + files)
+   - Upload the new folders + files from the unzipped package
+   - Commit changes
+3) Cloudflare Pages will auto-deploy.
 
-Ordering
---------
-The website does not collect payment-card details. Product, contact and retailer
-requests open a pre-filled WhatsApp conversation with +1 868 361-8990.
+After deploy:
+- Create a Cloudflare Turnstile widget and replace YOUR_TURNSTILE_SITE_KEY in /contact/ and /retailer/ pages.
+- Add environment variables in Cloudflare Pages:
+  TURNSTILE_SECRET_KEY
+  RESEND_API_KEY
+  FROM_EMAIL (e.g. Pure Harvest <no-reply@pureharvestfood.com>)
+  (optional) TO_EMAIL (defaults to pureharvest2022@gmail.com)
 
-Images
-------
-Company and product uploads are stored under assets/images/original. Temporary
-neutral category photographs are under assets/images/generated and can be
-replaced later while keeping the same WebP filenames.
-
-Company document
-----------------
-Do not delete or alter assets/documents/certificate-of-incorporation.png or the
-page at certificates/incorporation/index.html.
-
-Styles
-------
-The production pages use the compiled assets/css/site.css file and do not load
-the Tailwind browser runtime. After changing Tailwind classes, rebuild it with:
-
-  pnpm dlx tailwindcss@3.4.16 -c tailwind.config.js -i assets/css/input.css -o assets/css/site.css --minify
-
-Checks
-------
-Run the repository audit before publishing:
-
-  python scripts/audit_site.py
-
-The audit checks page metadata, internal links, local images, accessible forms,
-WhatsApp ordering and the incorporation document checksum.
+Note: Recipes are not linked in the main nav (secondary only), but the page exists at /recipes/brown-stew-chicken/
