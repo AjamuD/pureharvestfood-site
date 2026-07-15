@@ -8,7 +8,7 @@
     'Out of Stock': 'out-of-stock'
   };
   var productNames = {
-    'garlic-powder': 'Garlic Powder',
+    'garlic-powder': 'Garlic Flakes',
     'dehydrated-bay-leaves': 'Dehydrated Bay Leaves',
     'local-hot-pepper-powder': 'Local Hot Pepper Powder',
     'pimento-power': 'Pimento Power',
