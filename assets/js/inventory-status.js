@@ -26,8 +26,9 @@
     Array.prototype.forEach.call(cards, function (card) {
       var title = card.querySelector('h3');
       var indicator = card.querySelector('.stock-indicator');
+      var inventoryKey = card.getAttribute('data-inventory-key');
 
-      if (!title || !indicator || title.textContent.trim() !== productName) {
+      if (!indicator || (inventoryKey !== product.key && (!title || title.textContent.trim() !== productName))) {
         return;
       }
 
@@ -62,8 +63,21 @@
     return;
   }
 
-  var feedScript = document.createElement('script');
-  feedScript.src = endpoint + '?callback=PureHarvestInventory.receive&t=' + Date.now();
-  feedScript.async = true;
-  document.head.appendChild(feedScript);
+  function requestInventory() {
+    var feedScript = document.createElement('script');
+    feedScript.src = endpoint + '?callback=PureHarvestInventory.receive&t=' + Date.now();
+    feedScript.async = true;
+    feedScript.onload = feedScript.onerror = function () {
+      feedScript.remove();
+    };
+    document.head.appendChild(feedScript);
+  }
+
+  requestInventory();
+  window.setInterval(requestInventory, 60000);
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden) {
+      requestInventory();
+    }
+  });
 })();
