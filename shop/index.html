@@ -568,7 +568,7 @@ In Stock
 </div>
 </div>
 <!-- Product 5 -->
-<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-product-story="dark-chocolate" onclick="openProductModal(this)">
 <div class="relative h-64 overflow-hidden">
 <img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/796f23f7a623763726a6ab5f507f765f.jpeg" alt="Nutri-Fuse Dark Chocolate" class="w-full h-full object-cover object-top">
 <div class="badge badge-bestseller">Bestseller</div>
@@ -582,7 +582,7 @@ In Stock
 </span>
 </div>
 <h3 class="text-lg font-bold mb-1">Nutri-Fuse Dark Chocolate</h3>
-<p class="text-gray-600 text-sm mb-3">Premium mixed nuts coated in rich dark chocolate for a decadent treat.</p>
+<p class="text-gray-600 text-sm mb-3">Nuts, dried fruits and seeds with ginger, salt and dark chocolate bits scattered throughout for a different combination in every handful.</p>
 <div class="space-y-3">
 <div class="flex items-center space-x-4">
 <label class="flex items-center">
@@ -1279,7 +1279,7 @@ Free shipping over $300
 </div>
 </div>
 <!-- Red Skins Story -->
-<div id="modal-product-story" class="hidden border-t mt-12">
+<div id="modal-product-story" data-modal-story="redskins" class="hidden border-t mt-12">
 <div class="container mx-auto px-4 py-12">
 <article class="redskin-story">
 <div class="redskin-story-content px-6 py-10 md:px-10 md:py-14 lg:px-14">
@@ -1328,6 +1328,83 @@ Free shipping over $300
 <a class="redskin-source-link" href="https://www.ars.usda.gov/oc/utm/the-nuts-and-bolts-of-peanut-breeding/" target="_blank" rel="noopener noreferrer">USDA ARS: Spanish-type peanuts</a>
 <a class="redskin-source-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2808014/" target="_blank" rel="noopener noreferrer">Peer-reviewed study: peanut skin colour</a>
 </div>
+</div>
+</div>
+</article>
+</div>
+</div>
+<!-- Nutri-Fuse Dark Chocolate Story -->
+<div id="modal-dark-chocolate-story" data-modal-story="dark-chocolate" class="hidden border-t mt-12">
+<div class="container mx-auto px-4 py-12">
+<article class="redskin-story">
+<div class="redskin-story-content px-6 py-10 md:px-10 md:py-14 lg:px-14">
+<div class="max-w-3xl">
+<span class="redskin-story-kicker"><i class="ri-cake-3-line"></i> The Nutri-Fuse Dark Chocolate Story</span>
+<h3 class="text-3xl md:text-5xl font-bold mt-5 mb-5 leading-tight">A different flavour journey in every handful</h3>
+<p class="text-lg md:text-xl text-amber-50/80 leading-relaxed">This is not a chocolate-coated nut mix. Dark chocolate bits are scattered among peanuts, cashews, almonds, dried fruits and seeds, so each handful creates its own meeting of nutty crunch, bright fruit, gentle ginger warmth, savoury salt and rich cocoa flavour.</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
+<section class="redskin-story-card">
+<span class="redskin-story-number">1</span>
+<h4 class="text-xl font-bold mb-3">Roots in the Upper Amazon</h4>
+<p class="text-amber-50/75 leading-relaxed">Cacao comes from the seeds of <em>Theobroma cacao</em>. Archaeologists found cacao starch, theobromine residues and ancient DNA at a site in southeast Ecuador dating to about 5,300 years ago—the earliest firmly identified evidence of cacao use in the Americas.</p>
+</section>
+<section class="redskin-story-card">
+<span class="redskin-story-number">2</span>
+<h4 class="text-xl font-bold mb-3">A celebrated American tradition</h4>
+<p class="text-amber-50/75 leading-relaxed">Cacao travelled through the Americas and became important in Mesoamerican food culture. Chemical analysis of vessels from an early Maya community in Belize shows cacao was being prepared and consumed by about 600 BCE.</p>
+</section>
+<section class="redskin-story-card">
+<span class="redskin-story-number">3</span>
+<h4 class="text-xl font-bold mb-3">From cacao seed to chocolate</h4>
+<p class="text-amber-50/75 leading-relaxed">Chocolate begins with cacao seeds that are fermented and roasted before being processed into cocoa ingredients. Kew Science notes that fermentation is one of the key stages in developing chocolate's distinctive flavour.</p>
+</section>
+</div>
+
+<div class="mt-8">
+<section class="redskin-story-card">
+<p class="text-xs font-bold tracking-widest uppercase text-amber-300 mb-3">What the ingredients bring</p>
+<h4 class="text-2xl font-bold mb-6">Flavour, texture and useful nutrients in layers</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-amber-50/75">
+<div>
+<p class="font-bold text-amber-100 mb-2">Peanuts, cashews and almonds</p>
+<p class="leading-relaxed">These form the crunchy foundation. Nuts contribute plant protein and unsaturated fats, while peanuts, cashews and almonds are recognised food sources of magnesium. Almonds and peanuts also contribute vitamin E.</p>
+</div>
+<div>
+<p class="font-bold text-amber-100 mb-2">Mango, papaya, cranberries, pineapple, goji berry, kiwi and cantaloupe</p>
+<p class="leading-relaxed">The dried fruit layer brings changing sweet and tart notes, colourful variety, carbohydrates and dietary fibre. Because fruit becomes concentrated when dried, its flavour and portion are more concentrated too.</p>
+</div>
+<div>
+<p class="font-bold text-amber-100 mb-2">Pumpkin and sunflower seeds</p>
+<p class="leading-relaxed">The seeds add a smaller, delicate crunch alongside the nuts. Pumpkin seeds are a notable source of magnesium, while sunflower seeds are a notable source of vitamin E.</p>
+</div>
+<div>
+<p class="font-bold text-amber-100 mb-2">Ginger, dark chocolate bits and salt</p>
+<p class="leading-relaxed">Dried ginger adds aromatic warmth, salt sharpens the contrast between sweet and savoury, and the scattered dark chocolate bits bring cocoa richness. Cocoa can contain flavanols, although the amount varies with the chocolate recipe and processing.</p>
+</div>
+</div>
+<p class="text-xs text-amber-50/60 mt-6 leading-relaxed">Nutrient amounts depend on the finished recipe and serving size. Please use the product's nutrition label for product-specific values.</p>
+</section>
+</div>
+
+<blockquote class="redskin-quote rounded-2xl p-6 md:p-8 mt-8">
+<p class="text-xs font-bold tracking-widest uppercase text-amber-300 mb-4">Pure Harvest approach</p>
+<p class="text-xl md:text-2xl font-semibold leading-relaxed">“We leave the ingredients free to mingle rather than coating the nuts. That means one handful may lead with mango and cashew, another with seeds and cranberry, and the next with ginger and dark chocolate. The pleasure is in discovering a slightly different taste each time.”</p>
+<footer class="mt-5 text-amber-100/75">— Pure Harvest</footer>
+</blockquote>
+
+<div class="mt-8 pt-6 border-t border-white/15">
+<p class="text-xs font-bold tracking-widest uppercase text-amber-300 mb-3">History and nutrition sources</p>
+<div class="flex flex-col md:flex-row md:flex-wrap gap-3 md:gap-6 text-sm">
+<a class="redskin-source-link" href="https://www.nature.com/articles/s41559-018-0697-x" target="_blank" rel="noopener noreferrer">Nature: earliest Upper Amazon cacao evidence</a>
+<a class="redskin-source-link" href="https://www.nature.com/articles/418289a" target="_blank" rel="noopener noreferrer">Nature: cacao use by the earliest Maya</a>
+<a class="redskin-source-link" href="https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:320783-2/general-information" target="_blank" rel="noopener noreferrer">Kew Science: Theobroma cacao</a>
+<a class="redskin-source-link" href="https://www.myplate.gov/web/web/eat-healthy/protein-foods" target="_blank" rel="noopener noreferrer">USDA MyPlate: nuts and seeds</a>
+<a class="redskin-source-link" href="https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/" target="_blank" rel="noopener noreferrer">NIH: food sources of magnesium</a>
+<a class="redskin-source-link" href="https://ods.od.nih.gov/factsheets/VitaminE-HealthProfessional/" target="_blank" rel="noopener noreferrer">NIH: food sources of vitamin E</a>
+</div>
+<p class="text-xs text-amber-50/60 mt-5 leading-relaxed"><strong class="text-amber-100">Ingredients:</strong> Peanuts, dried mango, cashews, almonds, dried papaya, dried cranberries, dried pineapple, dried goji berry, dried kiwi, dried cantaloupe, dried ginger, dark chocolate bits, pumpkin seeds, sunflower seeds and salt.</p>
 </div>
 </div>
 </article>
@@ -1470,7 +1547,7 @@ const modalStockStatus = document.getElementById('modal-stock-status');
 const modalDescription = document.getElementById('modal-product-description');
 const modalPrice = document.getElementById('modal-product-price');
 const modalBadges = document.getElementById('modal-badges');
-const modalStory = document.getElementById('modal-product-story');
+const modalStories = document.querySelectorAll('[data-modal-story]');
 const relatedProducts = document.getElementById('related-products');
 // Get data from clicked product card
 const image = productCard.querySelector('img').src;
@@ -1488,7 +1565,9 @@ modalStockStatus.innerHTML = stockStatus;
 modalDescription.textContent = description;
 modalPrice.textContent = price;
 modalBadges.innerHTML = badges;
-modalStory.classList.toggle('hidden', productCard.dataset.productStory !== 'redskins');
+modalStories.forEach(story => {
+story.classList.toggle('hidden', story.dataset.modalStory !== productCard.dataset.productStory);
+});
 // Generate related products
 const allProducts = Array.from(document.querySelectorAll('.product-card'))
 .filter(product => !product.closest('#related-products'));
@@ -1892,10 +1971,11 @@ this.classList.add('active');
 });
 window.filterByCategory(window.currentCategory, false);
 const requestedProduct = new URLSearchParams(window.location.search).get('product');
-if (requestedProduct === 'redskins') {
-const redSkinsCard = document.querySelector('[data-product-story="redskins"]');
-if (redSkinsCard) {
-window.openProductModal(redSkinsCard);
+const supportedProductStories = ['redskins', 'dark-chocolate'];
+if (supportedProductStories.includes(requestedProduct)) {
+const requestedProductCard = document.querySelector(`[data-product-story="${requestedProduct}"]`);
+if (requestedProductCard) {
+window.openProductModal(requestedProductCard);
 }
 }
 });
