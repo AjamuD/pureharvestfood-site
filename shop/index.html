@@ -1891,6 +1891,13 @@ this.classList.add('active');
 });
 });
 window.filterByCategory(window.currentCategory, false);
+const requestedProduct = new URLSearchParams(window.location.search).get('product');
+if (requestedProduct === 'redskins') {
+const redSkinsCard = document.querySelector('[data-product-story="redskins"]');
+if (redSkinsCard) {
+window.openProductModal(redSkinsCard);
+}
+}
 });
 </script>
 <script>
