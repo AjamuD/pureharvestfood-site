@@ -165,6 +165,76 @@ background-color: #F59E0B;
 .badge-bestseller {
 background-color: #8B4513;
 }
+.redskin-story {
+position: relative;
+overflow: hidden;
+border-radius: 1.5rem;
+background:
+radial-gradient(circle at 12% 8%, rgba(245, 158, 11, 0.22), transparent 34%),
+radial-gradient(circle at 88% 92%, rgba(180, 83, 9, 0.28), transparent 38%),
+linear-gradient(135deg, #24120b 0%, #4a2314 52%, #28150d 100%);
+color: #fffaf3;
+box-shadow: 0 24px 70px rgba(58, 28, 15, 0.24);
+}
+.redskin-story::before {
+content: "";
+position: absolute;
+inset: 0;
+background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+background-size: 18px 18px;
+pointer-events: none;
+}
+.redskin-story-content {
+position: relative;
+z-index: 1;
+}
+.redskin-story-kicker {
+display: inline-flex;
+align-items: center;
+gap: 0.5rem;
+padding: 0.45rem 0.8rem;
+border: 1px solid rgba(251, 191, 36, 0.38);
+border-radius: 9999px;
+background: rgba(120, 53, 15, 0.34);
+color: #fde68a;
+font-size: 0.75rem;
+font-weight: 700;
+letter-spacing: 0.16em;
+text-transform: uppercase;
+}
+.redskin-story-card {
+height: 100%;
+padding: 1.25rem;
+border: 1px solid rgba(255, 255, 255, 0.12);
+border-radius: 1rem;
+background: rgba(255, 255, 255, 0.07);
+backdrop-filter: blur(8px);
+}
+.redskin-story-number {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 2.25rem;
+height: 2.25rem;
+margin-bottom: 1rem;
+border-radius: 9999px;
+background: #f59e0b;
+color: #32180e;
+font-weight: 800;
+}
+.redskin-quote {
+border-left: 4px solid #f59e0b;
+background: rgba(255, 251, 235, 0.1);
+}
+.redskin-source-link {
+color: #fde68a;
+text-decoration: underline;
+text-decoration-color: rgba(253, 230, 138, 0.45);
+text-underline-offset: 3px;
+}
+.redskin-source-link:hover {
+color: #ffffff;
+}
 .skeleton {
 background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
 background-size: 200% 100%;
@@ -622,7 +692,7 @@ In Stock
 </div>
 </div>
 <!-- Product 9 -->
-<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" onclick="openProductModal(this)">
+<div class="product-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" data-product-story="redskins" onclick="openProductModal(this)">
 <div class="relative h-64 overflow-hidden">
 <img src="https://static.readdy.ai/image/3c4ae28f9da0d564b9e8cbdc20287803/8fde9ef44852b6aab79441efdf66de41.jpeg" alt="Nutri-Fuse Red Skin" class="w-full h-full object-contain">
 <div class="badge badge-new">New</div>
@@ -1208,6 +1278,61 @@ Free shipping over $300
 </div>
 </div>
 </div>
+<!-- Red Skins Story -->
+<div id="modal-product-story" class="hidden border-t mt-12">
+<div class="container mx-auto px-4 py-12">
+<article class="redskin-story">
+<div class="redskin-story-content px-6 py-10 md:px-10 md:py-14 lg:px-14">
+<div class="max-w-3xl">
+<span class="redskin-story-kicker"><i class="ri-seedling-line"></i> The Red Skin Story</span>
+<h3 class="text-3xl md:text-5xl font-bold mt-5 mb-5 leading-tight">A small peanut with a remarkable journey</h3>
+<p class="text-lg md:text-xl text-amber-50/80 leading-relaxed">Red-skin peanuts carry a history that begins in South America, travels across oceans, and arrives in Tobago ready for a careful Pure Harvest roast.</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
+<section class="redskin-story-card">
+<span class="redskin-story-number">1</span>
+<h4 class="text-xl font-bold mb-3">Ancient South American roots</h4>
+<p class="text-amber-50/75 leading-relaxed">The cultivated peanut, <em>Arachis hypogaea</em>, is a legume rather than a tree nut. Genomic research places its beginnings thousands of years ago in South America, where two wild peanut ancestors combined—likely in the region of present-day Bolivia.</p>
+</section>
+<section class="redskin-story-card">
+<span class="redskin-story-number">2</span>
+<h4 class="text-xl font-bold mb-3">A crop that crossed oceans</h4>
+<p class="text-amber-50/75 leading-relaxed">From South America, peanuts were carried to Africa. They later reached North America through Atlantic trade routes, including the forced migration of enslaved Africans, and became an established food crop.</p>
+</section>
+<section class="redskin-story-card">
+<span class="redskin-story-number">3</span>
+<h4 class="text-xl font-bold mb-3">The red-skin tradition</h4>
+<p class="text-amber-50/75 leading-relaxed">One well-known red-skinned market type is the Spanish peanut, recognised for its smaller kernels, reddish-brown skin, and naturally sweet, nutty flavour. Spanish-type peanuts are widely used in snacks, confectionery, and some peanut butters.</p>
+</section>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-6 mt-8">
+<section class="redskin-story-card lg:col-span-2">
+<p class="text-xs font-bold tracking-widest uppercase text-amber-300 mb-3">Why keep the skin?</p>
+<h4 class="text-2xl font-bold mb-4">Colour with character</h4>
+<p class="text-amber-50/75 leading-relaxed">The red layer is the peanut's thin seed coat. Research across peanut cultivars found that deeper skin colour was strongly associated with total polyphenol content and measured antioxidant capacity. The skin also contributes the pleasantly earthy, lightly astringent character that makes red-skin peanuts distinctive.</p>
+</section>
+<blockquote class="redskin-quote rounded-2xl p-6 md:p-8 lg:col-span-3">
+<p class="text-xs font-bold tracking-widest uppercase text-amber-300 mb-4">Ajamu's Pure Harvest approach</p>
+<p class="text-xl md:text-2xl font-semibold leading-relaxed">“I roast and prepare each batch with close attention to colour, aroma, and crunch, allowing the natural richness to deepen while keeping the peanuts fresh. The aim is simple: a succulent, satisfying bite—crisp, flavourful, and just right for eating.”</p>
+<footer class="mt-5 text-amber-100/75">— Ajamu Daniel, Director</footer>
+</blockquote>
+</div>
+
+<div class="mt-8 pt-6 border-t border-white/15">
+<p class="text-xs font-bold tracking-widest uppercase text-amber-300 mb-3">History and food-science sources</p>
+<div class="flex flex-col md:flex-row md:flex-wrap gap-3 md:gap-6 text-sm">
+<a class="redskin-source-link" href="https://agresearchmag.ars.usda.gov/2016/sep/peanut/" target="_blank" rel="noopener noreferrer">USDA ARS: cultivated peanut origins</a>
+<a class="redskin-source-link" href="https://www.ars.usda.gov/southeast-area/dawson-ga/national-peanut-research-laboratory/docs/peanuts-101-the-basics/page-2/" target="_blank" rel="noopener noreferrer">USDA ARS: peanut history</a>
+<a class="redskin-source-link" href="https://www.ars.usda.gov/oc/utm/the-nuts-and-bolts-of-peanut-breeding/" target="_blank" rel="noopener noreferrer">USDA ARS: Spanish-type peanuts</a>
+<a class="redskin-source-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2808014/" target="_blank" rel="noopener noreferrer">Peer-reviewed study: peanut skin colour</a>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
 <!-- Related Products -->
 <div class="border-t mt-12">
 <div class="container mx-auto px-4 py-12">
@@ -1241,11 +1366,21 @@ display: block;
 <script id="modal-script">
 document.addEventListener('DOMContentLoaded', function() {
 let cartCount = 0;
+function getProductPrice(productCard) {
+const singlePrice = productCard.querySelector('.text-primary');
+if (singlePrice) {
+return singlePrice.textContent.trim();
+}
+const sizePrices = Array.from(productCard.querySelectorAll('label .text-sm'))
+.map(price => price.textContent.trim())
+.filter(price => price.includes('$'));
+return sizePrices.length ? sizePrices.join('  •  ') : 'Contact us for pricing';
+}
 window.addToCart = function(button) {
 // Get product info
 const productCard = button.closest('.product-card');
 const productName = productCard.querySelector('.font-bold').textContent;
-const productPrice = productCard.querySelector('.text-primary').textContent;
+const productPrice = getProductPrice(productCard);
 // Update cart count
 cartCount++;
 const cartCountElement = document.querySelector('.absolute');
@@ -1335,13 +1470,14 @@ const modalStockStatus = document.getElementById('modal-stock-status');
 const modalDescription = document.getElementById('modal-product-description');
 const modalPrice = document.getElementById('modal-product-price');
 const modalBadges = document.getElementById('modal-badges');
+const modalStory = document.getElementById('modal-product-story');
 const relatedProducts = document.getElementById('related-products');
 // Get data from clicked product card
 const image = productCard.querySelector('img').src;
 const category = productCard.querySelector('.text-gray-500').textContent;
 const name = productCard.querySelector('.font-bold').textContent;
 const description = productCard.querySelector('.text-gray-600').textContent;
-const price = productCard.querySelector('.text-primary').textContent;
+const price = getProductPrice(productCard);
 const stockStatus = productCard.querySelector('.stock-indicator').parentElement.innerHTML;
 const badges = Array.from(productCard.querySelectorAll('.badge')).map(badge => badge.outerHTML).join('');
 // Update modal content
@@ -1352,6 +1488,7 @@ modalStockStatus.innerHTML = stockStatus;
 modalDescription.textContent = description;
 modalPrice.textContent = price;
 modalBadges.innerHTML = badges;
+modalStory.classList.toggle('hidden', productCard.dataset.productStory !== 'redskins');
 // Generate related products
 const allProducts = Array.from(document.querySelectorAll('.product-card'))
 .filter(product => !product.closest('#related-products'));
